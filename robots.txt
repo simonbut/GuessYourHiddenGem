@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://simonbut.github.io/GuessYourHiddenGem/sitemap.xml
