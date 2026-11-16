@@ -195,4 +195,37 @@ For each test player, the eval hides one game they liked, recommends from the re
 python -m unittest discover -s tests -v
 ```
 
-58 tests run in about a minute on a synthetic database: crawler paging and resume with a fake Steam API, review analysis, recommendations, filters, quiz rules, server API and security, and the static web build (slim model, the in-browser API bridge, game pages and sitemap). A few smoke tests also run on the real data when it's present.
+59 tests run in about a minute on a synthetic database: crawler paging and resume with a fake Steam API, review analysis, recommendations, filters, quiz rules, server API and security, and the static web build (slim model, the in-browser API bridge, game pages, the data page and sitemap). A few smoke tests also run on the real data when it's present.
+
+## License and data
+
+**Code:** MIT (see `LICENSE`). That covers the code in this repository only, not Steam's data.
+
+**Never published:** `steam.db` and the model files (`recsys_model.npz`, `recsys_meta.json`) stay on your computer, and `.gitignore` keeps them out of Git. Don't upload them anywhere (GitHub, Kaggle, Hugging Face):
+* **Review text** belongs to the people who wrote it. Steam's Subscriber Agreement licenses reviews to Valve only, for running Steam, and passes nothing on to anyone else.
+* **Steam IDs** are personal data. Under the EU's GDPR (and similar laws elsewhere), any review linked to an ID is too, and removing or hashing the IDs doesn't make full review text anonymous.
+* **Steam's Web API Terms of Use** let you show Steam data "to end users for their personal use via your Application", not redistribute it in bulk.
+
+**On the website:**
+* game facts from Steam's store (names, dates, developers, tags, review scores);
+* short store-description excerpts linked to their Steam pages;
+* cover images loaded from Steam's servers;
+* the project's own AI-written summaries and review statistics.
+
+There is no review text and there are no Steam IDs or player names. Steam data is shown "as is", as Steam's API terms ask. Every page links to `/about/`, which explains:
+* where the data comes from and its snapshot date;
+* who owns what;
+* privacy: no cookies, accounts or tracking;
+* how to ask for a removal: the website repo's GitHub issues, or `--contact` for `build_site.py`.
+
+**Licences for the website's content:**
+* The AI-written summaries and computed statistics: CC0 1.0. AI-written text probably has no copyright anyway, and a check found no copied passages from the reviews.
+* Game names, store excerpts and images: the project claims no rights in them and grants no licence to them.
+
+**Running the crawler yourself:** you're responsible for following Steam's terms.
+* Keep it slow: one request a second is the default, and it backs off when Steam answers "too many requests".
+* Steam's Web API Terms allow at most 100,000 calls a day.
+* `api.steampowered.com/robots.txt` disallows crawling. Valve documents the reviews API (`IUserReviewsService/GetAppReviews`) as key-less; the store catalogue endpoints are undocumented.
+* Check the terms again before you charge money for anything built on this data.
+
+Dream Game Finder is not affiliated with or endorsed by Valve. Steam is a trademark of Valve Corporation. This section explains the project's choices and is not legal advice.

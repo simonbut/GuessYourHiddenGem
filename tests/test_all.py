@@ -725,6 +725,22 @@ class TestWebBuild(Synthetic):
         self.assertIn('name="google-site-verification" content="tok&lt;en"', page)
         self.assertNotIn('href="/"', page)
         self.assertIn('href="genres/"', page)
+        self.assertIn('href="about/"', page)
+        self.assertIn("shown as is", page)
+
+    def test_about_page_and_contact(self):
+        bs = self.bs
+        self.assertEqual(bs.contact_url("https://Name.github.io/my-site/"), "https://github.com/Name/my-site/issues")
+        self.assertEqual(bs.contact_url("https://name.github.io/"), "https://github.com/name/name.github.io/issues")
+        self.assertIsNone(bs.contact_url("https://example.com/"))
+        page = bs.about_page("https://name.github.io/my-site/", "b1", 1700000000, bs.contact_url("https://name.github.io/my-site/"))
+        for must in ('"as is"', "not affiliated", "CC0", "no review text, no Steam IDs", "14 November 2023",
+                     'href="https://github.com/name/my-site/issues"', '<link rel="canonical" href="https://name.github.io/my-site/about/">',
+                     'href="../style.css?v=b1"'):
+            self.assertIn(must, page)
+        self.assertNotIn("Open an issue", bs.about_page("https://example.com/", "b1", 1700000000, None))
+        # every generated page links to it
+        self.assertIn('href="../../about/"', bs.page_shell("t", "d", "https://x/", 2, "<p>x</p>"))
 
     def test_slugs(self):
         self.assertEqual(self.bs.slugify("Sid Meier's Civilization® VI"), "sid-meier-s-civilization-vi")

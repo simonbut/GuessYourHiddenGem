@@ -225,7 +225,8 @@ def page_shell(title, description, canonical, depth, body, *, image=None, jsonld
              '</header>', '<main class="page-main">']
     foot = ['</main>',
             '<footer class="foot">What players say is summarised from public Steam reviews. '
-            'Game data and images from Steam\'s public store. Not affiliated with Valve.</footer>',
+            'Game data and images from Steam\'s public store, shown as is. Not affiliated with Valve. '
+            f'<a href="{up}about/">About this data</a></footer>',
             '</body>', '</html>']
     return "\n".join(head) + "\n" + body + "\n" + "\n".join(foot) + "\n"
 
@@ -381,6 +382,71 @@ def write(path, text):
         f.write(text)
 
 
+def contact_url(site_url):
+    """Where to ask for a removal or correction: the issues page of the site's
+    own GitHub repository (for a GitHub Pages address), else None."""
+    m = re.match(r"^https://([a-z0-9-]+)\.github\.io/([^/]+)/", site_url, re.I)
+    if m:
+        return f"https://github.com/{m.group(1)}/{m.group(2)}/issues"
+    m = re.match(r"^https://([a-z0-9-]+)\.github\.io/$", site_url, re.I)
+    return f"https://github.com/{m.group(1)}/{m.group(1)}.github.io/issues" if m else None
+
+
+def about_page(site_url, v, built_at, contact=None):
+    """/about/: what data the site shows, whose it is, "as is", privacy and removals.
+    Steam's API terms (s. 2) ask that Steam data is provided "as is" with
+    disclaimers, and that users are told what is stored."""
+    day = time.strftime("%d %B %Y", time.gmtime(built_at)).lstrip("0")
+    ask = (f'<p>Are you a developer, a publisher or a reviewer and want something here removed or corrected? '
+           f'<a href="{E(contact)}" rel="noopener">Open an issue</a> and it will be taken down in the next '
+           f'update.</p>') if contact else ""
+    body = f"""<nav class="crumbs"><a href="../">Home</a> › About this data</nav>
+<h1>About this site and its data</h1>
+<p class="muted">Steam data snapshot: {E(day)}.</p>
+
+<h2>What's here</h2>
+<ul class="plist">
+<li><b>Game facts from Steam's public store</b>: names, release dates, developers and publishers, platforms,
+tags, and review scores, as they were on the date above.</li>
+<li><b>Short excerpts of store descriptions</b>, each linked to its Steam page. They belong to the game's
+developer or publisher.</li>
+<li><b>Cover images</b>, loaded straight from Steam's servers. They are not copied here.</li>
+<li><b>"What players say"</b>: summaries written by an AI in its own words after reading many public
+Steam reviews of a game, plus statistics computed from reviews (how often players mention boss fights,
+bugs and so on).</li>
+</ul>
+<p>The site contains <b>no review text, no Steam IDs and no player names</b>.</p>
+
+<h2>Provided as is</h2>
+<p>All Steam data on this site is provided "as is", without any warranty. It may be incomplete, out of date
+or wrong. Check the game's Steam page before you buy anything.</p>
+<p>Dream Game Finder is not affiliated with or endorsed by Valve. Steam and the Steam logo are trademarks of
+Valve Corporation. Game names, descriptions and images belong to their owners; this site claims no rights in
+them and grants no licence to them.</p>
+
+<h2>Our own content</h2>
+<p>The AI-written summaries and the statistics this site computed are released under
+<a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener">CC0 1.0</a>: use them for
+anything. The site's code is MIT-licensed.</p>
+
+<h2>Your privacy</h2>
+<ul class="plist">
+<li>No accounts, cookies, analytics or tracking.</li>
+<li>Your quiz answers, favourites and filters are saved only in your own browser, so you can come back to
+them. "Start over" clears your quiz; clearing this site's data in your browser removes everything. The
+recommender runs in your browser too: nothing you answer is sent to us.</li>
+<li>Cover images load from Steam's servers and the in-browser engine from the jsDelivr CDN, so those servers
+see a request from your browser, as with any image or script on the web.</li>
+<li>"Ask Google AI Mode" sends your wish to Google, only when you click it.</li>
+<li>The site is hosted on GitHub Pages, which keeps its own logs
+(<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub's privacy statement</a>).</li>
+</ul>
+{ask}"""
+    return page_shell("About this data - Dream Game Finder",
+                      "What data Dream Game Finder shows, where it comes from, who owns it, and your privacy.",
+                      f"{site_url}about/", 1, body, v=v)
+
+
 def sitemap_xml(urls):
     items = "".join(f"<url><loc>{E(u)}</loc><lastmod>{d}</lastmod></url>" for u, d in urls)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -405,8 +471,9 @@ def static_index(src, *, site_url, build, google_verification):
                   f'<script>window.DGF = {cfg};</script>\n  <script src="app.js?v={build}"></script>')
     s = s.replace('<a class="brand" href="/"', '<a class="brand" href="./"')
     s = s.replace("Recommendations run locally on this computer.",
-                  'Recommendations run in your browser. <a href="genres/">Browse games by genre</a>.')
-    for needle in ('window.DGF', 'href="./"', 'genres/'):
+                  'Recommendations run in your browser. <a href="about/">About this data</a> · '
+                  '<a href="genres/">Browse games by genre</a>.')
+    for needle in ('window.DGF', 'href="./"', 'genres/', 'about/', 'shown as is'):
         if needle not in s:
             raise SystemExit(f"build_site: web/index.html changed - couldn't place {needle!r}")
     return s
@@ -430,6 +497,8 @@ def main():
     p.add_argument("--google-verification", default=os.environ.get("GOOGLE_SITE_VERIFICATION", ""),
                    help="Search Console HTML-tag token (content=...)")
     p.add_argument("--no-pages", action="store_true", help="skip the per-game pages (quick test builds)")
+    p.add_argument("--contact", default=None,
+                   help="where people ask for removals (default: the GitHub Pages repo's issues page)")
     args = p.parse_args()
     site_url = args.site_url if args.site_url.endswith("/") else args.site_url + "/"
     if not re.match(r"^https://[^/]+/", site_url):
@@ -468,6 +537,10 @@ def main():
                                                               google_verification=args.google_verification))
     urls, n_pages = ([(site_url, time.strftime("%Y-%m-%d"))], 0) if args.no_pages else \
         build_pages(model, out, site_url, build, model.meta.get("built_at") or time.time())
+    built_at = model.meta.get("built_at") or time.time()
+    write(os.path.join(out, "about", "index.html"),
+          about_page(site_url, build, built_at, args.contact or contact_url(site_url)))
+    urls.append((f"{site_url}about/", time.strftime("%Y-%m-%d", time.gmtime(built_at))))
     write(os.path.join(out, "sitemap.xml"), sitemap_xml(urls))
     # robots.txt only counts at the root of a host (a custom domain or NAME.github.io);
     # for a project site, the sitemap is submitted in Search Console instead
