@@ -1,0 +1,22 @@
+# Private data: every crawled review and player ID. Never commit or publish it.
+steam.db
+steam.db-journal
+steam.db-wal
+steam.db-shm
+
+# Built from steam.db by `python recommend.py build` (large, and contains review text features)
+recsys_model.npz
+recsys_meta.json
+
+# Built website (python build_site.py / publish_site.py); it has its own git repo
+site/
+
+# Run logs, caches and scratch state
+*.log
+*.err
+__pycache__/
+*.pyc
+aspects.backup.json
+tools/personas/
+# this app's local preview settings (machine-specific paths)
+.claude/

@@ -1,0 +1,2832 @@
+{
+ "aspects": [
+  {
+   "key": "story",
+   "kind": "quality",
+   "label": "Gripping story",
+   "taste_label": "story-driven games",
+   "sample_hits": 5135,
+   "patterns": {
+    "english": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!\\bno )(?<!\\bnot a )(?<!\\bnot an )(?<!\\black of )(?<!\\bwithout a )\\b(great|amazing|awesome|fantastic|excellent|incredible|gripping|compelling|engaging|captivating|interesting|beautiful|deep|intriguing|immersive|brilliant|masterful|wonderful|good|solid|touching|epic|fascinating) (main )?(story|storyline|plot|narrative|storytelling)\\b(?! mode))",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(story|storyline|plot|narrative|storytelling) (is|was) (really |very |so |just |absolutely |incredibly )?(great|amazing|awesome|fantastic|excellent|incredible|gripping|compelling|engaging|captivating|interesting|beautiful|deep|intriguing|brilliant|masterful|wonderful|good|solid|phenomenal|superb|top notch)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bstory[- ]driven\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bstory[- ]rich\\b)"
+    ],
+    "schinese": [
+     "(剧情|故事)(很|非常|超|特别|真的|也|还|超级|十分)?(精彩|出色|感人|动人|优秀|吸引人|引人入胜|扣人心弦|棒|不错|赞|深刻)",
+     "(精彩|出色|感人|优秀|引人入胜|扣人心弦|动人|深刻)的(剧情|故事)",
+     "剧情向(游戏|神作|佳作|作品|RPG|AVG|的游戏)"
+    ],
+    "russian": [
+     "(?<!\\bнет )(?<!\\bне )\\b(отличн|прекрасн|интересн|захватывающ|увлекательн|шикарн|великолепн|потрясающ|глубок|хорош|крут)\\w* (сюжет|истори)",
+     "\\bсюжет\\w* (тут |здесь )?(очень |просто |довольно )?(отличн|интересн|захватывающ|шикарн|потрясающ|великолепн|хорош|увлекательн|крут|глубок)\\w*"
+    ],
+    "brazilian": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(história|historia|enredo|narrativa) (é |foi )?(muito |super |simplesmente |bem )?(incrível|incrivel|ótim[ao]|otim[ao]|excelente|maravilhos[ao]|envolvente|lind[ao]|bonit[ao]|cativante|fantástic[ao]|interessante|boa|bom|sensacional|emocionante|profund[ao])\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(ótima|otima|excelente|incrível|incrivel|bela|linda|boa|envolvente|grande) (história|historia|narrativa)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(ótimo|excelente|incrível|bom|envolvente) enredo\\b)"
+    ],
+    "spanish": [
+     "\\b(historia|trama|narrativa|argumento) (es |fue )?(muy |súper |super |simplemente |bastante )?(increíble|increible|excelente|buenísima|buena|bueno|maravillosa|atrapante|envolvente|preciosa|hermosa|fantástica|interesante|genial|cautivadora|emotiva|profunda)\\b",
+     "\\b(gran|excelente|increíble|increible|buena|hermosa|preciosa|bonita|bella) (historia|trama|narrativa)\\b"
+    ],
+    "german": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(tolle|großartige|grossartige|spannende|fesselnde|packende|gute|wunderschöne|interessante|geniale|mitreißende|schöne|tiefgründige|super) (Story|Geschichte|Handlung|Erzählung)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(Story|Geschichte|Handlung) (ist|war) (sehr |echt |richtig |super |einfach |wirklich )?(toll|großartig|spannend|fesselnd|packend|gut|genial|super|interessant|mitreißend|schön|klasse)\\b)"
+    ],
+    "french": [
+     "\\b(histoire|scénario|scenario|intrigue|narration) (est |était )?(très |vraiment |super |juste |hyper )?(incroyable|géniale?|excellente?|prenante?|captivante?|magnifique|passionnante?|intéressante?|belle|bonne|bon|touchante?|sublime|top|superbe)\\b",
+     "\\b(belle|bonne|superbe|magnifique|excellente|incroyable|super) (histoire|narration)\\b",
+     "\\b(bon|excellent|super|superbe) scénario\\b"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "\\b(story|storyline|plot|narrative) (is|was) (really |very |so |pretty |kinda |kind of )?(boring|bad|weak|terrible|awful|forgettable|nonsensical|lame|meh|shallow|generic|cliche|cliched|predictable|mediocre|a mess|confusing|non-?existent|lackluster)\\b",
+     "\\b(boring|weak|terrible|awful|forgettable|nonsensical|lame|shallow|generic|cliched?|predictable|mediocre|lackluster|non-?existent|dull|bland) (main )?(story|storyline|plot|narrative)\\b"
+    ],
+    "schinese": [
+     "(剧情|故事)(很|非常|太|好|超|有点|比较|就是|也|真的)?(烂|差(?!不多)|无聊|拉胯|拉垮|稀烂|稀碎|狗血|弱智|老套|平淡|薄弱|崩坏|一坨|降智)",
+     "烂剧情"
+    ],
+    "russian": [
+     "\\b(скучн|слаб|ужасн|банальн|туп|отвратительн|примитивн|плох|никаков)\\w* (сюжет|истори)",
+     "\\bсюжет\\w* (тут |здесь )?(очень |довольно |какой-то |просто )?(скучн|слаб|банальн|туп|ужасн|никак|плох|примитивн)\\w*"
+    ],
+    "brazilian": [
+     "\\b(história|historia|narrativa) (é |foi )?(muito |bem |meio |bastante )?(chata|fraca|ruim|horrível|péssima|sem graça|confusa|rasa|genérica|clichê)\\b",
+     "\\benredo (é |foi )?(muito |bem |meio )?(chato|fraco|ruim|horrível|péssimo|confuso|raso)\\b"
+    ],
+    "spanish": [
+     "\\b(historia|trama|narrativa) (es |fue )?(muy |bastante |algo |un poco )?(aburrida|floja|mala|pobre|horrible|confusa|genérica|predecible|sosa|pésima)\\b",
+     "\\b(mala|pobre|floja|aburrida|pésima) (historia|trama)\\b"
+    ],
+    "german": [
+     "\\b(langweilige|schwache|schlechte|flache|dünne|vorhersehbare|wirre) (Story|Geschichte|Handlung)\\b",
+     "\\b(Story|Geschichte|Handlung) (ist|war) (sehr |echt |eher |ziemlich |leider )?(langweilig|schwach|schlecht|flach|dünn|vorhersehbar|wirr|belanglos)\\b"
+    ],
+    "french": [
+     "\\b(histoire|scénario|scenario|intrigue|narration) (est |était )?(très |assez |un peu |vraiment )?(nulle?|ennuyeuse?|ennuyante?|faible|bateau|plate|confuse?|inexistante?|creuse?|prévisible|banale?|médiocre)\\b"
+    ]
+   },
+   "area": "story"
+  },
+  {
+   "key": "characters",
+   "kind": "quality",
+   "label": "Memorable characters",
+   "taste_label": "memorable characters",
+   "sample_hits": 1062,
+   "patterns": {
+    "english": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!\\bno )\\b(memorable|lovable|loveable|likeable|likable|well[- ]written|interesting|charming|great|amazing|fantastic|unique|endearing|relatable|well[- ]developed|colorful|colourful) (cast|characters)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bcharacter (writing|arcs?)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(great|amazing|excellent|fantastic|incredible|good|strong|deep|wonderful|brilliant) character development\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(cast|characters) (are|is) (all )?(so |very |really )?(memorable|lovable|likeable|likable|well[- ]written|charming|great|amazing|fantastic|endearing|relatable|interesting|adorable)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bfell in love with (the|every|all the) characters?\\b)"
+    ],
+    "schinese": [
+     "(角色|人物)(塑造|刻画)(得|的)?(也|很|非常|十分|都|相当|特别|真的|超|极其|很是)?(好(?![，,])|棒|出色|优秀|成功|丰满|饱满|立体|到位|用心|细腻|完整|鲜明|可圈可点|不错|深刻|精彩)",
+     "(角色|人物)(都)?(很|非常|超|特别)?(有魅力|鲜活|立体|丰满|饱满|有血有肉)",
+     "人设(很|超|非常)?(好|棒|讨喜)(?![烂差])"
+    ],
+    "russian": [
+     "(?<!\\bне )(?<!\\bнет )(запоминающ|харизматичн|интересн|проработанн|живы|ярк|колоритн|хорош|отличн|прекрасн)\\w* (персонаж|герои|героев)",
+     "\\b(проработк|раскрыти)\\w* (персонаж|героев)",
+     "\\bперсонаж\\w* (очень |просто )?(харизматичн|проработан|живые|запоминающ|интересн|колоритн)\\w*"
+    ],
+    "brazilian": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bpersonagens (são |muito |bem |super )*(carismáticos|carismaticos|cativantes|incríveis|marcantes|bem escritos|bem desenvolvidos|interessantes|apaixonantes|bem construídos)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(carismáticos|cativantes|marcantes|ótimos|incríveis) personagens\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bdesenvolvimento d[eo]s? personage)"
+    ],
+    "spanish": [
+     "\\bpersonajes (son |muy |bien |súper )*(carismáticos|carismaticos|entrañables|memorables|interesantes|increíbles|bien escritos|bien desarrollados|geniales|adorables)\\b",
+     "\\bdesarrollo de (los )?personajes\\b",
+     "\\b(carismáticos|entrañables|memorables|grandes|geniales) personajes\\b"
+    ],
+    "german": [
+     "\\b(liebenswerte|sympathische|interessante|tolle|gut geschriebene|charismatische|einprägsame|vielschichtige|liebevolle) (Charaktere|Figuren)\\b",
+     "\\b(Charaktere|Figuren) (sind )?(sehr |echt |richtig |alle )?(liebenswert|sympathisch|toll|gut geschrieben|vielschichtig|großartig|interessant)\\b"
+    ],
+    "french": [
+     "\\bpersonnages (sont |très |bien |vraiment |tous )*(attachants|charismatiques|marquants|intéressants|bien écrits|travaillés|géniaux|incroyables|mémorables)\\b",
+     "\\bdéveloppement des personnages\\b"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "\\b(bland|flat|forgettable|unlikable|unlikeable|boring|one[- ]dimensional|shallow|cardboard|lifeless|insufferable) (characters|cast|protagonists?|companions|main character)\\b",
+     "\\b(characters|cast|companions) (are|were) (so |very |really |pretty |all )?(bland|flat|forgettable|unlikable|unlikeable|boring|one[- ]dimensional|shallow|lifeless|insufferable)\\b"
+    ],
+    "schinese": [
+     "(人物|角色)(塑造|刻画)(的|得)?(也|很|非常|太|比较)?(不好|不足|失败|并不成功|一般|薄弱|扁平|单薄|差|空洞|一坨|拉完了|有大问题|难评)",
+     "(人物|角色)(很|太|比较)?(扁平|单薄|脸谱化|工具人)"
+    ],
+    "russian": [
+     "\\b(плоск|картонн|скучн|невыразительн|безликие|бездушн)\\w* (персонаж|герои|героев)\\w*",
+     "\\bперсонаж\\w* (очень |совсем |просто )?(плоские|картонные|скучные|невыразительные|безликие)\\b"
+    ]
+   },
+   "area": "story"
+  },
+  {
+   "key": "writing",
+   "kind": "quality",
+   "label": "Sharp writing & dialogue",
+   "taste_label": "great writing and dialogue",
+   "sample_hits": 740,
+   "patterns": {
+    "english": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<![❌☐🔲□⬜✖✗])(?<![❌☐🔲□⬜✖✗] )(?<![❌☐🔲□⬜✖✗]  )\\b(the )?writing (is|was) (really |so |very |incredibly |absolutely )?(great|amazing|excellent|fantastic|superb|brilliant|top ?notch|phenomenal|sharp|witty|incredible|good|solid)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<![❌☐🔲□⬜✖✗])(?<![❌☐🔲□⬜✖✗] )(?<![❌☐🔲□⬜✖✗]  )\\b(great|amazing|excellent|fantastic|superb|brilliant|sharp|witty|incredible|stellar|good|clever) (writing|dialogue|dialogues|dialog)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<![❌☐🔲□⬜✖✗])(?<![❌☐🔲□⬜✖✗] )(?<![❌☐🔲□⬜✖✗]  )\\bwell[- ]written\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bdialogues? (is|are|was|were) (really |so |very )?(great|amazing|excellent|fantastic|superb|brilliant|witty|hilarious|sharp|well written|good|clever)\\b)"
+    ],
+    "schinese": [
+     "文笔(很|非常|超|特别|真的|也|相当)?(好|棒|出色|优秀|细腻|优美|不错)",
+     "(文案|台词|对白|对话)(写得)?(很|非常|超|特别|真的)(好|棒|出色|优秀|精彩|有趣|幽默|有意思)",
+     "(文案|台词|对白|对话)(写得)?(棒|出色|优秀|精彩|有趣|幽默|有意思)"
+    ],
+    "russian": [
+     "\\b(диалог\\w*|сценарий|тексты) (тут |здесь )?(очень |просто )?(отличн|шикарн|остроумн|прекрасн|хорош|великолепн|живы|смешн)\\w*",
+     "\\b(хорошо|отлично|прекрасно|грамотно|талантливо) написанн?\\w* (истори|сюжет|диалог|персонаж|сценари|текст)",
+     "\\b(отличн|шикарн|остроумн|прекрасн|хорош|живы)\\w* (диалог\\w*|сценари(й|ем|я)\\b|сценарист\\w*)"
+    ],
+    "brazilian": [
+     "\\bbem escrit[oa]s?\\b",
+     "\\bdiálogos? (são |é |muito )*(ótimos|incríveis|excelentes|engraçados|bons|bem escritos|inteligentes)\\b",
+     "\\broteiro (é |muito )*(incrível|excelente|ótimo|bom|bem escrito)\\b"
+    ],
+    "spanish": [
+     "(?<![❌☐🔲]Muy )(?<![❌☐🔲] Muy )\\bbien escrit[oa]s?\\b"
+    ],
+    "german": [
+     "(?<!nicht )(?<!nicht so )\\bgut geschrieben\\b",
+     "\\b(Dialoge|Texte|Writing) (sind |ist )?(sehr |echt |richtig )?(toll|witzig|großartig|gut|hervorragend|genial|super)\\b",
+     "\\b(tolle|witzige|gute|großartige|geniale|scharfe) Dialoge\\b"
+    ],
+    "french": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bbien écrit\\w*\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(dialogues?|écriture) (est |sont |très )*(excellente?s?|super|géniale?|géniaux|drôles?|incroyables?|soignée?|top|percutants|bons?|bonne)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(excellente|superbe|bonne) écriture\\b)"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "\\b(bad|terrible|awful|cringe|cringy|cringey|poor|weak|clunky|atrocious|cheesy) (writing|dialogue|dialogues|dialog)\\b",
+     "\\b(writing|dialogue|dialogues) (is|was|are|were) (so |very |really |pretty |just )?(bad|terrible|awful|cringe|cringy|cringey|poor|weak|clunky|atrocious|cheesy)\\b",
+     "\\bpoorly written\\b"
+    ],
+    "schinese": [
+     "文笔(相当|很|太|实在|也|比较)?(烂|差|一般|不敢恭维|幼稚|尴尬)",
+     "(台词|对白|文案)(很|太|非常|有点|比较)?(尬|尴尬|中二|烂|差|幼稚)"
+    ],
+    "russian": [
+     "\\b(ужасн|кринжов|туп|плох|деревянн|слаб)\\w* (диалог|сценари)\\w*",
+     "\\bдиалог\\w* (очень |просто )?(ужасн|кринжов|тупые|деревянн|плох)\\w*"
+    ]
+   },
+   "area": "story"
+  },
+  {
+   "key": "lore",
+   "kind": "quality",
+   "label": "Rich lore & worldbuilding",
+   "taste_label": "deep lore and worldbuilding",
+   "sample_hits": 1050,
+   "patterns": {
+    "english": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(rich|deep|interesting|fascinating|amazing|great|intriguing|extensive|detailed) (lore|world[- ]?building|setting|universe)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bworld[- ]?building\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(lore|world) is (so |very |really )?(rich|deep|fascinating|interesting|amazing|intriguing|detailed)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\blore (is|was) (great|amazing|rich|deep|fascinating|interesting)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\blore[- ](heavy|rich|lovers?)\\b)"
+    ],
+    "schinese": [
+     "世界观",
+     "背景设定"
+    ],
+    "russian": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\bлор(а|у|ом|е)?\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\bпроработанн\\w* (мир|вселенн|лор)\\w*)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\bмир (очень |отлично |хорошо )?проработан)"
+    ],
+    "brazilian": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\blore\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\bconstrução de mundo\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\bworld ?building\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\buniverso (muito )?(rico|incrível|interessante|fascinante|bem construído)\\b)"
+    ],
+    "spanish": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\blore\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\bconstrucción del mundo\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\bworld ?building\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\buniverso (muy )?(rico|increíble|interesante|fascinante)\\b)"
+    ],
+    "german": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\bLore\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\bWorld ?building\\b)"
+    ],
+    "french": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\blore\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\bworld ?building\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:(?<!some )(?<!simple )(?<!немного )(?<!algo de )(?<!peu de )\\bunivers (très |super )?(riche|travaillé|fascinant|incroyable|passionnant|intéressant)\\b)"
+    ]
+   },
+   "area": "story"
+  },
+  {
+   "key": "ending",
+   "kind": "quality",
+   "label": "Satisfying ending",
+   "taste_label": "a satisfying ending",
+   "sample_hits": 214,
+   "patterns": {
+    "english": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(amazing|perfect|satisfying|beautiful|great|fantastic|incredible|emotional|touching|powerful|epic|fitting) endings?\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bendings? (is|was|were) (so |really |very |absolutely )?(amazing|perfect|satisfying|beautiful|great|fantastic|incredible|emotional|touching|powerful|epic|fitting)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(loved|love|enjoyed) the endings?\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(bittersweet|heartbreaking|heart-?warming|mind[- ]?blowing|wonderful|brilliant|phenomenal|stunning|moving|excellent|awesome|cathartic) endings?\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bwhat an ending\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bending (is|was) (so |really |very |absolutely |just )?(wonderful|brilliant|phenomenal|stunning|moving|excellent|awesome|bittersweet|heartbreaking|mind[- ]?blowing|good|nice|cool)\\b)"
+    ],
+    "schinese": [
+     "结局(很|非常|太|超|真的)?(感人|圆满|完美|震撼|好哭|精彩|动人|美好)"
+    ],
+    "russian": [
+     "\\b(отличн|прекрасн|шикарн|трогательн|эпичн|потрясающ|достойн|великолепн)\\w* (концовк|финал)\\w*"
+    ],
+    "brazilian": [
+     "\\b(o|um) (final|desfecho) (do jogo |da história )?(é |foi )?(muito )?(incrível|lindo|perfeito|emocionante|satisfatório|excelente|épico|bonito)\\b"
+    ],
+    "spanish": [
+     "\\b(el|un) final (del juego |de la historia )?(es |fue )?(muy )?(increíble|precioso|perfecto|emotivo|satisfactorio|excelente|épico|hermoso|bonito)\\b"
+    ],
+    "german": [
+     "\\b(tolles|schönes|großartiges|befriedigendes|emotionales|würdiges|geniales) (Ende|Ending|Finale)\\b",
+     "\\b(Ende|Ending) (ist|war) (sehr )?(toll|schön|großartig|emotional|genial|befriedigend)\\b"
+    ],
+    "french": [
+     "\\b(la |une )fin (est |était )?(très |vraiment )?(magnifique|parfaite|superbe|incroyable|émouvante|satisfaisante|géniale|touchante|bouleversante)\\b"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "\\b(rushed|disappointing|unsatisfying|abrupt|terrible|awful|lackluster|anticlimactic|anti-climactic|underwhelming|lame) endings?\\b",
+     "\\bendings? (is|was|were|felt|feels) (so |really |very |kinda |a bit |pretty )?(rushed|disappointing|unsatisfying|abrupt|terrible|awful|lackluster|weak|anticlimactic|underwhelming|lame|a letdown)\\b",
+     "\\bends (on|with) a cliff-?hanger\\b"
+    ],
+    "schinese": [
+     "(剧情|故事|结局|后期|最后)(有点|有些|直接|完全)?烂尾",
+     "烂尾的(剧情|结局|故事)",
+     "结局(太|很|有点|比较)?(仓促|草率|潦草|突兀|烂|差|拉胯|拉垮)"
+    ],
+    "russian": [
+     "\\b(скомкан|разочаровывающ|слаб|ужасн|обрубленн|невнятн)\\w* (концовк\\w*|финал(ом|е|а|у)?\\b)",
+     "\\b(концовк\\w*|финал(ом|е|а|у)?) (очень |какая-то |просто )?(скомкан|слит|слаб|разочаров)\\w*"
+    ],
+    "brazilian": [
+     "\\b(o|um) final (do jogo |da história )?(é |foi )?(muito |bem )?(apressado|corrido|decepcionante|fraco|horrível|abrupto)\\b"
+    ],
+    "spanish": [
+     "\\b(el|un) final (del juego |de la historia )?(es |fue )?(muy |bastante |algo )?(apresurado|decepcionante|flojo|abrupto|horrible)\\b"
+    ],
+    "french": [
+     "\\b(la |une )fin (est |était )?(très |assez |un peu |vraiment )?(bâclée|décevante|abrupte|frustrante|rushée)\\b"
+    ]
+   },
+   "area": "story"
+  },
+  {
+   "key": "choices",
+   "kind": "trait",
+   "label": "Multiple endings & choices",
+   "taste_label": "branching stories and multiple endings",
+   "sample_hits": 454,
+   "patterns": {
+    "english": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bchoices (that )?(really |actually |truly )?matter\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bchoices (have|with) (real |actual |meaningful |lasting )?consequences\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bmeaningful choices\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bmultiple endings\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bbranching (story|storyline|storylines|narratives?|dialogue)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\byour (choices|decisions) (actually |really |truly )?(matter|affect|impact|shape|have consequences)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bdifferent endings\\b)"
+    ],
+    "schinese": [
+     "多结局|多重结局|多个结局|不同(的)?结局",
+     "分支(剧情|选项|路线)"
+    ],
+    "russian": [
+     "\\bвыбор\\w* (действительно |реально |правда )?(влия|имеет значение|имеют значение)\\w*",
+     "\\b(нескольк|множеств|разн|многочисленн)\\w* концов",
+     "\\bпоследстви\\w* (выбор|решени)\\w*",
+     "\\bнелинейн\\w* (сюжет|повествовани)\\w*"
+    ],
+    "brazilian": [
+     "\\bescolhas (que )?(realmente |de fato )?(importam|fazem diferença|têm consequências|tem consequências|afetam)\\b",
+     "\\b(múltiplos|vários|varios|diversos) finais\\b",
+     "\\bfinais diferentes\\b"
+    ],
+    "spanish": [
+     "\\b(decisiones|elecciones) (que )?(realmente )?(importan|tienen consecuencias|afectan)\\b",
+     "\\b(múltiples|varios|distintos|diferentes) finales\\b",
+     "\\bfinales (diferentes|distintos|alternativos)\\b"
+    ],
+    "german": [
+     "\\bEntscheidungen (haben )?(echte |spürbare |wirkliche )?(Konsequenzen|Auswirkungen)\\b",
+     "\\b(mehrere|verschiedene|unterschiedliche) (Enden|Endings)\\b"
+    ],
+    "french": [
+     "\\bchoix (qui )?(comptent|ont des conséquences|ont un impact|impactent|influencent)\\b",
+     "\\b(plusieurs|différentes|multiples) fins\\b",
+     "\\bfins multiples\\b"
+    ]
+   },
+   "area": "story"
+  },
+  {
+   "key": "emotional",
+   "kind": "trait",
+   "label": "Emotional, tearjerker moments",
+   "taste_label": "emotional stories that hit hard",
+   "sample_hits": 550,
+   "patterns": {
+    "english": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bmade me (cry|tear up)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(i|i've|ive) (cried|teared up|was crying|was in tears)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\btear ?jerker\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bemotional (rollercoaster|roller coaster|journey|ride|story|experience)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(cried|crying|tears) (like a baby|at the end|multiple times)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(emotionally|deeply) (moving|touching|impactful|powerful|resonant)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bheart-?wrenching\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bheart-?breaking (story|ending|moments?|scenes?|tale)\\b)"
+    ],
+    "schinese": [
+     "泪目|催泪|泪崩|看哭|玩哭|哭死我|(?<!吓)(我|都|也|直接)哭了|(剧情|故事|结局|情节|很|非常|超|特别|真的|太|十分|挺|格外|最)感人(?!的(更新|速度|优化|价格|概率))|感人肺腑|(很|非常|好|超|真的|让我|令人|太)感动|热泪盈眶"
+    ],
+    "russian": [
+     "\\b(я|чуть не|даже) (плакал|плакала|прослезил\\w*|рыдал\\w*)\\b",
+     "\\bпрослезил\\w*",
+     "\\b(плакал|плакала|рыдал|рыдала) (в конце|как|навзрыд)\\b",
+     "\\bдо слёз\\b|\\bдо слез\\b",
+     "пустил\\w* слезу",
+     "\\bэмоциональн\\w* (истори|сюжет|финал|концовк|путешестви)\\w*",
+     "\\bтрогательн\\w*"
+    ],
+    "brazilian": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(me fez|me faz|fazer) chorar\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bchorei\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bme emocion(ei|ou)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\blágrimas\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bcomovente\\b)"
+    ],
+    "spanish": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(me hizo|me hace|hacer) llorar\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\blloré\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\blágrimas\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bconmovedor\\w*\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bme emocion(é|ó)\\b)"
+    ],
+    "german": [
+     "\\bgeweint\\b",
+     "\\bTränen in den Augen\\b",
+     "\\bemotional\\w* (Geschichte|Story|Achterbahn|Reise)\\b",
+     "\\bberührend\\w*\\b",
+     "\\bherzzerreißend\\w*\\b"
+    ],
+    "french": [
+     "\\b(j'ai|m'a fait) (pleuré|pleurer|chialé)\\b",
+     "\\b(larmes aux yeux|verser (des|quelques|une) larmes?|en larmes|aux larmes)",
+     "\\bémouvant\\w*\\b",
+     "\\bbouleversant\\w*\\b"
+    ]
+   },
+   "area": "story"
+  },
+  {
+   "key": "humor",
+   "kind": "trait",
+   "label": "Genuinely funny",
+   "taste_label": "funny games",
+   "sample_hits": 1129,
+   "patterns": {
+    "english": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(hilarious|so funny|really funny|very funny|super funny|genuinely funny|laugh out loud)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(made me|make you|makes you) laugh\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(great|good|witty|dark|clever|quirky) (sense of )?humou?r\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bhumou?r (is|was) (great|amazing|on point|top notch|hilarious|spot on|fantastic)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\blaughed (so hard|out loud|my ass off)\\b)"
+    ],
+    "schinese": [
+     "(很|非常|超|特别|超级|十分|挺)搞笑",
+     "搞笑的(剧情|游戏|台词|对话|故事|角色)",
+     "幽默(感|风趣|诙谐)|(黑色|充满)幽默|笑出声|笑死我了|笑得(停不|肚子)|爆笑"
+    ],
+    "russian": [
+     "\\bюмор\\w*",
+     "\\bржал\\w*",
+     "\\bржачн\\w*",
+     "\\bугарн\\w*",
+     "\\b(очень|безумно|невероятно) смешн\\w*",
+     "\\bпосмеяться\\b",
+     "\\bсмеялся\\b"
+    ],
+    "brazilian": [
+     "\\b(muito|super|bem|bastante|mt|mto|extremamente|jogo|e) engraçad[oa]s?\\b",
+     "\\bhilári[oa]\\b",
+     "(?<!de bom )(?<!de mau )(?<!bom )(?<!mau )\\bhumor\\b",
+     "\\bdei (muita )?risada\\b"
+    ],
+    "spanish": [
+     "(?<!buen )(?<!mal )(?<!cambiar el )\\bhumor\\b(?! de perros)",
+     "\\bme reí\\b",
+     "\\bhilarante\\w*\\b",
+     "\\bcarcajada\\w*\\b",
+     "\\b(muy|súper|super) gracios[oa]\\b",
+     "\\bdivertidísim[oa]\\b"
+    ],
+    "german": [
+     "\\bwitzig\\w*\\b",
+     "\\bHumor\\b",
+     "\\b(sehr|echt|richtig|super) lustig\\b",
+     "\\bzum Lachen\\b",
+     "\\bgelacht\\b"
+    ],
+    "french": [
+     "(?<!pas )(?<!pas très )\\bdrôle\\b(?! de)",
+     "\\bhumour\\b",
+     "\\bhilarant\\w*\\b",
+     "\\bfou rire\\b",
+     "\\b(très |trop |super |vraiment |assez )marrant\\w*\\b",
+     "\\bj'ai (bien )?ri\\b"
+    ]
+   },
+   "area": "story"
+  },
+  {
+   "key": "dark_mature",
+   "kind": "trait",
+   "label": "Dark, mature themes",
+   "taste_label": "dark and mature themes",
+   "sample_hits": 260,
+   "patterns": {
+    "english": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bdark (themes?|story|storyline|tone|atmosphere|and twisted|subject matter|narrative|undertones?|plot)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bmature (themes?|story|storytelling|subject matter)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(disturbing|unsettling|depressing|bleak|grim|haunting|gruesome|twisted|morbid|harrowing|oppressive) (story|storyline|themes?|tone|narrative|world|imagery|moments|atmosphere|subject matter)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(heavy|difficult|sensitive|dark) (subject matter|topics)\\b)"
+    ],
+    "schinese": [
+     "致郁|压抑|细思极恐|黑暗(的)?(剧情|故事|风格|题材|童话|氛围|世界)"
+    ],
+    "russian": [
+     "\\bмрачн\\w* (атмосфер|истори|сюжет|мир|тем|сказк)\\w*",
+     "\\bдепрессивн\\w*",
+     "\\bжесток\\w* (истори|сюжет|тем)\\w*",
+     "\\bвзросл\\w* тем\\w*",
+     "\\bгнетущ\\w*"
+    ],
+    "brazilian": [
+     "\\b(temas?|história|atmosfera|clima|tom) (muito )?(pesad|sombri|obscur|dark|dens)\\w*",
+     "\\btemas? (adultos|sensíveis|pesados|delicados)\\b",
+     "\\bperturbador\\w*\\b",
+     "\\bdepressiv[oa]\\b"
+    ],
+    "spanish": [
+     "\\b(temas?|historia|atmósfera|ambiente|tono) (muy )?(oscur|perturbador|deprimente|turbi|sombr|tétric)\\w*",
+     "\\btemas? (adultos|delicados|sensibles)\\b",
+     "\\bperturbador\\w*\\b",
+     "\\bdeprimente\\b"
+    ],
+    "german": [
+     "\\b(düstere|dunkle|bedrückende|verstörende) (Atmosphäre|Geschichte|Story|Themen|Welt|Stimmung)\\b",
+     "\\bverstörend\\w*\\b",
+     "\\bbedrückend\\w*\\b"
+    ],
+    "french": [
+     "\\b(thèmes?|histoire|ambiance|atmosphère|univers) (très )?(sombres?|glauques?|dérangeante?s?|pesante?s?|matures?)\\b",
+     "\\b(jeu|histoire|ambiance|univers|atmosphère|thèmes?|scènes?) (très |assez |vraiment )?dérangeante?s?\\b",
+     "\\bglauque\\b",
+     "\\bthèmes? (matures|adultes|difficiles|lourds|durs)\\b"
+    ]
+   },
+   "area": "story"
+  },
+  {
+   "key": "mystery_twists",
+   "kind": "trait",
+   "label": "Mystery & plot twists",
+   "taste_label": "mysteries and plot twists",
+   "sample_hits": 367,
+   "patterns": {
+    "english": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bplot[- ]?twists?\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\b(unexpected|amazing|great|crazy|mind[- ]blowing|shocking|surprising|clever|insane|brilliant) twists?\\b(?! (on|to)\\b))",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\btwists and turns\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bmind[- ]?(blowing|fuck|bending) (story|ending|plot|twist)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bmystery (story|storyline|solving|elements|plot|narrative)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\btwist (at the end|ending)\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bdidn'?t see (that|it) coming\\b)"
+    ],
+    "schinese": [
+     "(剧情|结局|最后的|故事|神|大)反转|反转(很|也|挺|太|非常)?(多|精彩|有意思|震撼|意外|出人意料)|伏笔|悬疑"
+    ],
+    "russian": [
+     "\\bсюжетн\\w* поворот\\w*",
+     "\\bнеожиданн\\w* (поворот|концовк|развязк)\\w*",
+     "\\bтвист\\w*",
+     "\\bинтригующ\\w* (сюжет|истори)\\w*"
+    ],
+    "brazilian": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bplot ?twists?\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\breviravolta\\w*\\b)"
+    ],
+    "spanish": [
+     "\\bgiros? (de guion|argumental|argumentales|inesperados?)\\b",
+     "\\bplot ?twists?\\b"
+    ],
+    "german": [
+     "\\bPlot ?twists?\\b",
+     "\\bWendungen\\b"
+    ],
+    "french": [
+     "\\bretournements? de situation\\b",
+     "\\brebondissements?\\b",
+     "\\bplot ?twists?\\b"
+    ]
+   },
+   "area": "story"
+  },
+  {
+   "key": "wholesome",
+   "kind": "trait",
+   "label": "Wholesome & heartwarming",
+   "taste_label": "wholesome, heartwarming games",
+   "sample_hits": 283,
+   "patterns": {
+    "english": [
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bwholesome\\b(?! (community|people|players|playerbase|player base|fanbase|devs?|developers?)\\b))",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bheart-?warming\\b)",
+     "\\b(?<![☐□⬜🔲❌✖✗])(?<![☐□⬜🔲❌✖✗] )(?<!\\[ \\] )(?:\\bfeel[- ]good (game|story)\\b)"
+    ],
+    "schinese": [
+     "治愈(?!(技能|术|量|效果|道具|药|血|能力|者|师|系统|值|buff|魔法|法术|药水|伤))|温馨|暖心"
+    ],
+    "russian": [
+     "\\bдушевн(ая|ый|ое|ые|ую|ой|ых|ым|ыми|о)\\b(?! (больн|равновес|здоров|травм|боль))",
+     "\\bтёпл\\w* (истори|игр)\\w*|\\bтепл\\w* (истори|игр)\\w*"
+    ],
+    "brazilian": [
+     "\\breconfortante\\b",
+     "\\bcoração quentinho\\b",
+     "\\baquece o coração\\b"
+    ],
+    "spanish": [
+     "\\bwholesome\\b",
+     "\\benternecedor\\w*\\b"
+    ],
+    "german": [
+     "\\bherzerwärmend\\w*\\b",
+     "\\bwholesome\\b"
+    ],
+    "french": [
+     "\\bréconfortant\\w*\\b",
+     "\\bfeel ?good\\b",
+     "\\bwholesome\\b",
+     "\\bchaud au c(œ|oe)ur\\b"
+    ]
+   },
+   "area": "story"
+  },
+  {
+   "key": "challenging",
+   "kind": "trait",
+   "label": "Challenging",
+   "taste_label": "a real challenge",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!not )(?<!not too )(?<!not very )(?<!n't )(?<!never )\\b(challenging|brutally hard|really hard game|very hard game|difficult game|tough game)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(hard|difficult|challenging|tough) but (fair|rewarding)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bgame is (very |really |pretty |quite |extremely )?(hard|difficult|tough)\\b(?! to\\b))"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!上手)(?<!上手的)(?<!入门)(难度(很|挺|比较|偏|非常|相当|较|有点|也|还是)?高|难度不低)|很有挑战|挑战性(很|十足|强)|(?<!上手)(?<!没)有难度(?!选择|选项|模式|调节|分级|设置|可选|的成就|成就))"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!не )(?<!не очень )(очень |довольно |достаточно |крайне )?сложн(ая|ой) игр|бросает вызов|(серь[её]зный|хороший|неплохой|нехилый|настоящий|приятный|достойный|отличный) челлендж|(?<!не )игра (очень |довольно |весьма )?сложная|сложно,? но (честно|интересно))"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!nada )(?<!pouco )(?<!n[aã]o é )(?<!nem )\\b(desafiador|desafiante|muito dif[ií]cil|bem dif[ií]cil|jogo dif[ií]cil)\\b(?! (de|pra|para|n[aã]o|se|\\w+(ar|er|ir))\\b))"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!poco )(?<!nada )(?<!ni )(?<!no es )(?<!❌)(?<!❌ )\\b(desafiante|retador|muy dif[ií]cil|bastante dif[ií]cil|juego dif[ií]cil)\\b(?! (de|para|no|\\w+(ar|er|ir)(se|te|lo|la)?)\\b))"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!nicht )(?<!wenig )\\b(herausfordernd\\w*|knackig schwer|bockschwer|fordernd|schwer,? aber fair)\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!pas )(?<!peu )(?<!manque )\\b(exigeant|challengeant|du challenge|un vrai d[eé]fi|corsé|difficile mais juste)\\b(?! en (ressources|termes de)))"
+    ]
+   },
+   "sample_hits": 2670,
+   "area": "gameplay"
+  },
+  {
+   "key": "too_easy",
+   "kind": "issue",
+   "label": "Too easy",
+   "taste_label": "games that are too easy",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!not )(?<!n.t )(?<!neither )(?<!nor )\\b(way |far |much |a bit |a little |kinda |slightly |is |are |was )?too easy\\b(?! to))",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bno challenge\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bnot (very |really )?challenging\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(laughably|ridiculously|insultingly) easy\\b(?! to\\b))"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!不)(?<!不会)(?<!不能)(难度(太|过|偏)低|太简单|过于简单)|没(有|什么)挑战)"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:слишком (лёгк|легк|прост)(ая|ой|ий|ое)|никакого (челленджа|вызова))"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!\\[ \\] )(?<!n[aã]o )(?<!nem )\\b(f[aá]cil demais|muito f[aá]cil|sem desafio|nenhum desafio)\\b(?! (de|se|pra|para|\\w+(ar|er|ir)(-se)?)\\b))"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!❌)(?<!❌ )(?<!no )(?<!ni )(?<!sin )\\b(demasiado f[aá]cil|muy f[aá]cil|sin (ning[uú]n )?reto|sin desaf[ií]o)\\b(?! (de|para|\\w+(ar|er|ir)(se|te|lo|la)?)\\b))"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!nicht )(?<!weder )(?<!ab und )\\b(zu leicht|viel zu einfach|zu einfach|keine herausforderung)\\b(?! (zu|an)\\b))"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!pas )(?<!ni )\\b(trop facile|beaucoup trop simple|aucun challenge|pas de challenge|aucun d[eé]fi)\\b(?! (de|d'|[àa])\\b))"
+    ]
+   },
+   "sample_hits": 477,
+   "area": "gameplay"
+  },
+  {
+   "key": "punishing",
+   "kind": "trait",
+   "label": "Punishing, rage-inducing",
+   "taste_label": "punishing games",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(very|brutally|really|quite|so|incredibly|extremely|super|pretty|too|can be|is) (punishing|unforgiving)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bpunishing (difficulty|game|but|and|combat|gameplay)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bunforgiving\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(made me|make you|makes you|making me|make me|makes me|i|you will|you'll|want to|wanna|gonna|will|almost|nearly) rage ?quit)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bfrustratingly (hard|difficult)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(throw|smash|broke|break) (my|the|your) (controller|keyboard)\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:容错(率)?(太|很|极|非常|比较|有点)?低|(?<!承)受苦(?!受难|难)|摔手柄|砸键盘|(打|玩|死)(到|得)红温)"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:беспощадн(ая|ой|ую) сложност|не прощает (ошиб|промах)|бомбануло|горит (пукан|жопа)|разбил (клавиатуру|геймпад|джойстик))"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!no )(?<!tão )(?<!n[aã]o é )\\b(punitivo|n[aã]o perdoa (erros|nada|nenhum erro))\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!pas )(?<!pas tr[eè]s )(?<!peu )\\b(punitif|impitoyable|ne pardonne pas)\\b)"
+    ]
+   },
+   "sample_hits": 555,
+   "area": "gameplay"
+  },
+  {
+   "key": "combat",
+   "kind": "quality",
+   "label": "Satisfying combat",
+   "taste_label": "satisfying combat",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!not )(?<!n't )(?<!not very )(?<!not that )\\b(satisfying|fluid|tight|weighty|visceral|crunchy|impactful|smooth|fun|excellent|great|amazing|responsive|punchy) (combat|gunplay|gunfeel|melee)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bcombat (is|feels) (so |really |very |super |incredibly )?(satisfying|fluid|smooth|fun|great|amazing|tight|excellent|visceral|weighty|punchy)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bgunplay (is|feels) (so |really |very )?(satisfying|great|good|tight|amazing|fun|punchy)\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:打击感(很|非常|挺|十足|超|也)?(好|棒|强|爽|不错|拉满|扎实|出色)|战斗(系统)?(很|非常|挺|十分)?(爽|流畅|爽快|有趣|好玩|丝滑))"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(боёвк|боевк|боев(ая|ой|ую) систем)\\w* (очень |просто |тут |здесь )?(отличн|бодр|приятн|динамичн|сочн|крут|классн|интересн))"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bcombate (é |e |muito |bem |super )*(fluid[oa]|satisfat[oó]ri[oa]|gostos[oa]|divertid[oa]|incr[ií]vel|excelente|fren[eé]tic[oa]))"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bcombate (es |muy |super |bastante |s[uú]per )*(fluido|satisfactorio|divertido|incre[ií]ble|excelente|fren[eé]tico|adictivo|genial|brutal))"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(kampfsystem|kämpfe|kampf) (ist |sind |fühlt sich |fühlen sich |macht |machen |sehr |richtig |super |echt )*(flüssig|befriedigend|wuchtig|spaßig|spaß|toll|großartig|genial|knackig|grandios))"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bcombats? (est |sont |tr[eè]s |super |vraiment |hyper )*(nerveux|fluides?|satisfaisants?|jouissifs?|dynamiques?|p[eê]chus?|grisants?))"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(clunky|boring|repetitive|janky|bad|terrible|floaty|shallow|awful|mediocre) (combat|gunplay|melee)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bcombat (is|feels|gets) (so |really |very |pretty |kinda |a bit )?(clunky|boring|repetitive|janky|bad|terrible|floaty|shallow|awful|mediocre|dull)\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:打击感(很|非常|太|比较)?(差|弱|稀烂|软|欠缺|不足)|没有打击感|战斗(系统)?(很|非常|太|比较)?(无聊|单调|枯燥|僵硬|拉胯|稀烂))"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(боёвк|боевк|боев(ая|ой|ую) систем)\\w* (очень |просто |тут |здесь )?(скучн|уныл|убог|кос|крив|однообразн|деревянн))"
+    ]
+   },
+   "sample_hits": 1305,
+   "area": "gameplay"
+  },
+  {
+   "key": "boss_fights",
+   "kind": "quality",
+   "label": "Memorable boss fights",
+   "taste_label": "great boss fights",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bboss (fights?|battles?|design)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bbosses (are|were)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(epic|great|amazing|cool|fun|awesome|memorable|challenging|creative|unique) bosses\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(boss|BOSS|Boss|首领)(战|设计))"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:босс(ы|ов|ами|ах)\\b|битв\\w* с босс)"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bboss(es)?\\b|\\bchef[õo]es\\b)"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(jefes|bosses|jefe final|peleas? contra jefes)\\b)"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(bosse|bosskämpfe?|bossfights?|endgegner)\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(boss|combats? de boss)\\b)"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(boring|bad|lame|terrible|disappointing|annoying|forgettable|easy) (boss fights?|bosses)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bbosses (are|were) (so |really |very |pretty |kinda )?(boring|bad|lame|terrible|disappointing|annoying|forgettable|too easy|underwhelming)\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(boss|BOSS|Boss)(战|设计)(很|非常|太|比较|做得|做的)?(无聊|稀烂|烂|拉胯|恶心|单调|敷衍|一坨))"
+    ]
+   },
+   "sample_hits": 1656,
+   "area": "gameplay"
+  },
+  {
+   "key": "tight_controls",
+   "kind": "quality",
+   "label": "Tight, responsive controls",
+   "taste_label": "tight controls",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(tight|responsive|precise|smooth|fluid|snappy|perfect) (controls|movement|platforming)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bcontrols (are|feel|felt) (so |really |very |super |incredibly )?(tight|responsive|precise|smooth|great|perfect|fluid|snappy)\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:手感(很|非常|挺|超|十分|也)?(好|棒|不错|流畅|丝滑|顺滑|舒服|舒适|优秀|一流|极佳)|操作(很|非常)?(流畅|丝滑|跟手))"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!не)(?<!не )(?<!самое )(?<!самым )(отзывчив(ое|ым) управлени|(отличное|приятное|чёткое|четкое) управление)|управление (очень |просто )?(отзывчивое|отличное|приятное|отзывчиво|чёткое|четкое))"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(controles?|comandos) (s[aã]o |é |muito |bem )*(precisos?|responsivos?|fluidos?)\\b)"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bcontroles? (son |es |muy )*(precisos?|responsivos?|fluidos?)\\b)"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bsteuerung (ist |fühlt sich |sehr |super |echt )*(präzise|direkt|flüssig|reaktionsschnell)\\b|\\b(präzise|direkte|flüssige) steuerung\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(maniabilit[eé]|contr[oô]les?) (est |sont |tr[eè]s |vraiment )*(pr[eé]cises?|r[eé]actives?|nerveuses?|fluides?)\\b)"
+    ]
+   },
+   "sample_hits": 229,
+   "area": "gameplay"
+  },
+  {
+   "key": "clunky_controls",
+   "kind": "issue",
+   "label": "Clunky controls",
+   "taste_label": "clunky controls",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(clunky|janky|unresponsive|floaty|sluggish|terrible|awful|wonky|stiff) (controls?|movement|controlling)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(controls?|movement) (is|are|feels?|felt) (so |really |very |pretty |kinda |a bit |extremely )?(clunky|janky|unresponsive|awkward|floaty|sluggish|terrible|awful|wonky|stiff|horrible)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(camera) (is|was) (so |really |very |pretty |kinda |a bit )?(clunky|janky|terrible|awful|horrible|wonky)\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:手感(很|非常|太|比较|有点|有些)?(差|稀烂|奇怪|僵硬|拉胯|糟糕|别扭)|操作(很|非常|太|有点)?(别扭|反人类|僵硬|难受|拉胯)|操控(很|非常|太)?(差|别扭|僵硬)|视角(很|太)?(反人类|难受|别扭))"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(кривое|ужасное|неудобное|деревянное|топорное|дубовое|убогое) управление|управление (очень |просто |тут |здесь )?(кривое|ужасное|неудобное|деревянное|топорное|дубовое|убогое|отвратительное)|кривая камера)"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(controles?|comandos) (s[aã]o |é |e |muito |bem )*(ruins?|horr[ií]veis|p[eé]ssimos?|duros?|travados?|desconfort[aá]veis))"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bcontroles? (son |es |muy |bastante |algo |un poco )*(torpes?|toscos?|malos?|horribles?|r[ií]gidos?|incómodos?|terribles?)|\\bmalos controles\\b)"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bsteuerung (ist |fühlt sich |sehr |etwas |extrem |total |echt )*(hakelig|schwammig|umständlich|träge|katastrophal|schlecht|grausam|furchtbar|fummelig|unpräzise)|\\b(hakelige|schwammige|umständliche|schlechte) steuerung\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(maniabilit[eé]|contr[oô]les?|commandes) (est |sont |tr[eè]s |un peu |assez |vraiment )*(rigides?|lourde?s?|approximati(f|ve)s?|horribles?|catastrophiques?|p[eé]nibles?))"
+    ]
+   },
+   "sample_hits": 373,
+   "area": "gameplay"
+  },
+  {
+   "key": "strategic_depth",
+   "kind": "quality",
+   "label": "Strategic depth",
+   "taste_label": "strategic depth",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!no )(?<!lacks )(?<!lack of )(?<!lacking )(?<!without )(?<!little )(?<!for )(?<!no real )(?<!any )\\b(strategic|tactical|mechanical) depth\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!not )(?<!not a )\\b(lots|lot|tons|plenty) of strategy\\b(?! games?))",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(deep|complex) (strategy|mechanics|systems|tactics)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(lot of|lots of|surprising amount of|plenty of|a ton of|tons of|real|more|adds|added|adding|great|incredible|amazing|enough|extra|surprising) depth (to|in) (the )?(gameplay|combat|mechanics|strategy)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(easy|simple) to learn,? (but )?(hard|difficult) to master\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:策略性(很|十足|强|爆表|高)(?!不)|很有策略性|策略深度(?!一般|不足|不够|较浅|很浅|欠缺|不高)|玩法(很|非常)?有深度)"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!без )(?<!нет )(?<!лишен[аы] )(тактическ(ая|ой|ую) глубин|стратегическ(ая|ой|ую) глубин|глубок(ая|ую|ие) (механик|стратеги|тактик))|простор для тактики|много тактики)"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!falta de )(?<!sem )\\b(profundidade (estrat[eé]gica|t[aá]tica)|muita estrat[eé]gia|(muito|bem|bastante) estrat[eé]gico)\\b(?! limitada))"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!carece de )(?<!carecen de la )(?<!carecen de )(?<!carece de la )(?<!falta de )(?<!sin )(?<!con )(?<!requiere )\\b(profundidad (estrat[eé]gica|t[aá]ctica|mec[aá]nica)|mucha estrategia|(muy|bastante) estrat[eé]gico)\\b)"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!oder )(?<!keine )(?<!ohne )\\b(taktische tiefe|strategische tiefe)\\b(?! (fehlt|sucht man|vermisst)))"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!manque de )(?<!sans )(?<!de la )\\b(profondeur (strat[eé]gique|tactique)|tr[eè]s strat[eé]gique|beaucoup de strat[eé]gie)\\b)"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(lacks?|lacking|no|little|without) (any )?(real )?(strategic|tactical|mechanical) depth\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(combat|gameplay|mechanics|strategy) (lacks|has no) (any )?(real )?depth\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bshallow (gameplay|mechanics|combat|strategy|systems)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(not much|no real|not a lot of|isn't a lot of|little|no) depth (to|in) (the )?(gameplay|combat|mechanics|strategy)\\b)"
+    ]
+   },
+   "sample_hits": 286,
+   "area": "gameplay"
+  },
+  {
+   "key": "replayability",
+   "kind": "quality",
+   "label": "High replayability",
+   "taste_label": "replayable games",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\breplay ?(ability|value)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\breplayable\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:重玩(性|价值|度|动力|的欲望)|多周目|(?<!不)(?<!不太)(?<!不是很)(?<!不算)耐玩|复玩)"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:реиграбельн|(хочется|захочется|буду|можно|стоит|желание|охота|хотелось) (ещё |еще |снова |заново )?(перепро(йти|ходить))|перепроходить (её|ее|игру|снова|ещё|еще|много|не раз|несколько))"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(rejogabilidade|rejogar|rejog[aá]vel|replay ?ability)\\b)"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(rejugabilidad|rejugable|replay ?ability)\\b)"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(wiederspielwert|wiederspielbarkeit|wiederspielbar)\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(rejouabilit[eé]|rejouable)\\b)"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(no|zero|little|low|lacks?|lacking|without|not much) (real )?replay ?(ability|value)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bnot (very )?replayable\\b)"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(нет|никакой|низкая|мало|нулевая|отсутствует) реиграбельн|реиграбельност(и|ь) (нет|никакой|ноль|нулевая)|малореиграбельн)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(没有|没啥|缺乏)(重玩|多周目)|不(太|是很)?耐玩)"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(0|zero|pouca|nenhuma|sem|baixa) rejogabilidade\\b)"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(poca|sin|nula|no tiene|nada de|baja) rejugabilidad\\b)"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(kein(en)?|geringe[rn]?|wenig) wiederspielwert\\b|\\bwiederspielwert (liegt |ist )?(nahezu |quasi |praktisch |eher )?(bei )?(null|0|gering)\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(peu de|aucune|pas de|faible|z[eé]ro) rejouabilit[eé]\\b)"
+    ]
+   },
+   "sample_hits": 1918,
+   "area": "gameplay"
+  },
+  {
+   "key": "addictive",
+   "kind": "trait",
+   "label": "Addictive, one-more-run",
+   "taste_label": "addictive games",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bone more (run|turn|game|match|round|level|day|night|try)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!not )(?<!n't )(?<!not very )(?<!not that )\\baddict(ive|ing)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(got|get|am|was|i'm|keeps? (me|you)) hooked\\b(?! up))",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\blost track of time\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bcan.?t stop playing\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!不)(?<!不会)(?<!不太)(上瘾|上头)|停不下来|再来一(局|把|回合)|不知不觉(就|玩到|天亮)|玩到天亮)"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!не )(?<!не особо )(?<!не сильно )(?<!совсем не )(затягивает(?!ся)|затянула(?!сь)|затянет(?!ся)|залипа)|не оторваться|невозможно оторваться|ещё (один|одну|1) (забег|ход|катку|партию|раунд))"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!n[aã]o )(?<!nao )\\b(viciante|viciado|vicia|viciei|mais uma (partida|run|rodada))\\b)"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!no )(?<!nada )(?<!poco )\\b(adictivo|adictiva|engancha|enganchado|viciante|una partida m[aá]s|una run m[aá]s)\\b)"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(süchtig|suchtfaktor|suchtpotenzial|nur noch eine runde|fesselt)\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!pas )(?<!peu )\\b(addictif|addictive|accro|encore une partie|encore une run|chronophage)\\b)"
+    ]
+   },
+   "sample_hits": 3311,
+   "area": "gameplay"
+  },
+  {
+   "key": "exploration",
+   "kind": "quality",
+   "label": "Rewarding exploration",
+   "taste_label": "exploration",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bexploration\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bexplor(e|ing) (the |a |an |every |new |this |its |huge |vast |open )?(world|map|areas?|planets?|caves?|dungeons?|levels?|islands?|galaxy|universe|ruins|ocean|wilderness|environments?|locations?|regions?|zones?|nooks?)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(sense of|freedom to|urge to|love to) explor)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:探索(感|欲|的乐趣|的感觉|要素|世界)|喜欢探索|自由探索)"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:исследова(ние|ть|ния) (мира|локаций|карты|карт|планет|подземелий|острова)|исследовать (мир|локации|каждый))"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bexplora(r|ção|çao)\\b)"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bexplora(r|ci[oó]n)\\b)"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(erkunden|erkundung|zum erkunden)\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bexplor(er|ation)\\b)"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(empty|barren|lifeless) (open )?world\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(open world|world|map) (feels|is|was|felt) (so |very |really |pretty |kinda |quite )?(empty|barren|lifeless)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bnothing to (explore|discover|find)\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(没啥|没有|缺乏)探索(欲|感))"
+    ]
+   },
+   "sample_hits": 2529,
+   "area": "gameplay"
+  },
+  {
+   "key": "creative_freedom",
+   "kind": "quality",
+   "label": "Creative freedom / building",
+   "taste_label": "creative building",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(creative freedom|creative mode|freedom to build|build (whatever|anything) you (want|like|can imagine)|(limited only by|only limit is) your imagination)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!world )(?<!world-)\\bbuilding (system |mechanics? )?(is|are|was|feels?) (so |really |very |super |incredibly )?(fun|great|satisfying|addictive|amazing|intuitive|awesome|good|deep|flexible)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\byour (own )?creativity\\b|\\b(you can|lets? you|allows? you to) (get|be) creative\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:发挥(你的|自己的|玩家的)?(想象力|创造力)|自由建造|建造(系统)?(很|非常|也)?(有趣|好玩|自由)|建造(的)?自由度|随心所欲(地|的)?(建造|搭建|创造)|想造什么就造什么)"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:свобод(а|у|ы) творчества|творческ(ая|ой|ую) свобод|строить (что угодно|всё что)|простор для творчества)"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(liberdade criativa|modo criativo|construir o que quiser|sua criatividade|usar a criatividade)\\b)"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(libertad creativa|modo creativo|construir lo que quieras|tu creatividad|tu imaginaci[oó]n)\\b)"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(kreativität (freien|freie)|kreativ austoben|bauen was man (will|möchte)|kreativmodus)\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!manque total de )(?<!manque de )\\b(libert[eé] cr[eé]ative|mode cr[eé]atif|votre cr[eé]ativit[eé]|sa cr[eé]ativit[eé])\\b)"
+    ]
+   },
+   "sample_hits": 235,
+   "area": "gameplay"
+  },
+  {
+   "key": "puzzles",
+   "kind": "quality",
+   "label": "Clever puzzles",
+   "taste_label": "clever puzzles",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(clever|smart|great|challenging|brilliant|ingenious|creative|interesting|satisfying|well[- ]designed|tricky|mind[- ]bending) puzzles\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bpuzzles? (are|were|is) (so |really |very )?(clever|smart|great|challenging|brilliant|satisfying|well|fun|interesting|good))",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bpuzzle design\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:谜题|解谜(设计)?(很|非常|挺)?(巧妙|精妙|有趣|不错|有意思|烧脑)|(?<!不)(?<!不太)(?<!不是很)(?<!不怎么)(?<!不会)烧脑)"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:головоломк)"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(puzzles|quebra[- ]cabeças|enigmas)\\b)"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(puzzles|rompecabezas|acertijos)\\b)"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(rätsel|rätseldesign|knobel\\w*)\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(puzzles|[eé]nigmes|casse-t[eê]tes)\\b)"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bpuzzles (are|were) (so |really |very |pretty |kinda )?(boring|obtuse|tedious|annoying|frustrating|too easy|bad|terrible|illogical)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(obtuse|boring|tedious|illogical|annoying) puzzles\\b)"
+    ]
+   },
+   "sample_hits": 468,
+   "area": "gameplay"
+  },
+  {
+   "key": "grindy",
+   "kind": "issue",
+   "label": "Grindy",
+   "taste_label": "grindy games",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!not )(?<!not too )(?<!not that )(?<!not overly )(?<!not very )(?<!without being )(?<!without being too )(?<!isn't )(?<!isn't too )(?<!n't too )(?<!never )(?<!less )(?<!no )\\bgrindy\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bgrind ?fest\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!not )(?<!without )(?<!without the )(?<!without a )(?<!no )(?<!of )\\b(too much|so much|lots of|a lot of|endless|mindless|tedious|insane|excessive|ridiculous|absurd|massive|heavy|brutal|boring) grind(ing)?\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!not )(?<!without being )(?<!n't )\\b(very|super|extremely|really|too|quite|incredibly) grindy\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!不)(?<!不会)(?<!不是)(太肝|很肝|非常肝|有点肝)(?!疼)|爆肝|肝不动|肝度(很|太|非常|有点|偏|比较)?高|很吃肝)"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(много|слишком много|сплошной|бесконечн\\w+|долг\\w+|душн\\w+|туп\\w+|уныл\\w+|жутк\\w+|адск\\w+|лютый|огромн\\w+) гринд\\w*|гриндилк|гриндов\\w+)"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(muito grind|grind (excessivo|absurdo|chato|demais)|grindar muito|farmar muito)\\b)"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(mucho grind(eo)?|grind(eo)? (excesivo|absurdo|aburrido))\\b)"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(grindlastig|grindig|viel grind|viel gegrinde|gegrinde|stundenlang\\w* grind\\w*)\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(beaucoup de grind|grind (excessif|interminable|abusif)|tr[eè]s grind\\w*|farmer [àa] mort)\\b)"
+    ]
+   },
+   "sample_hits": 1069,
+   "area": "gameplay"
+  },
+  {
+   "key": "repetitive",
+   "kind": "issue",
+   "label": "Repetitive",
+   "taste_label": "repetitive games",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!not )(?<!never )(?<!not too )(?<!not overly )(?<!without being )(?<!without getting )(?<!never gets )(?<!isn't )(?<!isn't too )\\b(repetitive|repetetive|repititive)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bsame thing over and over\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bgets? (boring|stale|old) (fast|quickly|after)\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:重复(度|性|感)(很|太|非常|比较|有点)?(高|强|重)|千篇一律|玩法单调|内容单调|很快就(腻|玩腻)|容易腻)"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!не )(однообраз|монотонн|репетативн)|(?<!не )быстро (надоедает|приедается))"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!n[aã]o é )\\b(repetitiv[oa]|mon[oó]ton[oa])\\b)"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(?<!no es )\\b(repetitiv[oa]|mon[oó]ton[oa])\\b)"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(repetitiv|eintönig|monoton|immer das gleiche|immer dasselbe)\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(r[eé]p[eé]titi(f|ve|vit[eé])|monotone)\\b)"
+    ]
+   },
+   "sample_hits": 3084,
+   "area": "gameplay"
+  },
+  {
+   "key": "learning_curve",
+   "kind": "trait",
+   "label": "Steep learning curve",
+   "taste_label": "deep games that take time to learn",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(steep|harsh|big|huge|high|brutal) learning curve\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\blearning curve (is|can be) (steep|high|harsh|brutal|big|huge)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(takes?|took) (a while|some time|time) to (learn|get used to|get the hang|understand)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\boverwhelming at first\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:上手(难度|门槛)(很|比较|有点|非常|较|极|偏)?高|上手(很|比较|有点|非常|较|极)?(难|困难)(?!度)|有一定(的)?上手难度|门槛(很|比较|有点|较|非常)?高|学习(曲线|成本)(很|比较|非常|较|极)?(高|陡)|新手(不友好|劝退)|劝退新手)"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(высокий|большой) порог вхождения|порог вхождения (высокий|довольно высокий|очень высокий|высоковат)|(крутая|сложная) кривая обучения|(?<!не )(?<!не так )(?<!не нужно )(?<!не надо )(?<!не придётся )(?<!не придется )(сложно разобраться|трудно разобраться|долго разбираться))"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(curva de aprendizado (é |bem |muito |um pouco |bastante |meio )*(alta|[ií]ngreme|longa|dif[ií]cil|enorme|imensa|grande|acentuada|lenta)|(enorme|grande|imensa|alta|longa) curva de aprendizado|dif[ií]cil de aprender|dif[ií]cil de entender no (in[ií]cio|come[cç]o)|demora (um pouco )?(pra|para) (aprender|entender|pegar))\\b)"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bcurva de aprendizaje (es |muy |bastante |algo |un poco )*(empinada|pronunciada|alta|dura|elevada|exigente)|(?<!no es )\\bdif[ií]cil de aprender\\b|\\bcuesta (un poco )?(entender|aprender|pillarle)\\b)"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(steile lernkurve|lernkurve (ist )?(sehr |ziemlich |recht )?steil|einstiegshürde|einstieg (ist |fällt )?(schwer|schwierig))\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bcourbe d.apprentissage (est |un peu |assez |tr[eè]s |plut[oô]t )*(raide|abrupte|s[eé]v[eè]re|[eé]lev[eé]e|longue|ardue)|\\bdifficile [àa] prendre en main\\b|\\bprise en main (est |un peu |assez )*(difficile|compliqu[eé]e|ardue))"
+    ]
+   },
+   "sample_hits": 418,
+   "area": "gameplay"
+  },
+  {
+   "key": "progression",
+   "kind": "quality",
+   "label": "Rewarding progression",
+   "taste_label": "satisfying progression",
+   "patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(satisfying|rewarding|great|good|addictive|solid|nice|excellent|steady|meaningful|deep) (sense of )?progression\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bprogression (system|loop|is|feels)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(meta[- ]?progression|skill trees?|upgrade (system|tree|path)s?)\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bsense of progress(ion)?\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:成长(感|系统|线|曲线)|养成(系统|感)|升级系统|局外成长|正反馈)"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:прокачк|прогресси|древо навыков|дерево навыков)"
+    ],
+    "brazilian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(progress[aã]o|sistema de upgrades?|[aá]rvore de habilidades)\\b)"
+    ],
+    "spanish": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(progresi[oó]n|[aá]rbol de habilidades|sistema de mejoras)\\b)"
+    ],
+    "german": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(progression|fortschrittssystem|fortschrittsgefühl|skilltree|talentbaum)\\b)"
+    ],
+    "french": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(sentiment de progression|syst[eè]me de progression|arbre de comp[eé]tences|syst[eè]me d.am[eé]lioration|progression (est |tr[eè]s |bien )*(satisfaisante|gratifiante|addictive|lente))\\b)"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\b(slow|grindy|tedious|bad|no|lack of|poor|boring) progression\\b)",
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:\\bprogression (is|feels) (so |really |very |painfully |too )?(slow|grindy|tedious|bad|boring|non-existent)\\b)"
+    ],
+    "schinese": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:正反馈(不足|太少|很少|低)|没有(成长感|正反馈))"
+    ],
+    "russian": [
+     "(?<![☐□🔲⬜] )(?<![☐□🔲⬜])(?:(медленная|унылая|скучная|убогая|кривая|долгая|нудная) (прокачка|прогрессия)|(прокачка|прогрессия) (очень |слишком |крайне )?(медленная|унылая|скучная|убогая|нудная))"
+    ]
+   },
+   "sample_hits": 1626,
+   "area": "gameplay"
+  },
+  {
+   "key": "beautiful_visuals",
+   "kind": "quality",
+   "label": "Gorgeous visuals",
+   "taste_label": "beautiful art and visuals",
+   "patterns": {
+    "english": [
+     "\\b(?:beautiful|gorgeous|stunning|amazing|great|lovely|breathtaking|incredible|fantastic|excellent|unique|charming|wonderful|nice|good|cool|awesome|distinct|distinctive|pretty|phenomenal|superb|top[- ]notch|striking|fabulous|eye[- ]catching|jaw[- ]dropping) (?:art ?style|artwork|art direction|visuals|art|graphics|aesthetics?|animations?)\\b",
+     "\\b(?:art ?style|art direction|visuals|artwork|graphics|aesthetics?|animations?) (?:is|are|was|were|looks?) (?:so |very |really |absolutely |just |truly |also |simply |quite |pretty |incredibly )?(?:beautiful|gorgeous|stunning|amazing|great|lovely|breathtaking|incredible|fantastic|excellent|unique|charming|wonderful|nice|good|cool|awesome|distinct|distinctive|pretty|phenomenal|superb|top[- ]notch|striking|fabulous|eye[- ]catching|jaw[- ]dropping)\\b",
+     "\\bvisually (?:stunning|beautiful|gorgeous|impressive|striking|appealing|pleasing)\\b",
+     "\\b(?:beautiful|gorgeous|stunning|breathtaking) (?:world|environments?|scenery|landscapes?|vistas?)\\b"
+    ],
+    "schinese": [
+     "(?:画面|美术|画风|美工|场景)(?:真的|也|是)?(?:很|非常|超级?|十分|特别|相当|极其|真)?(?:好看|精美|漂亮|优美|惊艳|唯美|精致|美|棒|出色|一流|顶级|独特)",
+     "(?:精美|唯美|惊艳|优秀|出色|漂亮)的(?:画面|美术|画风)"
+    ],
+    "russian": [
+     "\\b(?:красив|потрясающ|шикарн|великолепн|отличн|приятн|прекрасн|стильн|бесподобн)\\w* (?:графи|визуал|рисовк|стилистик|арт[- ]?дизайн)",
+     "(?:графика|визуал|рисовка|стилистика|арт[- ]?дизайн)\\w* (?:\\w+ )?(?:просто |очень |тут |здесь )?(?:красив|потрясающ|шикарн|великолепн|прекрасн|бесподобн|приятн)"
+    ],
+    "brazilian": [
+     "(?:lind|belíssim|incríve|maravilhos|bonit|impecáve|espetacular)\\w* (?:gráficos?|visual|arte|estilo artístico|direção de arte)",
+     "(?:gráficos?|visual|arte|estilo artístico|direção de arte) (?:\\w+ )?(?:é |são |muito |super |bem |simplesmente |absurdamente )+(?:lind|bonit|incríve|maravilhos|belíssim|impecáve|espetacular)"
+    ],
+    "spanish": [
+     "(?:hermos|precios|bonit|impresionant|espectacular|increíble|maravillos)\\w* (?:gráficos|apartado visual|arte|estilo artístico|dirección de arte|visuales)",
+     "(?:gráficos|apartado visual|arte|estilo artístico|dirección de arte) (?:es |son |muy |simplemente |realmente )+(?:hermos|precios|bonit|impresionant|espectacular|increíble|maravillos|una maravilla)"
+    ],
+    "german": [
+     "(?<!keine )(?:wunderschön|schön|toll|großartig|fantastisch|atemberaubend|hübsch|beeindruckend)\\w* (?:grafik|optik|art ?style|kunststil|visuals)",
+     "(?:grafik|optik|art ?style|kunststil) (?:ist|sind) (?:sehr |echt |einfach |wirklich |richtig )*(?:wunderschön|schön|toll|großartig|fantastisch|atemberaubend|hübsch|beeindruckend|klasse|super|top|genial)"
+    ],
+    "french": [
+     "(?:magnifique|superbe|sublime|beau|belle|splendide|jolie?)s? (?:graphismes|direction artistique|style graphique|visuels?)",
+     "(?:graphismes|direction artistique|\\bDA\\b|style graphique|visuels?) (?:est |sont )?(?:vraiment |très |juste |tout simplement |absolument )*(?:magnifique|superbe|sublime|splendide|incroyable|sympa|jolie?)s?"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "\\b(?:ugly|bland|hideous|terrible|horrible|awful|generic) (?:art ?style|art|visuals|artwork|art direction)\\b",
+     "\\b(?:art ?style|visuals|artwork|art direction) (?:is|are|was|were) (?:so |very |really |absolutely |just |truly |also |simply |quite |pretty |incredibly )?(?:ugly|bland|hideous|terrible|horrible|awful)\\b"
+    ],
+    "schinese": [
+     "(?:画面|美术|画风)(?:很|非常|太|有点|比较)?(?:难看|丑|劝退|辣眼睛)"
+    ],
+    "russian": [
+     "(?:уродлив|ужасн|отвратительн)\\w* (?:рисовк|стилистик|визуал)"
+    ]
+   },
+   "sample_hits": 4446,
+   "area": "senses"
+  },
+  {
+   "key": "pixel_art",
+   "kind": "trait",
+   "label": "Pixel art",
+   "taste_label": "pixel art games",
+   "patterns": {
+    "english": [
+     "\\bpixel[- ]?art\\b",
+     "\\bpixel(?:ated)? graphics\\b",
+     "\\b(?:16|8|32)[- ]bit (?:art|graphics|style|aesthetic|visuals)\\b"
+    ],
+    "schinese": [
+     "像素(?:风|画|美术|艺术|游戏|动画)"
+    ],
+    "russian": [
+     "пиксел\\w* (?:графи|арт|стил|рисовк)",
+     "пиксель[- ]?арт",
+     "пикселяв\\w* графи"
+    ],
+    "brazilian": [
+     "\\bpixel ?art\\b",
+     "gráficos? (?:em )?pixel"
+    ],
+    "spanish": [
+     "\\bpixel ?art\\b",
+     "gráficos? pixel"
+    ],
+    "german": [
+     "\\bpixel[- ]?(?:art|grafik|look|stil|optik)"
+    ],
+    "french": [
+     "\\bpixel ?art\\b"
+    ]
+   },
+   "sample_hits": 437,
+   "area": "senses"
+  },
+  {
+   "key": "hand_drawn",
+   "kind": "trait",
+   "label": "Hand-drawn / painterly art",
+   "taste_label": "hand-drawn, painterly art",
+   "patterns": {
+    "english": [
+     "\\bhand[- ]?(?:drawn|painted)\\b",
+     "\\bwatercolou?r (?:art|style|visuals|aesthetic|artwork|painting)\\b",
+     "\\bstoryboo?k (?:art|style|aesthetic|visuals)\\b",
+     "\\bpainterly\\b",
+     "\\bbeautifully (?:drawn|illustrated|hand[- ]?drawn|painted)\\b"
+    ],
+    "schinese": [
+     "手绘(?!地图)"
+    ],
+    "russian": [
+     "нарисован\\w* (?:от руки|вручную)",
+     "ручн\\w* рисовк"
+    ],
+    "brazilian": [
+     "desenhad\\w* à mão"
+    ],
+    "spanish": [
+     "dibujad[oa]s? a mano"
+    ],
+    "german": [
+     "handgezeichne",
+     "handgemalt"
+    ]
+   },
+   "sample_hits": 152,
+   "area": "senses"
+  },
+  {
+   "key": "soundtrack",
+   "kind": "quality",
+   "label": "Great soundtrack",
+   "taste_label": "great soundtracks",
+   "patterns": {
+    "english": [
+     "\\bsoundtrack\\b",
+     "\\bOST\\b",
+     "\\b(?:music|score) (?:is|was) (?:so |very |really |absolutely |just |truly |also |simply |quite |pretty |incredibly )?(?:amazing|great|beautiful|fantastic|incredible|awesome|excellent|phenomenal|gorgeous|wonderful|top[- ]notch|epic|fire|a banger|stellar|superb|good|catchy|lovely)\\b",
+     "\\b(?:amazing|great|beautiful|fantastic|incredible|awesome|excellent|phenomenal|gorgeous|wonderful|epic|catchy|stellar|lovely|good|nice|banger) (?:music|score)\\b",
+     "\\bmusic (?:slaps|bangs|is a banger)\\b"
+    ],
+    "schinese": [
+     "配乐",
+     "原声",
+     "\\bbgm\\b",
+     "音乐(?:也|真的)?(?:很|非常|超级?|特别|太)?(?:好听|棒|出色|动听|优秀|绝了|上头)"
+    ],
+    "russian": [
+     "саундтрек",
+     "\\bost\\b",
+     "музык\\w* (?:\\w+ )?(?:просто |очень )?(?:шикарн|отличн|потрясающ|великолепн|прекрасн|приятн|бомб|топ|божествен)",
+     "(?:шикарн|отличн|потрясающ|великолепн|прекрасн|приятн|крут|атмосферн)\\w* музык"
+    ],
+    "brazilian": [
+     "trilha sonora",
+     "\\bost\\b",
+     "músicas? (?:\\w+ )?(?:é |são |muito |super |simplesmente )+(?:boas?|incríve|lindas?|maravilhos|ótimas?|excelentes?|viciantes?)"
+    ],
+    "spanish": [
+     "banda sonora",
+     "\\bost\\b",
+     "música (?:es |muy |simplemente )+(?:buenísima|increíble|hermosa|preciosa|espectacular|genial|excelente)"
+    ],
+    "german": [
+     "soundtrack",
+     "\\bost\\b",
+     "musik (?:ist )?(?:sehr |echt |einfach |wirklich )*(?:toll|großartig|fantastisch|wunderschön|super|klasse|genial|top)\\b",
+     "(?:tolle|großartige|fantastische|wunderschöne|geniale|super) musik"
+    ],
+    "french": [
+     "bande[- ]son",
+     "soundtrack",
+     "\\bost\\b",
+     "musiques? (?:est |sont )?(?:vraiment |très |juste |tout simplement )*(?:magnifique|superbe|sublime|incroyable|excellente|géniale|belle)s?"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "\\b(?:music|soundtrack) (?:is|was|gets) (?:so |very |really |absolutely |just |truly |also |simply |quite |pretty |incredibly )?(?:repetitive|annoying|boring|forgettable|bad|terrible|awful|grating)\\b",
+     "\\b(?:repetitive|annoying|forgettable|bad|terrible|awful|boring) (?:music|soundtrack)\\b"
+    ]
+   },
+   "sample_hits": 3690,
+   "area": "senses"
+  },
+  {
+   "key": "voice_acting",
+   "kind": "quality",
+   "label": "Strong voice acting",
+   "taste_label": "great voice acting",
+   "patterns": {
+    "english": [
+     "(?<!\\bno )(?<!lack of )(?<!without )(?<!\\bany )(?<!\\bzero )\\bvoice[- ]?act(?:ing|ors?|ed|resses|ress)?\\b",
+     "(?<!\\bno )(?<!lack of )(?<!without )(?<!\\bany )(?<!\\bzero )\\bvoice[- ]?overs?\\b",
+     "(?<!\\bno )(?<!lack of )(?<!without )(?<!\\bany )(?<!\\bzero )\\bvoice (?:cast|work|performances?)\\b",
+     "\\bfully voiced\\b"
+    ],
+    "schinese": [
+     "配音",
+     "声优"
+    ],
+    "russian": [
+     "(?:хорош|отличн|шикарн|прекрасн|качественн|крут|потрясающ|великолепн|замечательн|топов|годн|живая|живой)\\w* озвучк",
+     "озвучк\\w* (?:тут |здесь |в игре |просто |очень |вообще |тоже |также )*(?:хорош|отличн|шикарн|прекрасн|на высоте|топ|великолепн|потрясающ|замечательн|качественн|крут|бомб)",
+     "актёр\\w* озвуч",
+     "актер\\w* озвуч"
+    ],
+    "brazilian": [
+     "(?:ótima|excelente|boa|incrível|linda|maravilhosa|perfeita|impecável|sensacional|bela) dublage",
+     "dublage\\w* (?:\\w+ )?(?:é |está |ficou |muito |super |simplesmente |bem )+(?:boa|ótima|excelente|incrível|perfeita|impecável|sensacional|maravilhosa|feita)",
+     "dubladores",
+     "\\bvoice acting\\b"
+    ],
+    "spanish": [
+     "(?:buen|gran|excelente|magnífico|increíble|espectacular|impecable)\\w* doblaje",
+     "doblaje (?:\\w+ ){0,3}?(?:es |está )(?:muy |simplemente |realmente )*(?:bueno|excelente|increíble|espectacular|impecable|genial|brutal)",
+     "actores de voz",
+     "actuación de voz"
+    ],
+    "german": [
+     "(?<!keine )(?<!fehlt die )\\b(?:die |deutsche |englische |gute |tolle |sehr gute |original )synchro(?:nisation)?\\b",
+     "(?<!keine )(?<!keine deutsche )(?<!keine englische )\\b(?:voll)?vertonung",
+     "\\bsprecher(?:in|innen)?\\b",
+     "\\bvoice acting\\b"
+    ],
+    "french": [
+     "doublages?",
+     "doubleurs",
+     "\\bvoice acting\\b",
+     "voix (?:françaises|anglaises|japonaises|off)",
+     "casting vocal"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "\\b(?:bad|terrible|awful|horrible|cringe|cringy|poor|wooden|mediocre) voice[- ]?(?:acting|actors?|work|overs?)\\b",
+     "\\bvoice[- ]?acting (?:is|was) (?:so |very |really |absolutely |just |truly |also |simply |quite |pretty |incredibly )?(?:bad|terrible|awful|horrible|cringe|cringy|poor|wooden|mediocre)\\b"
+    ]
+   },
+   "sample_hits": 1813,
+   "area": "senses"
+  },
+  {
+   "key": "atmospheric",
+   "kind": "quality",
+   "label": "Atmospheric & immersive",
+   "taste_label": "atmospheric, immersive worlds",
+   "patterns": {
+    "english": [
+     "\\batmospher(?:e|ic)\\b",
+     "\\bimmersive\\b(?! sims?\\b)",
+     "\\bimmersion\\b",
+     "\\bambience\\b"
+    ],
+    "schinese": [
+     "氛围",
+     "沉浸感",
+     "代入感",
+     "沉浸式"
+    ],
+    "russian": [
+     "атмосфер",
+     "погружени",
+     "иммерсивн(?!\\w* сим)"
+    ],
+    "brazilian": [
+     "atmosfera",
+     "imersiv",
+     "imersão",
+     "ambientação"
+    ],
+    "spanish": [
+     "atmósfera",
+     "ambientación",
+     "inmersiv",
+     "inmersión"
+    ],
+    "german": [
+     "atmosphär",
+     "immersiv",
+     "immersion"
+    ],
+    "french": [
+     "atmosph[eè]re",
+     "ambiance",
+     "immersi(?:f|ve|on)"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "\\b(?:breaks?|broke|breaking|ruins?|ruined|kills?|killed) (?:the |my |any |all )?immersion\\b",
+     "\\bimmersion[- ]breaking\\b",
+     "\\b(?:no|zero|lacks?|lacking|lack of) (?:any )?atmosphere\\b"
+    ]
+   },
+   "sample_hits": 5592,
+   "area": "senses"
+  },
+  {
+   "key": "scary",
+   "kind": "trait",
+   "label": "Genuinely scary",
+   "taste_label": "games that scare you",
+   "patterns": {
+    "english": [
+     "(?<!\\bnot )(?<!n't )(?<!not very )(?<!n't very )(?<!not really )(?<!n't really )(?<!not that )(?<!n't that )\\bscary\\b",
+     "\\bterrif(?:ying|ied)\\b",
+     "(?<!\\bnot )(?<!n't )(?<!not very )(?<!n't very )(?<!not really )(?<!n't really )(?<!not that )(?<!n't that )\\bcreepy\\b",
+     "\\bjump ?scares?\\b",
+     "\\bscared (?:the )?(?:shit|crap|hell)\\b",
+     "(?<!\\bnot )(?<!n't )(?<!not very )(?<!n't very )(?<!not really )(?<!n't really )(?<!not that )(?<!n't that )\\bspooky\\b",
+     "\\bunsettling\\b",
+     "\\bnightmare fuel\\b",
+     "\\bscared me\\b",
+     "\\b(?:horrifying|eerie|spine[- ]chilling|bone[- ]chilling)\\b",
+     "\\bgave me (?:the )?(?:chills|goosebumps)\\b"
+    ],
+    "schinese": [
+     "(?<!不)吓人",
+     "吓死我",
+     "吓到(?:我|了)",
+     "吓得我",
+     "(?<!不)(?:好|很|非常|超)可怕",
+     "(?<!不)(?:好|太|很|非常|超)恐怖",
+     "毛骨悚然",
+     "跳脸",
+     "阴森",
+     "不敢玩"
+    ],
+    "russian": [
+     "(?<!не )\\bстрашн(?:ая|ый|ые)\\b",
+     "\\bстрашно играть",
+     "(?<!не )\\bбыло страшно",
+     "\\bжутк(?:ая|ий|ое|ие|их|ую|ой)\\b",
+     "скример",
+     "напуга",
+     "(?<!не )пугает",
+     "до мурашек"
+    ],
+    "brazilian": [
+     "assustador",
+     "me assust",
+     "jump ?scares?",
+     "aterroriz",
+     "tomei (?:um|vários|muitos) sustos?",
+     "cagar de medo"
+    ],
+    "spanish": [
+     "(?<!no )da miedo",
+     "aterrador",
+     "terrorífico",
+     "jump ?scares?",
+     "escalofriante",
+     "sustos"
+    ],
+    "german": [
+     "gruselig",
+     "unheimlich(?:e|en|er|es)? (?:atmosphäre|stimmung|geräusche|kreaturen|monster)",
+     "jump ?scares?",
+     "erschrocken",
+     "zu tode erschreck",
+     "schreckmoment",
+     "furchteinflößend"
+    ],
+    "french": [
+     "fait peur",
+     "flippant",
+     "terrifiant",
+     "effrayant",
+     "jump ?scares?",
+     "angoissant"
+    ]
+   },
+   "sample_hits": 2676,
+   "area": "senses"
+  },
+  {
+   "key": "relaxing",
+   "kind": "trait",
+   "label": "Relaxing & cozy",
+   "taste_label": "relaxing, cozy games",
+   "patterns": {
+    "english": [
+     "(?<!\\bnot )(?<!n't )(?<!not very )(?<!n't very )(?<!not really )(?<!n't really )(?<!not that )(?<!n't that )\\brelax(?:ing|ed)\\b",
+     "(?<!\\bnot )(?<!n't )(?<!not very )(?<!n't very )(?<!not really )(?<!n't really )(?<!not that )(?<!n't that )\\bchill\\b",
+     "(?<!\\bnot )(?<!n't )(?<!not very )(?<!n't very )(?<!not really )(?<!n't really )(?<!not that )(?<!n't that )\\bco[sz]y\\b",
+     "(?<!\\bnot )(?<!n't )(?<!not very )(?<!n't very )(?<!not really )(?<!n't really )(?<!not that )(?<!n't that )\\b(?:calming|soothing|peaceful|therapeutic|meditative|zen-like)\\b",
+     "\\bunwind\\b",
+     "\\bstress[- ]?(?:free|relie[fv])\\b"
+    ],
+    "schinese": [
+     "放松",
+     "治愈",
+     "解压",
+     "惬意"
+    ],
+    "russian": [
+     "расслабля",
+     "расслабиться",
+     "медитатив",
+     "уютн",
+     "релакс",
+     "успокаива"
+    ],
+    "brazilian": [
+     "relaxante",
+     "relaxar",
+     "aconchegante",
+     "terapêutic",
+     "\\bcozy\\b"
+    ],
+    "spanish": [
+     "relajante",
+     "relajar",
+     "acogedor",
+     "\\bcozy\\b",
+     "terapéutic"
+    ],
+    "german": [
+     "entspann",
+     "gemütlich",
+     "\\bcozy\\b",
+     "beruhigend",
+     "chillig",
+     "zum abschalten"
+    ],
+    "french": [
+     "relaxant",
+     "reposant",
+     "jeu (?:de )?détente",
+     "se détendre",
+     "apaisant",
+     "\\bcosy\\b",
+     "\\bcozy\\b",
+     "\\bchill\\b"
+    ]
+   },
+   "sample_hits": 4846,
+   "area": "senses"
+  },
+  {
+   "key": "hilarious",
+   "kind": "trait",
+   "label": "Hilarious",
+   "taste_label": "games that make you laugh",
+   "patterns": {
+    "english": [
+     "\\bhilarious\\b",
+     "\\bhilarity\\b",
+     "\\blaugh(?:ed|ing)? (?:so hard|my ass off|out loud)\\b",
+     "\\bfunniest\\b",
+     "\\b(?:so|very|really|genuinely|actually) funny\\b",
+     "\\bfunny (?:moments|as hell|af)\\b",
+     "\\bchaotic fun\\b",
+     "\\b(?:pure|absolute|total|utter|hilarious|glorious|funny) chaos\\b",
+     "\\bcracked me up\\b",
+     "\\bcomedy gold\\b"
+    ],
+    "schinese": [
+     "(?:很|超|非常|挺|蛮)搞笑",
+     "搞笑(?:的)?(?:剧情|游戏|对话|台词)",
+     "笑死我了",
+     "笑得(?:肚子|停不|合不拢|不行)",
+     "(?:太|很|好|超)好笑",
+     "节目效果",
+     "爆笑",
+     "(?<!金)沙雕(?!刻|像)"
+    ],
+    "russian": [
+     "\\b(?:очень|оч|крайне|безумно) смешн",
+     "\\bсмешная игра",
+     "\\bугарн",
+     "\\bугар\\b",
+     "\\bржал",
+     "\\bржака",
+     "\\bржач",
+     "\\bхохотал",
+     "\\bуморительн",
+     "\\bугорал",
+     "\\bпоугарать",
+     "\\bпосмеяться"
+    ],
+    "brazilian": [
+     "engraçad",
+     "hilári",
+     "rachei de rir",
+     "morri de rir",
+     "muitas risadas",
+     "dar risada"
+    ],
+    "spanish": [
+     "graciosísim",
+     "\\bgracios[oa]\\b",
+     "hilarante",
+     "\\bme reí",
+     "(?:muchas|unas|echar(?:se)? unas) risas",
+     "risas aseguradas",
+     "me meé de risa"
+    ],
+    "german": [
+     "\\blustig",
+     "\\bwitzig",
+     "urkomisch",
+     "\\bgelacht",
+     "zum lachen"
+    ],
+    "french": [
+     "hilarant",
+     "(?:très|trop|super|vraiment|tellement) marrant",
+     "fou rire",
+     "j'ai (?:bien |beaucoup )?ri\\b",
+     "mort de rire",
+     "(?:très|trop|tellement|super) drôle"
+    ]
+   },
+   "sample_hits": 1210,
+   "area": "senses"
+  },
+  {
+   "key": "dated_graphics",
+   "kind": "issue",
+   "label": "Dated graphics",
+   "taste_label": "dated or ugly graphics",
+   "patterns": {
+    "english": [
+     "\\b(?:dated|outdated|ugly|bad|terrible|awful|horrible|poor|low[- ]quality|potato|ps2|ps3) (?:graphics|visuals|textures)\\b",
+     "\\bgraphics (?:are|is|look) (?:very |really |pretty |kinda |a bit )?(?:dated|outdated|ugly|bad|terrible|awful|horrible)\\b",
+     "\\bgraphics (?:aren't|are not|isn't) (?:great|good|the best)\\b",
+     "\\bgraphics (?:haven't|have not|hasn't) aged well\\b"
+    ],
+    "schinese": [
+     "画面(?:很|太|有点|比较|略显|过于)?(?:粗糙|过时|落后|简陋|老旧)",
+     "画质(?:很|太|有点|比较)?(?:差|渣|低|糊)",
+     "贴图(?:很|太|有点|比较)?(?:粗糙|模糊)"
+    ],
+    "russian": [
+     "\\b(?:устаревш|убог|ужасн|плох|мыльн|допотопн)\\w* (?:графи|текстур)",
+     "графика (?:\\w+ )?(?:устарел|убог|ужасн|плох|так себе|мыльн)"
+    ],
+    "brazilian": [
+     "gráficos? (?:datad|ultrapassad|feio|ruins?|horríve|fracos?)",
+     "gráficos? (?:são |é |muito |bem |meio )+(?:datad|ultrapassad|feios?|ruins?|horríve|fracos?)"
+    ],
+    "spanish": [
+     "gráficos (?:anticuados|feos|malos|desfasados|horribles|pobres)",
+     "gráficos (?:son|están) (?:muy |algo |un poco |bastante )*(?:anticuados|feos|malos|desfasados|pobres|horribles)"
+    ],
+    "german": [
+     "(?:veraltete|hässliche|schlechte|altbackene) grafik",
+     "grafik (?:ist )?(?:etwas |sehr |leider |ziemlich |total )*(?:veraltet|hässlich|schlecht(?! optimiert)|altbacken)"
+    ],
+    "french": [
+     "graphismes? (?:datés|vieillots|moches|dépassés)",
+     "graphismes (?:sont )?(?:un peu |très |assez |franchement )*(?:datés|vieillots|moches|dépassés)"
+    ]
+   },
+   "sample_hits": 196,
+   "area": "senses"
+  },
+  {
+   "key": "sound_design",
+   "kind": "quality",
+   "label": "Excellent sound design",
+   "taste_label": "great sound design",
+   "patterns": {
+    "english": [
+     "\\bsound ?design\\b",
+     "\\bsound effects?\\b",
+     "\\baudio design\\b",
+     "\\bsfx\\b",
+     "\\bsounds? (?:is|are) (?:so |very |really |absolutely |just |truly |also |simply |quite |pretty |incredibly )?(?:amazing|great|incredible|satisfying|crisp|punchy)\\b"
+    ],
+    "schinese": [
+     "音效"
+    ],
+    "russian": [
+     "звуков\\w* (?:дизайн|сопровождени|эффект)",
+     "саунд[- ]?дизайн"
+    ],
+    "brazilian": [
+     "design de som",
+     "efeitos sonoros",
+     "sound ?design"
+    ],
+    "spanish": [
+     "diseño de sonido",
+     "efectos de sonido",
+     "sound ?design"
+    ],
+    "german": [
+     "sound ?design",
+     "soundeffekte",
+     "geräuschkulisse"
+    ],
+    "french": [
+     "sound ?design",
+     "design sonore",
+     "effets sonores",
+     "bruitages?"
+    ]
+   },
+   "sample_hits": 1205,
+   "area": "senses"
+  },
+  {
+   "key": "fun_with_friends",
+   "kind": "trait",
+   "label": "Great with friends",
+   "taste_label": "games to play with friends",
+   "sample_hits": 3839,
+   "patterns": {
+    "english": [
+     "\\b(?:fun|blast|great|amazing|better|best|awesome|enjoyable|hilarious|good time|laughs?)\\b[^.!?\\n]{0,25}\\bwith (?:a |some |your |my |the )?(?:friends?|buddies|buddy|mates|the boys|squad|pals|homies)\\b",
+     "\\bplay(?:ing|ed)? (?:it |this )?with (?:a |some |your |my )?(?:friends?|buddies|mates|the boys|pals)\\b",
+     "\\bco-?op\\b[^.!?\\n]{0,20}\\b(?:fun|blast|great|amazing|awesome|best)\\b",
+     "\\b(?:fun|great|amazing|awesome|best|excellent)\\b[^.!?\\n]{0,15}\\bco-?op\\b"
+    ],
+    "schinese": [
+     "(?:和|跟|与|同)(?:朋友|好友|基友|室友|兄弟|小伙伴|伙伴|队友)(?:们)?一起(?:玩|联机|开黑|打|通关|入坑)",
+     "(?<!撕)开黑(?!暗|眼)",
+     "(?:多人|联机|合作)(?:模式)?(?:很|超|非常|特别|更|才)?(?:好玩|有趣|快乐|欢乐)",
+     "友尽"
+    ],
+    "russian": [
+     "(?<!друг )(?:с|со) (?:друзьями|другом|друганом|корешами|подругой|товарищами|приятелем|кентами)\\b",
+     "\\bкооп\\w*[^.!?\\n]{0,20}(?:весело|кайф|отлично|топчик|\\bтоп\\b|шикарн|огонь|прекрасн)"
+    ],
+    "brazilian": [
+     "\\bcom (?:os |uns |meus |seus |um |uma |a |o )?(?:amigos?|amigas?|parceiros?|parças|manos|galera|colegas)\\b",
+     "\\bco-?op\\b[^.!?\\n]{0,20}\\b(?:divertid\\w*|incrível|top|ótimo|muito bom)\\b"
+    ],
+    "spanish": [
+     "\\bcon (?:tus |mis |sus |unos |los |un |una |la |el )?(?:amigos?|amigas?|colegas|compas|panas|parceros|cuates)\\b",
+     "\\bco-?op\\b[^.!?\\n]{0,20}\\b(?:divertid\\w*|increíble|genial|buenísim\\w*)\\b"
+    ],
+    "german": [
+     "\\bmit (?:freunden|kumpels|einem kumpel|einem freund|meinem kumpel|meinen kumpels|meinen freunden|deinen freunden)\\b",
+     "\\bkoop\\b[^.!?\\n]{0,20}\\b(?:spa(?:ß|ss)|genial|super|klasse|lustig)\\b"
+    ],
+    "french": [
+     "\\bavec (?:des |ses |mes |tes |vos |un |une |les |deux |trois )?(?:amis?|amies?|potes?|copains?|copines?)\\b",
+     "\\ben co-?op\\b[^.!?\\n]{0,20}\\b(?:fun|génial|top|excellent|marrant|super|drôle|sympa)\\b"
+    ]
+   },
+   "area": "social"
+  },
+  {
+   "key": "solo_friendly",
+   "kind": "quality",
+   "label": "Works well solo",
+   "taste_label": "games you can enjoy solo",
+   "sample_hits": 371,
+   "patterns": {
+    "english": [
+     "(?<!\\bnot )(?<!n't )(?<!\\bless )\\b(?:fun|great|good|enjoyable|fine|playable|amazing|excellent|works well|a blast)\\b (?:to play |playing |even |also |both |still |just as \\w+ |in |as a |as )*(?:solo|alone|by yourself)\\b",
+     "(?<!let )\\b(?:solo|alone)\\b,? (?:or|and|as well as) (?:with |in |online with )?(?:friends|a friend|co-?op|multiplayer|others|a group)\\b",
+     "\\b(?:solo|single[- ]?player)\\b (?:is|was) (?:also |still |just as |really |very )?(?:great|good|fun|enjoyable|fine|amazing|excellent)\\b",
+     "(?<!not )(?<!n't )\\b(?:solo|single[- ]?player)[- ]friendly\\b"
+    ],
+    "schinese": [
+     "(?:单人|一个人|单机)(?:玩)?(?:也|也很|也能|同样|也可以)(?:玩)?(?:好玩|有趣|能玩|可以玩|不错|很爽|玩很久|玩得很开心)"
+    ],
+    "russian": [
+     "(?:в одиночку|одному|соло|в соло)\\s+(?:тоже\\s+|также\\s+|вполне\\s+|очень\\s+)?(?:интересно|весело|можно играть|играется|норм|отлично|хорошо|кайфово)",
+     "(?:в одиночку|одному|соло|в соло)\\s+(?:или|и)\\s+(?:с друзьями|в коопе|в кооперативе|с другом)"
+    ],
+    "brazilian": [
+     "\\b(?:sozinho|solo|single ?player)\\b (?:também |tambem )?(?:é |e )?(?:muito )?(?:divertido|bom|legal|ótimo|otimo|jogável|incrível)\\b",
+     "\\b(?:sozinho|solo)\\b,? (?:ou|e) (?:com (?:os |seus |uns )?amigos|em coop|no coop|cooperativo|multiplayer)\\b"
+    ],
+    "spanish": [
+     "\\b(?:en solitario|jug(?:ar|ando)(?:lo)? solo|single ?player)\\b (?:también |tambien )?(?:es |se disfruta|es muy )?(?:divertido|disfrutable|genial|bueno|entretenido)\\b",
+     "\\b(?:solo|en solitario|solitario)\\b,? (?:o|y) (?:con (?:tus |los |unos )?amigos|en co-?op|en cooperativo|multijugador|acompañado)\\b"
+    ],
+    "german": [
+     "\\b(?:alleine?|im einzelspieler)\\b (?:auch |ebenfalls |sehr |trotzdem )*(?:spa(?:ß|ss)|gut spielbar|super|unterhaltsam|lustig)\\b",
+     "\\balleine?\\b,? (?:oder|als auch|und) (?:mit (?:freunden|kumpels)|im koop|im coop|zu zweit)\\b"
+    ],
+    "french": [
+     "\\b(?:en solo|seul)\\b,? (?:ou|et) (?:avec des (?:amis|potes)|entre amis|en co-?op|à plusieurs|en multi)\\b"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "\\b(?:not|isn'?t|wasn'?t|never|less) (?:very |that |as |really |much )?(?:fun|good|enjoyable|playable)\\b[^.!?\\n]{0,15}\\b(?:solo|(?<!let )alone|by yourself|single ?player)\\b",
+     "\\b(?:boring|miserable|unplayable|painful|tedious|lonely)\\b[^.!?\\n]{0,10}\\b(?:solo|alone|by yourself)\\b",
+     "\\b(?:solo|alone) (?:is|it'?s|its) (?:boring|miserable|unplayable|not fun|painful|tedious)\\b",
+     "\\bdon'?t (?:buy|play) (?:this |it )?(?:solo|alone|if you (?:don'?t have|have no) friends)\\b"
+    ]
+   },
+   "area": "social"
+  },
+  {
+   "key": "helpful_community",
+   "kind": "quality",
+   "label": "Friendly, active community",
+   "taste_label": "games with a welcoming community",
+   "sample_hits": 358,
+   "patterns": {
+    "english": [
+     "(?<!without an )(?<!without a )(?<!\\bno )\\b(?:great|amazing|awesome|friendly|helpful|nice|wholesome|welcoming|wonderful|lovely|kind|chill|supportive|good|fantastic|passionate|dedicated)\\b (?:and \\w+ )?(?:community|player ?base)\\b(?! (?:servers?|goals?|maps?|made|content|mods?|patch|workshop|events?|creations?))",
+     "(?<!modding )(?<!mod )(?<!workshop )\\b(?:community|player ?base|other players) (?:is|are) (?:so |very |really |super |extremely |incredibly |pretty |also )?(?:friendly|helpful|nice|wholesome|welcoming|great|amazing|awesome|active|kind(?! of)|chill|supportive)\\b"
+    ],
+    "schinese": [
+     "(?<!对)(?:社区|社群|老玩家|大佬们?|玩家们|其他玩家|玩家社区|玩家群体)(?:都)?(?:很|非常|超|特别|超级|挺)?(?:友好|友善|热情|热心|和善|有爱)",
+     "(?:社区|社群)(?:的)?(?:氛围|环境)(?:很|非常|超|特别|挺|极)?(?:好|友好|友善|不错|棒)"
+    ],
+    "russian": [
+     "(?<!не )(?<!не очень )(?:хорош(?:ее|им|ая|ого)|дружелюбн(?:ое|ым|ая|ого)|отзывчив(?:ое|ым|ая|ого)|приятн(?:ое|ым|ая|ого)|замечательн(?:ое|ым|ая|ого)|адекватн(?:ое|ым|ая|ого)|отличн(?:ое|ым|ая|ого)|активн(?:ое|ым|ая|ого)|прекрасн(?:ое|ым|ая|ого)|лучш(?:ее|им|ая)|живое|добр(?:ое|ым)) (?:комьюнити|коммьюнити|сообществ(?:о|ом|а))",
+     "(?:комьюнити|сообщество)\\s+(?:тут\\s+|здесь\\s+|в игре\\s+)?(?:очень\\s+)?(?:дружелюбн\\w*|отзывчив\\w*|приятн(?:ое|ый)|адекватн(?:ое|ый)|отличн(?:ое|ый)|хорош(?:ее|ий)|замечательн\\w*)"
+    ],
+    "brazilian": [
+     "\\bcomunidade (?:muito |super |bem |é muito |é super |é )?(?:boa|ótima|otima|incrível|incrivel|legal|amigável|acolhedora|prestativa|maravilhosa|unida|gente boa)\\b",
+     "\\b(?:boa|ótima|incrível) comunidade\\b"
+    ],
+    "spanish": [
+     "\\bcomunidad (?:muy |super |súper |es muy |es súper |es )?(?:buena|genial|increíble|amigable|amable|acogedora|maravillosa|unida|sana)\\b",
+     "\\b(?:buena|gran|excelente|increíble) comunidad\\b"
+    ],
+    "german": [
+     "\\b(?:tolle|nette|freundliche|hilfsbereite|super|gute|gro(?:ß|ss)artige|angenehme|klasse) (?:community|spielerschaft|spielerbasis)\\b",
+     "\\b(?:community|spielerschaft) (?:ist )?(?:sehr |extrem |echt |total |super |wirklich )?(?:nett|freundlich|hilfsbereit|toll|super|angenehm|gro(?:ß|ss)artig)\\b"
+    ],
+    "french": [
+     "\\b(?:bonne|super|excellente|formidable|incroyable|gentille|sympa) communauté\\b",
+     "\\bcommunauté (?:est )?(?:très |super |vraiment )?(?:sympa|accueillante|bienveillante|géniale|super|incroyable|gentille|soudée)\\b"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "\\b(?:worst|terrible|awful|horrible|elitist|rude|hostile|gatekeeping) (?:community|player ?base)\\b"
+    ]
+   },
+   "area": "social"
+  },
+  {
+   "key": "toxic_players",
+   "kind": "issue",
+   "label": "Toxic players",
+   "taste_label": "toxic communities",
+   "sample_hits": 195,
+   "patterns": {
+    "english": [
+     "\\btoxic(?:ity)?\\b[^.!?\\n]{0,25}\\b(?:community|players|playerbase|player base|people|lobbies|kids|teammates|chat|fanbase)\\b",
+     "\\b(?:community|players|playerbase|player base|teammates|fanbase) (?:is|are|can be) (?:so |very |really |extremely |super |pretty |quite )?toxic\\b",
+     "\\btoxic (?:sweats?|tryhards?|veterans)\\b"
+    ],
+    "schinese": [
+     "(?:玩家|社区|游戏环境)(?:的)?(?:素质|氛围|风气)(?:很|太|极|非常|极其)?(?:差|低|烂|糟糕|恶劣|堪忧)"
+    ],
+    "russian": [
+     "токсичн\\w* (?:комьюнити|сообществ\\w*|игрок\\w*|людей|люди|тиммейт\\w*|школьник\\w*|калек\\w*|коммьюнити)",
+     "(?:комьюнити|сообщество|игроки|коммьюнити)\\s+(?:тут\\s+|здесь\\s+)?(?:очень\\s+|крайне\\s+|максимально\\s+)?токсичн\\w*",
+     "по токсичности"
+    ],
+    "brazilian": [
+     "(?<!☐ )(?<!☐)(?<!🔲 )(?<!🔲)(?<!❌ )(?<!❌)(?<!\\( \\))(?<!\\( \\) )\\b(?:comunidade|jogadores|players?|pessoal|galera)\\b(?:(?!nada|não|nao|sem|nenhum|quase)[^.!?\\n]){0,15}\\bt[óo]xic[oa]s?\\b",
+     "\\btoxicidade (?:da comunidade|dos jogadores|de quem)"
+    ],
+    "spanish": [
+     "(?<!☐ )(?<!☐)(?<!🔲 )(?<!🔲)(?<!❌ )(?<!❌)(?<!\\( \\))(?<!\\( \\) )\\b(?:comunidad|jugadores|gente|players?)\\b(?:(?!nada|no |sin |ning)[^.!?\\n]){0,15}\\bt[óo]xic[oa]s?\\b"
+    ],
+    "german": [
+     "\\btoxisch\\w*\\b[^.!?\\n]{0,15}\\b(?:community|spieler\\w*|leute|playerbase|mitspieler)\\b",
+     "\\btoxizität\\b"
+    ],
+    "french": [
+     "\\b(?:communauté|joueurs|commu)\\b[^.!?\\n]{0,15}\\btoxi(?:que|ques|cité)\\b"
+    ]
+   },
+   "area": "social"
+  },
+  {
+   "key": "cheaters",
+   "kind": "issue",
+   "label": "Cheaters and hackers",
+   "taste_label": "games overrun by cheaters",
+   "sample_hits": 770,
+   "patterns": {
+    "english": [
+     "(?<!\\bno )(?<!\\bnot )(?<!\\bwithout )(?<!\\bany )(?<!\\bzero )(?<!\\bfew )(?<!\\bsingle )(?<!n't too many )(?<!n't many )\\b(?:cheaters|hackers|aimbotters|wallhackers|cheating players)\\b",
+     "\\b(?:full of|infested with|lots of|so many|tons of|plagued by|riddled with|overrun by|filled with|too many) (?:cheaters|hackers|cheating)\\b",
+     "\\b(?:cheater|hacker) problem\\b",
+     "\\bcheaters? (?:everywhere|in every)\\b"
+    ],
+    "schinese": [
+     "外挂(?:泛滥|太多|很多|好多|巨多|横行|猖獗|严重|满天飞|乱飞|不封|一堆|成灾|玩家|狗|哥|多)",
+     "(?:管管|不管|封|遇到|碰到|全是|一堆|好多|很多|大量|满屏|一群|有)外挂",
+     "挂狗",
+     "挂哥",
+     "开挂(?:玩家|者|狗|仔)|(?:遇到|碰到|全是|一堆|好多|很多)开挂的",
+     "作弊玩家"
+    ],
+    "russian": [
+     "\\bчитер\\w*",
+     "\\bчитак\\w*"
+    ],
+    "brazilian": [
+     "\\b(?:cheaters?|trapaceiros|xitad\\w*|xiters?)\\b",
+     "\\b(?:muitos?|muita|cheio de|vários|monte de|tem|infestado de|só) (?:hackers?|hack|cheaters?|cheats?)\\b"
+    ],
+    "spanish": [
+     "\\b(?:cheaters?|tramposos|chetos|chiters?)\\b",
+     "\\b(?:muchos|lleno de|llenos? de|hay|plagado de|infestado de) (?:hackers?|cheaters?|tramposos)\\b"
+    ],
+    "german": [
+     "\\b(?:cheater\\w*|hacker(?:n|s)?)\\b"
+    ],
+    "french": [
+     "\\b(?:cheaters?|tricheurs?|hackers)\\b"
+    ]
+   },
+   "area": "social"
+  },
+  {
+   "key": "dead_servers",
+   "kind": "issue",
+   "label": "Dead servers / few players",
+   "taste_label": "empty, dead multiplayer",
+   "sample_hits": 775,
+   "patterns": {
+    "english": [
+     "\\bdead (?:game|servers?|multiplayer|online|lobbies|playerbase|player ?base|community|mp)\\b",
+     "\\b(?:servers?|lobbies|multiplayer|playerbase|player ?base|online|player ?count|mp) (?:is|are) (?:basically |pretty much |completely |totally |almost |mostly |kinda |now |already )?(?:dead|empty|non-?existent)\\b",
+     "\\b(?:no ?one|nobody|no one) (?:is )?(?:plays?|playing) (?:it|this|online|anymore|multiplayer)\\b",
+     "\\b(?:low|small|tiny|dying|dwindling) (?:player ?base|player ?count|population)\\b",
+     "\\bno ?(?:one|body) to play with\\b",
+     "\\bcan'?t find (?:a |any )?(?:match|matches|lobbies|lobby|players)\\b"
+    ],
+    "schinese": [
+     "(?:基本|已经|根本|都|快|现在|几乎|没什么)没(?:什么)?人玩|没(?:什么)?人玩了|怪不得没人玩",
+     "鬼服(?!务)",
+     "(?:玩家|在线人数|在线|人数|活人)(?:太少|稀少|过少|少得可怜)|(?:在线人数|在线玩家|活人)很少",
+     "(?:匹配|排)不到(?:人|对手|队友|玩家)",
+     "凉透了"
+    ],
+    "russian": [
+     "мертв(?:ая|ую|ой|ый|ым|ые|ых|а)\\b (?:игр\\w*|онлайн\\w*|сервер\\w*)",
+     "\\bонлайн\\w*\\s+(?:почти\\s+|практически\\s+|вообще\\s+|очень\\s+)?(?:мертв\\w*|нулев\\w*|низк\\w*|маленьк\\w*|помер)",
+     "\\b(?:никто|некому) (?:не )?(?:играет|играть)",
+     "(?:нет|мало) (?:игроков|онлайна)"
+    ],
+    "brazilian": [
+     "\\bjogo (?:est[áa] |t[áa] )?(?:morto|mortos)\\b|\\b(?:servidor(?:es)?|online|multiplayer|comunidade) (?:est[áa] |t[áa] )?(?:morto|morta|mortos|vazio|vazios|vazia)\\b",
+     "\\b(?:ningu[ée]m|niguem) (?:mais )?joga\\b(?! sozinho| isso pelo)",
+     "\\bpoucos jogadores\\b(?! brasileiros)",
+     "\\bsem (?:jogadores|players)\\b"
+    ],
+    "spanish": [
+     "\\bjuego (?:está |esta )?(?:muerto|muertos)\\b|\\b(?:servidor(?:es)?|online|multijugador|comunidad) (?:está |esta )?(?:muerto|muerta|muertos|vac[íi]o|vac[íi]os|vac[íi]a)\\b",
+     "\\bnadie lo juega\\b|\\bya nadie juega\\b|\\bnadie juega ya\\b",
+     "\\bpocos jugadores\\b",
+     "\\bno hay (?:partidas|jugadores)\\b"
+    ],
+    "german": [
+     "\\b(?:server|lobbys?|lobbies|multiplayer|spiel|online(?:modus)?) (?:ist |sind )?(?:komplett |quasi |praktisch |fast |völlig |leider )?(?:tot|leer)\\b(?! zu)",
+     "\\btote[sn]? (?:spiel|server|multiplayer|community)\\b",
+     "\\b(?:niemand|keiner) (?:mehr )?(?:spielt|zum spielen)\\b",
+     "\\bkeine (?:spieler|mitspieler|lobbys|matches)\\b"
+    ],
+    "french": [
+     "\\b(?:serveurs?|online|multijoueur|communauté) (?:est |sont )?(?:complètement |totalement |quasiment |presque )?(?:mort|morts|morte|vide|vides|désert|déserts)\\b",
+     "\\bjeu (?:est )?mort\\b",
+     "\\bpersonne (?:n'y |ne )?joue\\b",
+     "\\bpeu de joueurs\\b"
+    ]
+   },
+   "area": "social"
+  },
+  {
+   "key": "matchmaking_issues",
+   "kind": "issue",
+   "label": "Bad matchmaking / long queues",
+   "taste_label": "broken matchmaking",
+   "sample_hits": 140,
+   "patterns": {
+    "english": [
+     "\\bmatch ?making\\b[^.!?\\n]{0,30}\\b(?:broken|terrible|awful|horrible|bad|trash|garbage|unfair|sucks|non-?existent|a joke|takes forever|is rigged|slow|atrocious|dogshit|needs work)\\b",
+     "\\b(?:terrible|awful|horrible|bad|broken|trash|garbage|unfair|worst|shitty|abysmal|rigged|atrocious|poor|horrendous|janky) (?:sbmm|match ?making)\\b",
+     "\\b(?:queue|queues|queue times?|wait times?|matchmaking times?) (?:are|is) (?:so |very |extremely |super |way )?(?:too )?(?:long|insane|horrible|terrible|ridiculous)\\b",
+     "\\blong (?:queue|queues|queue times|matchmaking times)\\b",
+     "\\b(?:sbmm|eomm)\\b"
+    ],
+    "schinese": [
+     "匹配(?:机制|系统)(?:太|很|非常|极其)?(?:烂|差|垃圾|离谱|有问题|傻逼)",
+     "(?:匹配|排队)(?:时间)?(?:太|很|非常|特别)?(?:久|慢|长)",
+     "(?:垃圾|离谱|逆天|恶心)的?匹配"
+    ],
+    "russian": [
+     "(?:матчмейкинг|подбор\\w*)\\s+(?:игроков\\s+|команды\\s+|соперников\\s+)?(?:—\\s+)?(?:ужасн\\w*|отвратительн\\w*|кошмарн\\w*|сломан\\w*|убог\\w*|кривой|днище|говно|дерьмо|отстой)",
+     "(?:ужасн\\w*|отвратительн\\w*|кривой|убог\\w*|сломан\\w*|дебильн\\w*|худш\\w*) (?:матчмейкинг|подбор)",
+     "долг\\w* (?:поиск\\w* (?:матч|игр|лобби|соперник)\\w*|очеред\\w*)"
+    ],
+    "brazilian": [
+     "\\bmatch ?making\\b[^.!?\\n]{0,25}\\b(?:horrível|horroroso|péssimo|lixo|ruim|quebrado|bosta|injusto)\\b",
+     "\\bfilas? (?:muito |enorme|absurd\\w*|demorad\\w*|longa\\w*)",
+     "\\b(?:demora|demorar) (?:muito |pra |para )?(?:achar|encontrar) (?:partida|uma partida|jogadores)\\b"
+    ],
+    "spanish": [
+     "\\b(?:match ?making|emparejamiento)\\b[^.!?\\n]{0,25}\\b(?:horrible|pésimo|basura|malo|roto|una mierda|un asco)\\b"
+    ],
+    "german": [
+     "\\bmatchmaking\\b[^.!?\\n]{0,25}\\b(?:schlecht|katastrophal|furchtbar|mies|kaputt|unfair|grottig|müll|eine katastrophe)\\b"
+    ],
+    "french": [
+     "\\bmatch ?making\\b[^.!?\\n]{0,25}\\b(?:horrible|nul|catastrophique|cassé|pourri|à chier|déséquilibré|lent)\\b"
+    ]
+   },
+   "area": "social"
+  },
+  {
+   "key": "unbalanced",
+   "kind": "issue",
+   "label": "Poor balance",
+   "taste_label": "unbalanced games",
+   "sample_hits": 497,
+   "patterns": {
+    "english": [
+     "(?<!\\bor )(?<!n't )(?<!\\bnot )\\b(?:unbalanced|imbalanced|poorly balanced|badly balanced)\\b|\\bnot balanced\\b",
+     "\\bbalanc(?:e|ing) is (?:terrible|awful|horrible|bad|trash|broken|a joke|non-?existent|all over the place|garbage)\\b"
+    ],
+    "schinese": [
+     "(?:平衡性|平衡)(?:很|太|极|非常|极其)?(?:差|烂|崩|稀烂|一坨|有问题|堪忧)",
+     "(?<!心里)(?<!心理)(?<!心态)不平衡(?!对抗)",
+     "数值(?:崩坏|不平衡)"
+    ],
+    "russian": [
+     "\\bдисбаланс\\w*",
+     "баланс\\w*\\s+(?:—\\s+)?(?:ужасн\\w*|отвратительн\\w*|никакой|кривой|сломан\\w*|отсутствует)",
+     "(?:нет|никакого) баланса(?! цвета)",
+     "\\bнесбалансирован\\w*"
+    ],
+    "brazilian": [
+     "\\bdesbalancead\\w*\\b",
+     "\\bdesequilibrad\\w*\\b(?! emocional)",
+     "\\bbalanceamento\\b[^.!?\\n]{0,20}\\b(?:horrível|péssimo|lixo|ruim|quebrado|inexistente|uma piada)\\b"
+    ],
+    "spanish": [
+     "\\bdesbalancead\\w*\\b",
+     "\\bdesequilibrad\\w*\\b(?! emocional)"
+    ],
+    "german": [
+     "\\b(?:unausgeglichen\\w*|unbalanciert\\w*|unbalanced|imbalanced)\\b",
+     "\\bbalance\\b[^.!?\\n]{0,15}\\b(?:katastrophal|schlecht|mies|kaputt|nicht vorhanden|ein witz)\\b"
+    ],
+    "french": [
+     "\\b(?:déséquilibré\\w*|mal équilibré\\w*)\\b"
+    ]
+   },
+   "area": "social"
+  },
+  {
+   "key": "mod_support",
+   "kind": "quality",
+   "label": "Mods and Workshop",
+   "taste_label": "moddable games",
+   "sample_hits": 1902,
+   "patterns": {
+    "english": [
+     "\\bmod(?:ding)? (?:support|scene|community|tools|creators)\\b",
+     "\\b(?:steam )?workshop (?:support|mods|items|content|maps|levels|integration)\\b",
+     "\\bsteam workshop\\b",
+     "\\b(?:with|thanks to|plus|and|install(?:ing)?|using|use) (?:the |some |a few |a couple )?mods\\b",
+     "\\bmods? (?:make|makes|add|adds|extend|keep|fix)\\b",
+     "\\bmoddable\\b",
+     "\\b(?:great|amazing|awesome|tons of|lots of|huge|thousands of|so many) (?:of )?mods\\b"
+    ],
+    "schinese": [
+     "创意工坊",
+     "(?<![a-z])mods?(?![a-z])",
+     "模组"
+    ],
+    "russian": [
+     "\\bмод(?:ы|ов|ами|ах|ам|инг\\w*|дер\\w*)\\b",
+     "мастерск\\w* (?:steam|стим)",
+     "\\bsteam workshop\\b",
+     "\\bс модом\\b"
+    ],
+    "brazilian": [
+     "\\bmods?\\b",
+     "\\bsteam workshop\\b",
+     "\\boficina (?:da steam|steam|de mods)\\b"
+    ],
+    "spanish": [
+     "\\bmods?\\b",
+     "\\bworkshop\\b"
+    ],
+    "german": [
+     "\\bmods\\b",
+     "\\bmodding\\w*\\b",
+     "\\bworkshop\\b"
+    ],
+    "french": [
+     "\\bmods\\b",
+     "\\bmodding\\b",
+     "\\bworkshop\\b"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "\\b(?:no|lack of|without|zero|removed|killed) (?:official )?(?:mod support|modding support|steam workshop|workshop support)\\b",
+     "\\b(?:banned|bans|blocking|blocked|broke|breaks|disabled) (?:all )?mods\\b"
+    ]
+   },
+   "area": "social"
+  },
+  {
+   "key": "couch_party",
+   "kind": "trait",
+   "label": "Couch co-op / party & family fun",
+   "taste_label": "couch co-op and party games",
+   "sample_hits": 565,
+   "patterns": {
+    "english": [
+     "(?<!☐ )(?<!☐)(?<!🔲 )(?<!🔲)(?<!❌ )(?<!❌)(?<!\\( \\))(?<!\\( \\) )(?<!\\bno )(?<!\\bwithout )(?<!\\black of )(?<!\\bonly )\\b(?:couch|local|split[- ]?screen|same[- ]screen) (?:co-?op|multiplayer|pvp|play|gaming)\\b",
+     "(?<!☐ )(?<!☐)(?<!🔲 )(?<!🔲)(?<!❌ )(?<!❌)(?<!\\( \\))(?<!\\( \\) )(?<!\\bno )(?<!\\bwithout )(?<!\\black of the )(?<!\\black of )\\bsplit[- ]?screen\\b",
+     "\\bparty game\\b",
+     "(?<!late-)(?<!late )\\b(?:game|party) nights?\\b",
+     "\\bwith (?:my |the |your )?(?:family|kids|girlfriend|boyfriend|wife|husband|partner|gf|bf|sister|brother|son|daughter|siblings)\\b[^.!?\\n]{0,25}\\b(?:fun|blast|had a)\\b",
+     "\\bplay(?:ed|ing)? (?:it |this )?with (?:my |the |your )?(?:family|kids|girlfriend|boyfriend|wife|husband|partner|gf|bf|sister|brother|son|daughter|siblings)\\b"
+    ],
+    "schinese": [
+     "(?:本地|同屏|分屏)(?:合作|双人|多人|联机)",
+     "分屏(?!幕)",
+     "派对游戏",
+     "(?:和|跟|与)(?:女朋友|男朋友|老婆|老公|女友|男友|对象|家人|孩子|儿子|女儿|闺蜜)(?:一起)?(?:玩|联机|开黑|通关)"
+    ],
+    "russian": [
+     "(?:сплит-?скрин|разделённ\\w* экран\\w*|разделенн\\w* экран\\w*|локальн\\w* (?:кооп\\w*|мультиплеер\\w*)|на одном (?:экране|диване))(?! могут)",
+     "(?:играл\\w*|прош[её]л|прошли|поиграл\\w*|игра\\w*|мы) (?:вместе )?(?:с|со) (?:девушкой|женой|мужем|парнем|сыном|дочкой|дочерью|братом|сестрой|семьёй|семьей|детьми|ребёнком|ребенком)\\b"
+    ],
+    "brazilian": [
+     "(?<!☐ )(?<!☐)(?<!🔲 )(?<!🔲)(?<!❌ )(?<!❌)(?<!\\( \\))(?<!\\( \\) )\\b(?:tela dividida|split ?screen|co-?op local|coop local|multiplayer local|cooperativo local)\\b",
+     "\\bcom (?:a |o |minha |meu )?(?:namorad[ao]|esposa|marido|filh[oa]s?|irm[ãa]o?|fam[íi]lia|mulher)\\b[^.!?\\n]{0,25}\\b(?:jog\\w*|divert\\w*|zer\\w*)"
+    ],
+    "spanish": [
+     "(?<!☐ )(?<!☐)(?<!🔲 )(?<!🔲)(?<!❌ )(?<!❌)(?<!\\( \\))(?<!\\( \\) )(?<!no )(?<!sin )\\b(?:pantalla dividida|split ?screen|co-?op local|coop local|multijugador local|cooperativo local)\\b",
+     "\\bcon (?:mi |la |el )?(?:novi[oa]|espos[oa]|pareja|hij[oa]s?|herman[oa]s?|familia|mujer)\\b[^.!?\\n]{0,25}\\b(?:jug\\w*|divert\\w*)"
+    ],
+    "german": [
+     "\\b(?:split-?screen|geteilte[mnr]? bildschirm|couch-?(?:koop|coop|multiplayer)|lokale[nmr]? (?:koop|coop|multiplayer))\\w*",
+     "\\bmit (?:meiner |meinem |der |dem )?(?:freundin|frau|mann|partner\\w*|sohn|tochter|kindern|bruder|schwester|familie)\\b[^.!?\\n]{0,25}\\b(?:gespielt|spielen|spa(?:ß|ss))"
+    ],
+    "french": [
+     "\\b(?:écran (?:partagé|scindé|splitté)|split ?screen|co-?op locale?|coop locale?|multijoueur local)\\b",
+     "\\bavec (?:ma |mon |mes )?(?:copine|femme|mari|conjoint\\w*|enfants?|fils|fille|frère|soeur|sœur|famille)\\b[^.!?\\n]{0,25}\\b(?:jou\\w*|amus\\w*|fun|marrant|régal\\w*)"
+    ]
+   },
+   "area": "social"
+  },
+  {
+   "key": "competitive",
+   "kind": "trait",
+   "label": "Competitive / ranked play",
+   "taste_label": "competitive ranked play",
+   "sample_hits": 205,
+   "patterns": {
+    "english": [
+     "\\bcompetitive (?:scene|ranked|pvp|multiplayer|shooter|mode|game|matches|community|fps|fighter|fighting|esports?)\\b",
+     "\\branked (?:mode|matches|games|play|queue|system|ladder)\\b",
+     "\\besports? (?:scene|title|game)\\b"
+    ],
+    "schinese": [
+     "竞技性",
+     "排位(?:赛|模式|系统|环境)?",
+     "天梯"
+    ],
+    "russian": [
+     "\\bсоревновательн\\w*",
+     "\\bрейтингов\\w* (?:матч|игр|режим)\\w*",
+     "\\bкиберспорт\\w*"
+    ],
+    "brazilian": [
+     "\\b(?:modo|multiplayer|cenário|cena|fps|shooter|jogo|partidas?) competitiv[oa]s?\\b|\\bno competitivo\\b|\\bo competitivo\\b",
+     "\\branqueada\\w*\\b"
+    ],
+    "spanish": [
+     "\\b(?:modo|multijugador|escena|fps|shooter|juego|partidas?) competitiv[oa]s?\\b|\\b(?:el|lo|en) competitivo\\b",
+     "\\b(?:clasificatori\\w*|rankeds?)\\b"
+    ],
+    "german": [
+     "\\bkompetitiv\\w*\\b",
+     "\\branked\\b"
+    ],
+    "french": [
+     "\\bcompétiti(?:f|ve|vité)\\b",
+     "\\branked\\b",
+     "\\bparties classées\\b|\\bmode classé\\b"
+    ]
+   },
+   "area": "social"
+  },
+  {
+   "key": "great_value",
+   "kind": "quality",
+   "label": "Great value for money",
+   "taste_label": "games that are great value",
+   "sample_hits": 785,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bnot )(?<!n.t )(?<!\\bnot really )\\b(worth (every|each) (penny|cent|dollar|euro)|(great|good|excellent|amazing|incredible|fantastic|insane) value( for (the |your )?money)?|value for (the |your )?money|bang for (your|the|my) buck|(well|definitely|totally|absolutely|easily|more than|truly) worth (the|its|it.s) (price|money|cost|asking price)|steal (at|for) (this|that|the|its) price|worth (the )?full price)\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(性价比(很|超|极|非常|挺|相当|真的|还是|还挺|还算)?(高|不错|爆表|无敌|拉满)|物超所值|物有所值|值回票价|这个价格(真的)?(很|超|太)?(值|良心))"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bне )(стоит (своих|каждой|каждого) (денег|копейки|рубля)|отличн\\w* соотношение цен\\w*|(свои|своих) деньги (полностью |более чем )?(отрабатывает|стоит|оправдывает)|(цена|ценник) (полностью )?(оправдан|адекватн|копеечн))"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!não )(?<!nao )\\b(vale (cada|muito o|super o|totalmente o|demais o) (centavo|real|preço|dinheiro)|vale (o|seu) preço|custo[- ]benef[ií]cio (excelente|ótimo|otimo|incrível|muito bom)|(ótimo|otimo|excelente|incrível) custo[- ]benef[ií]cio)\\b"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!no )\\b(vale (cada|hasta el último) (céntimo|centavo|peso|euro|dólar|centimo)|vale (totalmente |completamente |mucho )?(lo que cuesta|su precio|el precio)|(excelente|buena|gran) relaci[oó]n calidad[- /]precio|calidad[- /]precio (excelente|buen[ií]sima|muy buena|inmejorable))\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!nicht )\\b(jeden (cent|euro) wert|(preis[- ]leistung(sverh[äa]ltnis)?|p/l) (ist )?(top|super|sehr gut|unschlagbar|hervorragend)|(top|super|sehr gutes|unschlagbares|hervorragendes) preis[- ]leistung(sverh[äa]ltnis)?|sein(en)? geld (absolut |definitiv |voll )?wert)\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!pas )\\b(vaut (largement |amplement |clairement |totalement |bien )?(chaque centime|son prix|chaque euro)|(excellent|tr[eè]s bon|super) rapport qualit[ée][- /]prix|rapport qualit[ée][- /]prix (excellent|imbattable|top|incroyable))\\b"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\bnot worth (the|its|it.s) (price|money|asking price|full price|price tag)\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(不值|配不上)(这个|这)?(价|价格|价钱)"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\bне стоит (своих |этих )?(денег|цены)"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))n[aã]o vale (o|seu|esse) (preço|valor|dinheiro)"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\bno vale (lo que cuesta|su precio|el precio)\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\bnicht (sein(en)? |den )?(geld|preis) wert\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\bne vaut pas (son|le) prix\\b"
+    ]
+   },
+   "area": "value"
+  },
+  {
+   "key": "overpriced",
+   "kind": "issue",
+   "label": "Overpriced for what it offers",
+   "taste_label": "overpriced games",
+   "sample_hits": 593,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bnot a )\\b(overpriced|over-priced|not worth (the|its|it.s) (price|money|asking price|full price|price tag)|(way )?too (expensive|pricey) for (what|the amount|how|a game)|(price|price tag) is (way |a bit |far )?too high|way too much (money )?for (what|a|this)|wait (for|till|until) (a|the|it.s on|it goes on) (sale|discount)|only (buy|get) (it|this) (on|during) (a )?(sale|discount)|rip-?off(?! of))\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))((价格|定价|售价|价钱)(太|偏|过|有点|有些|实在)(贵|高)|性价比(太|很|极|非常|有点)?低|(不值|配不上)(这个|这)?(价|价格|价钱)|(建议|等|推荐)(打折|史低|折扣)(再|时)?(买|入|入手|购买)|定价(离谱|劝退)|(太|真|好)贵了)"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(\\bне стоит (своих |этих )?(денег|цены|своей цены)|(слишком|неоправданно) дорог\\w*|завышенн\\w* цен\\w*|(цена|ценник) (слишком |сильно |явно )?(завышен|кусается|неадекватн)\\w*|(ждите|жди|берите|бери|брать|покупайте) (только )?(по|на) (скидк|распродаж)\\w*)"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(n[aã]o vale (o|seu|esse) (preço|valor|dinheiro)|caro demais|pre[cç]o (abusivo|absurdo|salgado|alto demais|muito alto)|(compre|espere|esperar|aguarde|recomendo esperar) (só |somente |apenas )?(em|na|uma|numa|pela) (promo|promoção|promocao|desconto)|s[oó] vale (a pena )?(em|na) promo\\w*)\\b"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(no vale (lo que cuesta|su precio|el precio)|demasiado caro|precio (abusivo|excesivo|desorbitado)|(cómpralo|compralo|esperen|espera|esperad|recomiendo esperar)( solo| sólo)? (en|a) (oferta|rebaja|descuento)s?|caro para lo que (ofrece|es))\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(nicht (sein(en)? |den |das )?(geld|preis) wert|(viel |deutlich |definitiv |etwas )?zu teuer|[üu]berteuert|(nur )?im (sale|angebot) (kaufen|holen|zuschlagen)|auf (einen )?sale warten)\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(ne vaut pas (son|le) prix|vaut pas (son|le) prix|(?<!gratuit c.)(?<!gratuit, c.)(?<!gratuit ce serait )(jeu|vendu|prix|beaucoup|bien|largement|vraiment|un peu|un poil|reste|est) trop cher(?! en temps)|trop cher (pour ce|par rapport|au vu|vu le)|hors de prix|prix (abusif|excessif|exorbitant|trop [ée]lev[ée])|(achetez|attendez|attendre|prenez)(-le)? (en |une |des |les )?(promo|promotion|soldes|r[ée]duction))\\b"
+    ]
+   },
+   "area": "value"
+  },
+  {
+   "key": "microtransactions",
+   "kind": "issue",
+   "label": "Microtransactions / pay-to-win",
+   "taste_label": "pay-to-win monetization",
+   "sample_hits": 1490,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bno )(?<!\\bnot )(?<!\\bnon-)(?<!\\bnon )(?<!\\bzero )(?<!without )(?<!n.t )(?<!lack of )(?<!free of )(?<!\\bany )(?<!\\bnor )(?<!\\bor )(?<!\\bnot a )\\b(pay[- ]?to[- ]?win|p2w|microtransactions?|micro-transactions?|loot ?box(es)?|cash shop|premium currency|pay to progress|pay-?walls?|paywalled)\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!不)(?<!无)(?<!没有)(?<!零)(?<!不用)(?<!不需要)(氪金|(?<!以)内购(?!入|买)|逼氪|课金|pay to win|p2w|开箱子)"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!нет )(?<!без )(?<!отсутствие )(?<!отсутствием )(?<!отсутствия )\\b(донат(а|ом|ы)?|донатн\\w*|пей ?ту ?вин|pay ?to ?win|p2w|лутбокс\\w*|микротранзакц\\w*)\\b"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!━)(?<!sem )(?<!nenhuma )(?<!não tem )(?<!não é )\\b(pay ?to ?win|p2w|microtransa[cç](ões|oes|ão|ao)|loot ?box(es)?|caixas? de loot|paga pra ganhar)\\b(?!━)"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!sin )(?<!ni )(?<!nada de )(?<!ni siquiera )(?<!no tiene )(?<!no es )\\b(pay ?to ?win|p2w|micro ?transacciones|micropagos|loot ?box(es)?|cajas de bot[ií]n|paga para ganar)\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!keine )(?<!nicht )(?<!no )(?<!kein klassisches )(?<!nicht reines )(?<!ohne )(?<!kein )\\b(pay ?(2|to) ?win|p2w|mikrotransaktionen|lootbox(en)?)\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!pas de )(?<!aucune )(?<!sans )(?<!pas )\\b(pay ?(2|to) ?win|p2w|micro[- ]?transactions?|loot ?box(es)?)\\b"
+    ]
+   },
+   "area": "value"
+  },
+  {
+   "key": "greedy_dlc",
+   "kind": "issue",
+   "label": "Greedy DLC / cash grab",
+   "taste_label": "greedy DLC practices",
+   "sample_hits": 498,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bnot )(?<!n.t )(?<!\\bnot a )(?<!\\bnot just a )\\b(dlcs? (are|is) (way |so |too |very |ridiculously |insanely )*(overpriced|expensive|pricey|a rip-?off)|overpriced dlcs?|expensive dlcs?|(so|too) many dlcs?|dlc (hell|spam|cash ?grab)|cash ?grab|greedy (devs?|developers?|publishers?|company|corporation)|(devs?|developers?|publishers?|company) (are|is) (so |just |very )?greedy|cut content (sold|released) as dlc|locked behind (a )?(paid )?dlcs?|nickel and dim(e|ed|ing)|corporate greed)\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))((dlc|DLC)(太|也太|真|好|很|特别|实在)(贵|多|坑)|(拆分|切割|阉割)(成|出)?(dlc|DLC)|(?<!不会)(?<!不)圈钱|吃相(太|很|真|过于)?(难看|恶心)|割韭菜)"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(жадн\\w* (разработчик|издател|компани)\\w*|(длс|dlc) (слишком |очень )?дорог\\w*|выкачивани\\w* денег)"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(dlcs? (muito |absurdamente )?car[oa]s|(muita|muitas|excesso de|tantas) dlcs?|gan[aâ]ncia d[aoe] (empresa|desenvolvedora|produtora|publicadora|devs?))\\b"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(dlcs? (muy |demasiado )?car[oa]s|(demasiados|tantos) dlcs?|saca ?cuartos|sacadineros|avaricia de (la empresa|los desarrolladores|sus desarrolladores))\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!kein )(?<!kein schneller )(?<!keine )\\b(dlc[- ]?(wahn|abzocke|schwemme)|(fragw[üu]rdige\\w*|miserable\\w*|gierige\\w*|unversch[äa]mte\\w*) dlc[- ]?politik|(teure|zu teure|überteuerte) dlcs?|(reine|totale|pure|ist eine) abzocke|geldmacherei|cash ?grab)\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(dlcs? (beaucoup |bien |vraiment )?trop chers?|(trop|beaucoup) de dlcs?|pompe à fric|vache à lait|cash ?grab)\\b"
+    ]
+   },
+   "area": "value"
+  },
+  {
+   "key": "buggy",
+   "kind": "issue",
+   "label": "Buggy / glitchy",
+   "taste_label": "buggy games",
+   "sample_hits": 2910,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bno )(?<!\\bnot )(?<!\\bzero )(?<!without )(?<!n.t )(?<!\\bany )(?<!\\bfew )(?<!\\bnot very )(?<!\\bnot too )(?<!\\bnot really )(?<!\\bnever )\\b(buggy|bugged|glitchy|full of (bugs|glitches)|(so|too|many|lots of|tons of|a lot of|plenty of|game.breaking|annoying|countless|numerous|major|constant|frequent) (bugs|glitches)|riddled with (bugs|glitches)|bug.?fest|soft.?lock(ed|s)?|broken (quests?|saves?|achievements?)|corrupted (my )?saves?|save (file )?corruption)\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!没有)(?<!没什么)(?<!没啥)(?<!无)((bug|BUG|Bug)(很|太|非常|特别|超|真的|有点|挺)?(多|严重)|(恶性|严重|大量|很多|各种|一堆|满地)(的)?(bug|BUG|Bug)|卡关(bug|BUG)|坏档|存档损坏|(bug|BUG)满天飞)"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!нет )(?<!без )(?<!мало )(?<!немного )(?<!минимум )(?<!ни одного )(?<!никаких )\\b(забагованн\\w*|бажн\\w*|(куча|много|кучу|полно|море|тонна|масса|миллион|уйма) (багов|глюков)|(баг|глюк) на (баге|глюке)|(критически|критичны|серьёзны|серьезны|бесконечны|постоянны|игроломающи|ужасны)\\w* (баг|глюк)\\w*|баги и вылеты|сломанн\\w* (квест|сохранени|сейв|ачив|достижени)\\w*)(?!\\w)(?!\\s+(я\\s+)?(не|нет)\\b)"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!sem )(?<!poucos )(?<!nenhum )\\b(bugado|bugada|bugad[oa]s|cheio de (bugs?|glitch\\w*)|(muitos|vários|varios|diversos|inúmeros|tantos|mto|mt) (bugs|glitches)|bugs? (que quebram|críticos|graves|absurdos|horríveis))\\b"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!sin )(?<!pocos )(?<!ningún )\\b(bugueado|bugeado|bugueada|bugeada|lleno de (bugs|errores|glitches)|(muchos|varios|demasiados|tantos|bastantes|montón de|cantidad de) (bugs|glitches)|bugs (graves|críticos|que rompen))\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!keine )(?<!ohne )(?<!kaum )(?<!wenige )\\b(verbuggt|verbugt|buggy|voller (bugs|fehler|glitches)|(viele|etliche|unz[äa]hlige|massig|haufenweise|zahlreiche) (bugs|glitches)|game ?breaking bugs?|spielbrechende\\w* bugs?)\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!pas de )(?<!aucun )(?<!sans )(?<!peu de )\\b(bugg[ée]e?s?|bug[ée]e?s?|rempli de bugs|plein de bugs|bourr[ée] de bugs|(beaucoup|pas mal|énormément|tellement|trop|plein) de (bugs|glitch\\w*|beugs)|bugs (bloquants|critiques|graves))\\b"
+    ]
+   },
+   "area": "value"
+  },
+  {
+   "key": "crashes",
+   "kind": "issue",
+   "label": "Crashes / won't launch",
+   "taste_label": "games that crash",
+   "sample_hits": 1772,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bno )(?<!\\bnot )(?<!\\bzero )(?<!without )(?<!n.t )(?<!\\bany )(?<!\\bnever )(?<!\\bsingle )\\b(crash(es|ed|ing)? (to (the )?desktop|constantly|every \\w+|all the time|a lot|frequently|randomly|on (start|launch|startup|boot|load)|when (i|you|loading|launching|starting))|keeps? (on )?crashing|constant(ly)? crash(es|ing)?|random(ly)? crash(es|ing)?|frequent crash(es)?|ctd|crash(ing)? (issues?|problems?|bugs?)|(game|it) (keeps |always |constantly |just |randomly |often )?crash(es|ed)\\b(?! into| in to)|crash(es|ed|ing)? (my|the) (game|pc|computer|system)|(won.t|doesn.t|does not|will not|wont|cant|can.t|cannot) (even )?(launch|boot)|black screen (on|at|after) (launch|start|startup|boot)|freez(es|ing) (my (pc|computer)|constantly|randomly|every))\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(闪退|(游戏|频繁|经常|总是|一直|动不动就?)崩溃|崩溃(到|回)桌面|进不去游戏|无法启动|启动不了|打不开游戏|游戏打不开|(启动|进入|打开|开局|一进|进游戏)[^，。,.!！]{0,4}黑屏|黑屏(进不去|闪退|卡死|无法)|死机|蓝屏)"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!нет )(?<!без )(?<!не )(?<!ни одного )\\b(вылета(ет|ют)|вылетела|вылетел|вылеты|(много|куча|кучи|частых|частые|постоянных|постоянные|от|из-за) вылет(ов|ы)|крашит(ся)?|краш(и|ится|ей)|(не запускается|не запустилась|не запускалась|отказывается запускаться)|ч[её]рный экран|зависает намертво)\\b(?!\\s+(нет|не)\\b)"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!sem )(?<!não )(?<!nunca )(?<!nada de )(?<!nenhum )(?<!zero )\\b(crash(a|ando|ou|aram|am|ar|ava|es|s)|fecha sozinho|fechando sozinho|(não|nao) (abre|inicia|executa|roda mais)|tela preta|trava(ndo)? (o pc|o computador|toda hora))\\b"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!sin )(?<!ni )(?<!no )(?<!ningún )\\b(crashea\\w*|crash(es)? (constantes|cada)|se cierra solo|(no|ni) (abre|arranca|inicia)|pantalla negra|cierres inesperados)\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!keine )(?<!einziger )(?<!einzigen )(?<!wenige )(?<!seltene )(?<!ohne )(?<!kein )(?<!nie )\\b(abst[üu]rz\\w*|st[üu]rzt (st[äa]ndig |dauernd |immer wieder |oft )?ab|crash(t|es|ed)|startet (nicht|nichtmal|gar nicht)|bluescreen|schwarzer bildschirm)\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!pas de )(?<!aucun )(?<!sans )(?<!jamais )\\b(crash(e|es|ent|é)? (constamment|souvent|tout le temps|en boucle|sans arr[eê]t|r[ée]guli[eè]rement)|(il|le jeu) (plante|crashe?|freeze)|ne (se )?lance (m[eê]me )?pas|[ée]cran noir|crashs? (r[ée]guliers|fr[ée]quents|constants|incessants|à r[ée]p[ée]tition)|retour (au|sur le) bureau)\\b"
+    ]
+   },
+   "area": "value"
+  },
+  {
+   "key": "poor_performance",
+   "kind": "issue",
+   "label": "Poor optimization / performance",
+   "taste_label": "poorly optimized games",
+   "sample_hits": 769,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bnot )(?<!n.t )(?<!\\bno )\\b(poorly optimi[sz]ed|badly optimi[sz]ed|unoptimi[sz]ed|un-optimi[sz]ed|optimi[sz]ation is (terrible|horrible|awful|bad|garbage|trash|non.?existent|a joke|poor|abysmal)|(terrible|horrible|awful|bad|poor|zero|shit|garbage|trash|abysmal) optimi[sz]ation|runs? like (garbage|trash|crap|shit|ass|dogshit|a slideshow)|(fps|frame ?rate) drops|(constant|terrible|horrible|massive|bad|insane|frequent|severe) (stutter(s|ing)?|lag spikes|fps drops|frame drops)|stutter(s|ing)? (constantly|a lot|everywhere)|(terrible|horrible|awful|unplayable) (fps|frame ?rates?)|memory leaks?)\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(优化(很|太|极|非常|真的|实在|有点|有些|稀|超级)?(差|烂|垃圾|稀烂|一坨|依托|拉胯|不行|狗屎|灾难)|(没有|毫无|零|负)优化|(?<!很少)(?<!不)(?<!没有)(?<!没)(?<!不会)(?<!少有)掉帧|帧数(很|太)?(低|不稳)|卡顿(严重|明显)|内存泄漏)"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!не )(?<!нет )\\b((ужасн|отвратительн|плох|кривая|кривой|хренов|дерьмов|убог)\\w* оптимизаци\\w*|оптимизаци\\w* (ужасн|отвратительн|плох|никак|нет|отсутствует|хромает|кривая|говно|отстой|на нуле|дно|кал)\\w*|неоптимизирован\\w*|(просадки|проседает|падения|дропы) (фпс|кадр|fps)\\w*|фризы|фризит|статтер\\w*|лагает|утечк\\w* памяти)"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!não é )(?<!nao é )\\b((mal|p[ée]ssimamente|porcamente|horrivelmente) otimizad[oa]|otimiza[cç][aã]o (péssima|pessima|horrível|horrivel|ruim|terrível|terrivel|lixo|porca|zero|nula|uma merda|bosta|precária)|(péssima|pessima|horrível|horrivel|ruim|terrível|zero) otimiza[cç][aã]o|quedas de (fps|frames?|quadros)|stuttering|engasgos)\\b"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!no está )\\b((mal|p[eé]simamente|horriblemente|fatal) optimizad[oa]|optimizaci[oó]n (p[eé]sima|horrible|mala|terrible|nula|basura|de mierda|penosa|lamentable)|(p[eé]sima|horrible|mala|terrible|nula|cero) optimizaci[oó]n|ca[ií]das de (fps|frames)|tirones|stuttering)\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!keine )(?<!keinen )(?<!ohne )(?<!nennenswerte )(?<!kaum )(?<!weniger )\\b((schlecht|mies|katastrophal|grottig|miserabel) optimiert|unoptimiert|optimierung (ist )?(schlecht|mies|katastrophal|grottig|eine katastrophe|unterirdisch)|(schlechte|miese|katastrophale) (optimierung|performance)|(fps|framerate)[- ]?(drops|einbr[üu]che)|ruckler|ruckelt)\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!pas )\\b((mal|tr[eè]s mal|horriblement) optimis[ée]e?|optimisation (catastrophique|horrible|nulle|d[ée]plorable|à la ramasse|inexistante|mauvaise|pourrie|à chier)|(mauvaise|aucune|zéro) optimisation|chutes? de (fps|framerate|frames|fluidit[ée])|saccades|stuttering)\\b"
+    ]
+   },
+   "area": "value"
+  },
+  {
+   "key": "runs_well",
+   "kind": "quality",
+   "label": "Runs smoothly / well optimized",
+   "taste_label": "well-optimized games",
+   "sample_hits": 809,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bnot )(?<!n.t )(?<!\\bnot very )(?<!\\bnot so )\\b(well[- ]optimi[sz]ed|(very|super|really|extremely|incredibly|perfectly|nicely|greatly|amazingly) optimi[sz]ed|(great|good|excellent|amazing|fantastic|solid|perfect|incredible) optimi[sz]ation|optimi[sz]ation is (great|good|excellent|amazing|fantastic|solid|perfect|incredible)|(runs|running|ran) (very |super |really |perfectly |incredibly |extremely |so )?(smooth(ly)?|flawlessly|like a dream|like butter|buttery)|runs? (great|well|perfectly|fine|flawlessly|beautifully) (on|even on) (my|a|an|low|old|older|potato|laptop)|(runs|running|ran) at (a )?(stable|locked|solid|constant) (60|120|144|165) ?fps|runs? on (a )?(potato|toaster)|low[- ]end (pc|laptop)s? friendly)\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!不)(?<!没)(优化(很|非常|特别|超级|真的|相当|极其|还挺|挺|做得很|做的很)(好|不错|优秀|出色|良好|给力|到位)(?!差|一点|一些|点)|优化(不错|优秀|出色|良好|给力|到位)|满帧|帧数稳定|运行流畅|(老|低配|核显|旧)(电脑|机器|笔记本|配置)?(也|都)(能|可以)(流畅)?(跑|玩|带|运行))"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!не )\\b((отличн|хорош|прекрасн|шикарн|достойн|великолепн|идеальн)\\w* оптимизаци\\w*|оптимизаци\\w* (отличн|хорош|прекрасн|шикарн|на высоте|супер|идеальн|великолепн)\\w*|(хорошо|отлично|прекрасно) оптимизирован\\w*|(идёт|идет|работает|летает|пойдёт|пойдет) (даже )?на (калькулятор|картошк|тостер|слаб|старом|старых)\\w*)"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!não )(?<!nao )(?<!não é )(?<!nao é )(?<!não é muito )(?<!não está )(?<!não ta )(?<!não tão )\\b((bem|muito bem|super bem|extremamente bem|otimamente) otimizad[oa]|otimiza[cç][aã]o (ótima|otima|excelente|perfeita|impecável|muito boa|incrível)|(ótima|otima|excelente|incrível|perfeita) otimiza[cç][aã]o|roda (até )?em (pc )?batata|roda em qualquer (pc|coisa|máquina|notebook))\\b"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!no )(?<!no está )(?<!no esta )(?<!siquiera esta )(?<!siquiera está )(?<!no es )\\b((bien|muy bien|bastante bien|super bien|excelentemente) optimizad[oa]|optimizaci[oó]n (excelente|buen[ií]sima|muy buena|perfecta|impecable)|(excelente|buena|gran|perfecta) optimizaci[oó]n|corre en (una )?(patata|tostadora|cualquier))\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!nicht )\\b((gut|sehr gut|super|hervorragend|toll|top) optimiert|(gute|sehr gute|super|hervorragende|tolle) (optimierung|performance)|l[äa]uft (absolut |super |sehr )?(einwandfrei|butterweich|stabil)|l[äa]uft (auch )?auf (jeder|jedem|einer) (kartoffel|toaster|gurke))\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!pas )(?<!mal )\\b((bien|tr[eè]s bien|super bien|parfaitement) optimis[ée]e?|(bonne|tr[eè]s bonne|excellente) optimisation|optimisation (au top|excellente|parfaite|impeccable)|tourne (parfaitement|tr[eè]s bien|nickel|sans souci|sans probl[eè]me) (sur|m[eê]me sur))\\b"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bnot )(?<!n.t )\\b(poorly|badly) optimi[sz]ed\\b"
+    ]
+   },
+   "area": "value"
+  },
+  {
+   "key": "steam_deck",
+   "kind": "quality",
+   "label": "Great on Steam Deck",
+   "taste_label": "games that play well on Steam Deck",
+   "sample_hits": 199,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bnot )(?<!n.t )(?<!can.t )\\b((runs?|works?|plays?|ran|worked|played|running|working) (great|well|perfectly|fine|flawlessly|beautifully|amazingly|smoothly|so well|perfectly fine|really well|very well|excellently|wonderfully) on (the |my |a )?(steam ?deck|deck)|(perfect|great|amazing|fantastic|excellent|flawless(ly)?|perfectly|beautifully) on (the |my |a )?(steam ?deck|deck)|(great|perfect|awesome|ideal|good) (steam ?deck|deck) game|play(ed|ing)? (it )?(entirely|mostly|exclusively|almost entirely) on (the |my )?(steam ?deck|deck))\\b"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!не )\\b(отлично|прекрасно|идеально|хорошо|без проблем|шикарно) (работает|идёт|идет|летает|играется) на (steam ?deck|стим ?деке|деке)"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!não )\\b(roda|funciona) (muito bem|perfeitamente|liso|bem|lisinho) no (steam ?deck|deck)\\b"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!no )\\b(corre|funciona|va) (muy bien|perfecto|perfectamente|genial|de maravilla) en (la |el )?(steam ?deck|deck)\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!nicht )\\bl[äa]uft (super|perfekt|einwandfrei|gut|sehr gut|flüssig|problemlos) auf (dem |meinem )?(steam ?deck|deck)\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!pas )\\b(tourne|fonctionne|marche) (parfaitement|tr[eè]s bien|nickel|bien|sans souci) sur (le |mon )?(steam ?deck|deck)\\b"
+    ]
+   },
+   "neg_patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(unplayable|doesn.t work|does not work|can.t play( it)?|won.t run|runs (poorly|badly|terribly)) on (the |my )?(steam ?deck|deck)\\b"
+    ]
+   },
+   "area": "value"
+  },
+  {
+   "key": "short",
+   "kind": "trait",
+   "label": "Short",
+   "taste_label": "short games",
+   "sample_hits": 657,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bnot )(?<!n.t )\\b((very|really|pretty|quite|rather|too|super|fairly|a bit|kinda|relatively|extremely|incredibly) short (game|experience|campaign|story)|(game|campaign|story|it) is (very |really |pretty |quite |rather |too |super |fairly |a bit |kinda |relatively |extremely )?short|(beat|finished|completed|beaten|finish|complete) (it |the game |this game |the story |the campaign )?in (under |less than |about |around |only |just )?(an? |one |two |three |four |1|2|3|4)( |-)?(hours?|hrs?)|(only|just|about|around|under|less than) (an? |one |two |three |1|2|3|4|1-2|2-3|3-4) ?(hours?|hrs?) (long|of (game ?play|content))|short but sweet|bite-?sized|(beat|finished|completed|played|did|played through) (it |the game |the whole (game|thing) |the entire game |everything )?in (one|a single) sitting)\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(流程(很|太|偏|比较|有点|非常|较|过于|稍)?短|(时长|篇幅|体量)(很|太|偏|比较|有点|较|稍)?(短|小)|(一两|两三|三四|[1-4一二三四两])个?(多)?小时(左右)?(就|即可)?(能|可以)?(通关|打完|结束)|一口气(打完|通关|玩完))"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!не )\\b((очень |слишком |довольно |весьма |немного |достаточно )?коротк(ая|ий|ое) (игра|сюжет|кампания|прохождение)|(игра|сюжет|кампания) (очень |слишком |довольно |весьма )?коротк(ая|ий|ое)|коротенькая|прош[её]л (её |ее |игру )?за (\\d|один|два|три|пару|несколько) (час|вечер)\\w*|проходится за (\\d|один|два|три|пару|несколько) (час|вечер)\\w*|на (один|пару) вечер\\w*)"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!não é )(?<!nao é )\\b((jogo|história|historia|campanha) (muito |bem |bastante |um pouco |meio )?curt[oa]|(muito|bem|bastante|meio) curt[oa]|zerei em (menos de )?(\\d|uma|duas|três|tres) ?(h|horas?))\\b"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!no es )(?<!❌)(?<!❌ )(?<!queda )(?<!quedan )(?<!quedó )\\b((juego|historia|campaña) (muy |bastante |algo |un poco |demasiado )?cort[oa]|(muy|bastante|demasiado) cort[oa]|(lo )?(terminé|termine|pasé|pase|acabé|acabe) en (menos de )?(\\d|una|dos|tres) ?(h|horas?)|dura (apenas |solo |sólo |unas? )?(\\d|una|dos|tres) ?horas?)\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!nicht )\\b((sehr |recht |ziemlich |relativ |viel zu )kurz(es|e|er)? (spiel|story|kampagne|spielzeit)|spielzeit (ist )?(sehr |recht |ziemlich |relativ |etwas |zu )?kurz|in (unter |weniger als |ca\\.? |etwa )?(\\d|einer|zwei|drei) ?(std|stunden?) (durch|durchgespielt|beendet|geschafft))\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!pas )(?<!ni )\\b((jeu|histoire|campagne|aventure) (tr[eè]s |assez |un peu |trop |plut[oô]t )?court(e)?|(tr[eè]s|un peu|trop|bien) court(e)?|dur[ée]e de vie (tr[eè]s |assez |un peu |trop )?(courte|faible|limit[ée]e)|fini (le jeu )?en (moins de )?(\\d|une|deux|trois) ?(h|heures?))\\b"
+    ]
+   },
+   "area": "value"
+  },
+  {
+   "key": "lots_of_content",
+   "kind": "trait",
+   "label": "Lots of content / long",
+   "taste_label": "big, content-rich games",
+   "sample_hits": 915,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bnot )(?<!n.t )(?<!\\bnot a )(?<!\\bno )(?<!\\black of )(?<!\\bcut )(?<!\\bcut out )(?<!removed )\\b((tons|lots|loads|plenty|a ton|a lot|so much|huge amount|massive amount|insane amount|ridiculous amount|metric ton|crazy amount|good amount|decent amount) of content|(content|content-)packed|packed with content|(dozens|hundreds|thousands) of hours of (content|gameplay|fun)|(endless|countless) hours of (content|gameplay|fun)|(very|really|super|extremely|incredibly) long (game|campaign|story)|(huge|massive|enormous) (amount of )?content|hours (and hours|upon hours) of (content|gameplay|fun)|so much to do|(lots|tons|plenty) of (things|stuff) to do|never runs? out of (things|stuff|content) to do|([3-9]\\d|\\d{3})\\+? hours (to|for) (beat|finish|complete)|([3-9]\\d|\\d{3})\\+? ?(hours?|hrs?) (long|of content|campaign|story))\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(内容(非常|很|超级|特别|极其|相当)?(丰富|充实|量大|管饱)|体量(很|超|非常|巨)大|(上百|几百|数百|上千)(个)?小时的(内容|游戏时间)|(?<!不)(?<!不太)(?<!没那么)(?<!不怎么)耐玩|量大管饱)"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!не )(?<!мало )(?<!вырезали )(?<!вырезано )(?<!☐ Затянет )(?<!Видел )(?<!видел )\\b((очень |огромн\\w* |невероятн\\w* )?много контента|контента (очень |просто |тут |здесь )?(много|навалом|хватает|море|завались)|(огромн|колоссальн|гигантск)\\w* (количество|объ[её]м) контента|сотни часов (контента|геймплея)|тонна контента|куча контента|на сотни часов)"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!pouco )\\b((muito|bastante|tanto|tonelada de|cheio de) conte[uú]do|conte[uú]do (de sobra|pra caramba|para caramba|enorme|gigante|imenso)|centenas de horas (de )?(conte[uú]do|gameplay|divers[aã]o)|muita coisa (pra|para) fazer)\\b"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!poco )\\b((mucho|much[ií]simo|bastante|cantidad de|montón de|lleno de) contenido|contenido (de sobra|para (rato|cientos de horas))|cientos de horas de (contenido|juego|diversi[oó]n)|muchas cosas (que|por) hacer)\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!wenig )(?<!kein )(?<!nicht )\\b((viel|sehr viel|jede menge|massig|unmengen an|tonnenweise|haufenweise|reichlich) (an )?(inhalt|content)|(spiel|game|es|welt) ist (sehr |extrem |unglaublich |absurd |enorm |äußerst |recht |ziemlich |wirklich |mittlerweile absurd )?umfangreich|(sehr|extrem|unglaublich|enorm|ein|tolles|riesiges) umfangreiches (spiel|abenteuer|game)|umfangreichsten (spiele|spielen|survival)|so viel zu tun)\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!peu )(?<!trop-)(?<!trop )\\b((beaucoup|énormément|[ée]norm[ée]ment|plein|[eé]norme quantit[eé]) de contenu|contenu (colossal|[ée]norme|gigantesque|cons[ée]quent)|grosse dur[ée]e de vie|dur[ée]e de vie ([ée]norme|cons[ée]quente|colossale|gigantesque|tr[eè]s longue|incroyable)|(pour|pendant|offrant|voire) des centaines d.heures)\\b"
+    ]
+   },
+   "area": "value"
+  },
+  {
+   "key": "unfinished",
+   "kind": "issue",
+   "label": "Unfinished / thin on content",
+   "taste_label": "unfinished-feeling games",
+   "sample_hits": 792,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bnot )(?<!n.t )(?<!\\bnot an )(?<!\\bnot a )(?<!\\bleft )(?<!\\bleave )\\b(unfinished(?! business)|incomplete (game|product|mess)|half[- ]baked|feels like (an? )?(beta|alpha|demo|tech demo)|(perpetual|eternal|permanent|forever|endless) early access|(stuck|been|still|left) in early access (for|forever)|(lack of|lacking|barely any|not enough|very little) content|released (way )?too early|rushed (release|out|game)|not (a )?finished (game|product)|(barebones|bare[- ]bones) (game|experience))\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(半成品|未完成品|(内容|玩法)(太|很|非常|过于|有点)?(少|单薄|匮乏|贫乏)|赶工|像个?demo)"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!не )\\b(недоделанн\\w*|(игра|игру|игре) (ещё |еще |пока |очень |слишком )?сыр(ая|ой|ую|ое)|недоработанн\\w*|(мало|не хватает|недостаточно) контента|контента (очень |слишком |катастрофически )?мало|вечный ранний доступ|сыроват\\w*)"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(inacabado|(jogo|parece|sente) incompleto|mal acabado|pouco conte[uú]do|falta de conte[uú]do|(parece|cara de) (uma )?(beta|demo|alpha))\\b"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(inacabado|(juego|está|esta|venden) incompleto|poco contenido|falta (de )?contenido|(parece|se siente como) (una )?(beta|demo|alpha))\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(unfertig\\w*|halbfertig\\w*|(zu )?wenig (inhalt|content)|fühlt sich (an )?wie (eine )?(beta|alpha|demo))\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(jeu inachev[ée]|(semble|para[iî]t) inachev[ée]|jeu (pas fini|incomplet)|manque de contenu|(?<!un )peu de contenu|(ressemble|on dirait) (à )?une (b[eê]ta|d[ée]mo|alpha))\\b"
+    ]
+   },
+   "area": "value"
+  },
+  {
+   "key": "active_devs",
+   "kind": "quality",
+   "label": "Active, responsive developers",
+   "taste_label": "actively supported games",
+   "sample_hits": 356,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bnot )(?<!n.t )(?<!\\bno )(?<!\\bmore )(?<!\\bused to be )\\b((very |super |really |extremely )?(active|dedicated|responsive|passionate|caring|hardworking|hard[- ]working|attentive) (devs?|developers?|dev team)|(great|awesome|amazing) (devs?|developers?) (who|that) (listen|care|update|actually)|devs? (who |that )?(actually |really |truly )?(listen|care) (to|about) (the )?(community|players|fans|feedback)|(devs?|developers?) (are|is) (very |super |really |extremely )?(active|responsive|dedicated|passionate)|(frequent|regular|constant|consistent|free|steady|monthly|weekly) (content )?updates|(still|constantly|regularly|continuously|actively) (being )?(updated|supported)|free (content )?(dlcs?|expansions?)|post[- ]launch support)\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))((制作组|开发者|开发组|官方|作者|厂商)(很|非常|特别|超级|真的|也)?(用心|良心|勤奋|负责|给力|靠谱)|(持续|一直|不断|经常|频繁)(在)?更新(?!恶心)|更新(很|非常|特别)?(勤快|频繁|及时)|听取(玩家)?(意见|建议|反馈)|免费(更新|dlc|DLC))"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!не )\\b((активн|отзывчив|адекватн)\\w* разработчик\\w*|разработчик\\w* (активно |постоянно |регулярно )?(обновляют|прислушиваются|слушают|поддерживают)|(частые|регулярные|постоянные|бесплатные) обновлени\\w*|(регулярно|постоянно|активно) обновляется|бесплатн\\w* (dlc|длс|дополнени\\w*))"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!não )\\b((desenvolvedores?|devs?|desenvolvedora) (muito )?(ativos?|atenciosos?|presentes|dedicados?|que escutam|escutam|ouvem)|(atualiza[cç](ões|oes)|updates?) (constantes|frequentes|gratuit[oa]s|regulares)|(constantes|frequentes) atualiza[cç](ões|oes)|dlcs? gratuit[oa]s?)\\b"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!no )\\b((desarrolladores?|devs?) (muy )?(activos?|atentos?|que escuchan|dedicados?)|actualizaciones (frecuentes|gratuitas|regulares)|frecuentes actualizaciones|dlcs? (gratis|gratuitos?))\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!nicht )\\b((aktive|engagierte|fleißige) (entwickler|devs?)|(regelm[äa]ßige|h[äa]ufige|kostenlose|st[äa]ndige) (updates|inhaltsupdates)|wird (st[äa]ndig|regelm[äa]ßig|immer noch|aktiv) (weiter ?entwickelt|geupdated|aktualisiert)|kostenlose dlcs?)\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!pas )\\b((d[ée]veloppeurs?|devs?) (tr[eè]s |super )?(actifs?|à l.[ée]coute|investis?)|mises? à jour (r[ée]guli[eè]res|fr[ée]quentes|gratuites|constantes)|dlcs? gratuits?|suivi (exemplaire|r[ée]gulier|constant))\\b"
+    ]
+   },
+   "area": "value"
+  },
+  {
+   "key": "abandoned",
+   "kind": "issue",
+   "label": "Abandoned by developers",
+   "taste_label": "abandoned games",
+   "sample_hits": 526,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bnot )(?<!n.t )(?<!\\bnot been )\\b(abandon(ed|ing)? by (the )?(devs?|developers?|publisher|studio)|(devs?|developers?|publisher|studio) (has |have |just |basically |completely )?(abandoned|gave up on|stopped (updating|supporting|working on)) (the game|this game|it)|(devs?|developers?) (have |has )?moved on|abandonware|(no|zero) (more |new |further )?(updates|patches) (for|since|in)|no (more|further) support|(hasn.t|haven.t|has not|have not|hasnt|havent) (been )?(updated|patched|received an update) (in|since|for)|(last|latest) update (was )?(\\d+|a|two|three|several|many) (years?|months?) ago|(game|it) (is|was|got) (completely |basically |essentially )?abandoned|end of (support|service))\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))((?<!不)停更|停止更新|不再更新|(制作组|开发者|开发商|官方|厂商|作者)(已经|直接)?(跑路|弃坑|放弃)|(几|好几|多)年(都)?没(有)?更新|(?<!不)断更)"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b((разработчик\\w*|разрабы|издатель) (забили|забросили|бросили|забил|забросил)|заброшенн\\w* (игр|проект)\\w*|(игра )?не обновляется|(нет|ноль) обновлений|последнее обновление (было )?\\w* (лет|год|года|месяцев) назад|(игру|проект) (забросили|бросили|похоронили))"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(abandonad[oa] pel[oa]s? (devs?|desenvolvedor\\w*|empresa|produtora)|(devs?|desenvolvedor\\w*|empresa) abandon(ou|aram)|jogo abandonado|sem atualiza[cç](ões|oes|ão|ao) (há|desde|faz)|n[aã]o (recebe|tem) mais atualiza[cç](ões|oes|ão|ao))\\b"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(abandonado por (los|sus) (devs?|desarrolladores?)|(devs?|desarrolladores?|la empresa) (lo |han |lo han )?abandon(aron|ó|ado)|juego abandonado|sin actualizaciones (desde|hace))\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b((entwickler|devs?) ha(t|ben) (das spiel )?(aufgegeben|fallen gelassen|im stich gelassen)|spiel wurde aufgegeben|keine updates mehr|seit (jahren|monaten) keine updates|wird nicht mehr (weiter ?entwickelt|unterst[üu]tzt|gepatcht|geupdated|aktualisiert))\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(abandonn[ée]e? par (les|ses) (d[ée]veloppeurs?|devs?|[ée]diteur)|(d[ée]veloppeurs?|devs?|[ée]diteur) (ont |a )abandonn[ée]|jeu abandonné|plus (aucune|de) mises? à jour|aucune mise à jour depuis)"
+    ]
+   },
+   "area": "value"
+  },
+  {
+   "key": "drm_launcher",
+   "kind": "issue",
+   "label": "Intrusive DRM / launcher / always-online",
+   "taste_label": "intrusive DRM and launchers",
+   "sample_hits": 198,
+   "patterns": {
+    "english": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!\\bno )(?<!\\bnot )(?<!n.t )(?<!without )(?<!\\bzero )(?<!drm[- ]free )(?<!removed )(?<!removed the )(?<!remove )(?<!removing )(?<!removal of )(?<!without the )\\b(denuvo|always[- ]online|always[- ]on(line)? (drm|requirement|connection)|requires? (an )?(constant |permanent |persistent )?(internet|online) connection|(forced|mandatory|required) (online|account|login|launcher|ea app|ubisoft connect|psn|sign[- ]in|third[- ]party (account|launcher))|(psn|ea|ubisoft|rockstar|epic|2k|bethesda\\.net|microsoft) (account|launcher) (required|is required|requirement|bullshit|garbage|nonsense)|(stupid|terrible|garbage|awful|horrible|annoying|bloated|third[- ]party|3rd[- ]party|separate|forced) launchers?|(kernel[- ]level|invasive|intrusive) anti[- ]?cheat|anti[- ]?cheat (kicks?|keeps|banned|false|blocks?|prevents|won.t let|doesn.t let)|(intrusive|invasive) drm|drm (is|ruins|garbage|bullshit|nonsense|issues|problems))\\b"
+    ],
+    "schinese": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!移除)(?<!去除)(?<!去掉)(?<!删除)(?<!删了)(?<!移除了)(d加密|D加密|[Dd]enuvo|(强制|必须|需要)(联网|登录|登陆)|(?<![a-zA-Z])(ea|EA|育碧|R星|epic|Epic)(的)?(启动器|登陆器|登录器)|启动器(太|很|真|一坨|垃圾|恶心|傻逼))"
+    ],
+    "russian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(denuvo|денуво|always ?online|ubisoft connect|ea app|обязательн\\w* (аккаунт|подключени|привязк)\\w*|постоянн\\w* подключени\\w* к интернету|античит на уровне ядра)"
+    ],
+    "brazilian": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!não )(?<!nao )\\b(denuvo|always ?online|ubisoft connect|ea app|(precisa|exige|obriga) (de )?(conex[aã]o|internet|conta|login))\\b"
+    ],
+    "spanish": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(denuvo|always ?online|ubisoft connect|uplay|ea app|(requiere|obliga a|necesitas) (conexi[oó]n|internet|una cuenta|iniciar sesi[oó]n))\\b"
+    ],
+    "german": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))(?<!ohne )(?<!kein )(?<!keine )\\b(denuvo|always ?online|ubisoft connect|ea app|online[- ]?zwang|account[- ]?zwang|launcher[- ]?zwang)\\b"
+    ],
+    "french": [
+     "(?<![☐🔲□⬜⬛▢])(?<![☐🔲□⬜⬛▢] )(?<![☐🔲□⬜⬛▢]  )(?<!\\[ \\] )(?<!\\[ \\])(?<!\\( \\) )(?<!\\( \\))\\b(denuvo|always ?online|ubisoft connect|ea app|connexion (internet )?obligatoire|compte obligatoire)\\b"
+    ]
+   },
+   "area": "value"
+  }
+ ]
+}

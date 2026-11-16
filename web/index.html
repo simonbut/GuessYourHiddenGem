@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dream Game Finder</title>
+  <meta name="description" content="Find your next favourite Steam game from what you love - or just describe it.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Dream Game Finder home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 2l2.6 6.3L21 9l-5 4.4L17.5 20 12 16.6 6.5 20 8 13.4 3 9l6.4-.7z" fill="currentColor"/></svg>
+      </span>
+      <span>Dream Game Finder</span>
+    </a>
+    <span class="stats" id="stats">loading…</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Find the game you didn't know you were looking for.</h1>
+      <p class="lede">Each round shows 5 games: rank the ones you've played from favourite to least favourite, and drop
+        the rest in a box - no interest, never heard of it, or want to play. 7 rounds, each learning from your answers,
+        then we recommend games you'll love - from big hits to hidden gems.</p>
+
+      <div class="tabs" role="tablist" aria-label="Search mode">
+        <button role="tab" id="tab-quiz" aria-selected="true" aria-controls="panel-quiz">Quick quiz</button>
+        <button role="tab" id="tab-like" aria-selected="false" aria-controls="panel-like" tabindex="-1">Games I love</button>
+        <button role="tab" id="tab-dream" aria-selected="false" aria-controls="panel-dream" tabindex="-1">Describe my dream game</button>
+      </div>
+      <p id="engine-note" class="engine-note" role="status" hidden></p>
+
+      <div class="card panel quiz" id="panel-quiz" role="tabpanel" aria-labelledby="tab-quiz">
+        <div class="quiz-head">
+          <h2 id="quiz-title" tabindex="-1">Round 1 of 7</h2>
+          <ol class="progress" id="quiz-progress" aria-hidden="true"></ol>
+        </div>
+        <p id="quiz-hint" class="quiz-hint"></p>
+        <p id="quiz-howto" class="quiz-howto"><b>Drag the games you've played into your ranking, favourite first.</b>
+          Haven't played one? Drop it in the box that fits: <i>Heard of it, no interest</i>, <i>Never heard of it</i>
+          or <i>Interested, haven't played</i>.</p>
+        <p id="quiz-sr-help" class="sr-only">If you've played this game, press Enter to put it in your next ranking
+          place. If not, press N for heard of it but no interest, H for never heard of it (or Shift and Enter), or I for
+          interested but haven't played. Press the same key again to take it back out.</p>
+        <div id="quiz-board" class="quiz-board">
+          <div id="quiz-choices" class="quiz-grid dz" data-zone="deck" role="group" aria-label="Games to sort"></div>
+          <div class="rank-head" aria-hidden="true"><span class="label">Games you've played</span><span class="muted">favourite → least favourite</span></div>
+          <ol id="quiz-rank" class="rank-row dz" data-zone="rank" aria-label="Games you've played, favourite first"></ol>
+          <div class="rank-head bins-head" aria-hidden="true"><span class="label">Haven't played it?</span><span class="muted">drop it in the box that fits</span></div>
+          <div id="quiz-bins" class="bins">
+            <div id="quiz-noint" class="bin bin-noint dz" data-zone="noint" role="group" aria-label="Heard of it, no interest">
+              <span class="bin-label" aria-hidden="true"><span class="bin-mark">✕</span><span>Heard of it, no interest</span></span>
+              <div class="bin-items"></div>
+            </div>
+            <div id="quiz-unk" class="bin bin-unk dz" data-zone="unk" role="group" aria-label="Never heard of it">
+              <span class="bin-label" aria-hidden="true"><span class="bin-mark">?</span><span>Never heard of it</span></span>
+              <div class="bin-items"></div>
+            </div>
+            <div id="quiz-want" class="bin bin-want dz" data-zone="want" role="group" aria-label="Interested, haven't played">
+              <span class="bin-label" aria-hidden="true"><span class="bin-mark">♥</span><span>Interested, haven't played</span></span>
+              <div class="bin-items"></div>
+            </div>
+          </div>
+        </div>
+        <div class="quiz-actions" id="quiz-actions">
+          <button type="button" id="quiz-next" class="primary" disabled>Next round →</button>
+          <span id="quiz-status" class="quiz-status muted"></span>
+          <span class="spacer"></span>
+          <button type="button" id="quiz-none" class="ghost">I don't like any of them</button>
+          <button type="button" id="quiz-clear" class="ghost">Clear</button>
+          <button type="button" id="quiz-back" class="ghost">← Back</button>
+          <button type="button" id="quiz-finish" class="ghost" hidden>Show my results now</button>
+          <button type="button" id="quiz-restart" class="ghost">Start over</button>
+        </div>
+        <p class="hint quiz-keys">No mouse? Keys: <kbd>1</kbd>–<kbd>5</kbd> put that game in the next place, <kbd>Shift</kbd>+<kbd>1</kbd>–<kbd>5</kbd> never heard of it.
+          On a game you <kbd>Tab</kbd> to: <kbd>Enter</kbd> next place, <kbd>N</kbd> heard of it, no interest, <kbd>H</kbd> never heard of it,
+          <kbd>I</kbd> interested (the same key again takes it back out).
+          <kbd>Backspace</kbd> undo, <kbd>Enter</kbd> next round, <kbd>0</kbd> don't like any. <kbd>Esc</kbd> cancels a drag.</p>
+
+        <!-- shown while playing and on the results: favourites the rounds didn't show -->
+        <section id="quiz-favs" class="quiz-favs" aria-labelledby="fav-label">
+          <p id="fav-label" class="fav-label"><b>Got favourites we didn't show?</b> Add them - they count as your 1st place.</p>
+          <div class="picker fav-picker" id="fav-picker">
+            <div class="chips" id="fav-chips"></div>
+            <div class="combo">
+              <input id="fav-input" type="text" autocomplete="off" spellcheck="false"
+                     placeholder="Type a favourite game…" role="combobox" aria-expanded="false"
+                     aria-controls="fav-suggest" aria-autocomplete="list" aria-label="Add a favourite game"
+                     aria-describedby="fav-label">
+              <ul id="fav-suggest" class="suggest" role="listbox" aria-label="Matching games" hidden></ul>
+            </div>
+          </div>
+          <p id="fav-msg" class="fav-msg"></p>
+        </section>
+
+        <div id="quiz-done" class="quiz-done" hidden>
+          <h2 tabindex="-1" id="quiz-done-title">Your taste</h2>
+          <p id="quiz-familiarity" class="familiarity"></p>
+          <div class="taste-grid">
+            <section id="taste-styles-box" hidden>
+              <h3>Your styles</h3>
+              <ul id="taste-styles" class="taste-list"></ul>
+            </section>
+            <section id="taste-loves-box" hidden>
+              <h3>What you love</h3>
+              <ul id="taste-loves" class="taste-list"></ul>
+            </section>
+            <section id="taste-moods-box" hidden>
+              <h3>The feel you go for</h3>
+              <ul id="taste-moods" class="mood-chips"></ul>
+            </section>
+            <section id="taste-praised-box" hidden>
+              <h3>Players praise your favourites for</h3>
+              <ul id="taste-praised" class="taste-list"></ul>
+            </section>
+            <section id="taste-avoids-box" hidden>
+              <h3>Less into</h3>
+              <ul id="taste-avoids" class="taste-list"></ul>
+            </section>
+            <section id="taste-radar-box" hidden>
+              <h3>Not on your radar</h3>
+              <ul id="taste-radar" class="taste-list"></ul>
+            </section>
+          </div>
+          <p id="quiz-picks-label" class="label">Your favourites</p>
+          <div id="quiz-picks" class="pick-strip" aria-label="Your favourites"></div>
+          <section id="quiz-feedback" class="quiz-feedback" aria-labelledby="quiz-feedback-title" hidden>
+            <h3 id="quiz-feedback-title">Your feedback</h3>
+            <div id="fb-more-row" class="fb-row" hidden>
+              <span class="label">More like:</span>
+              <div class="chips" id="fb-more-chips"></div>
+            </div>
+            <div id="fb-less-row" class="fb-row" hidden>
+              <span class="label">Not for me:</span>
+              <div class="chips" id="fb-less-chips"></div>
+            </div>
+          </section>
+          <div class="quiz-actions">
+            <button type="button" id="quiz-more" class="secondary">Play 3 more rounds</button>
+            <button type="button" id="quiz-tune" class="ghost">Fine-tune with "Games I love"</button>
+            <button type="button" id="quiz-again" class="ghost">Play again</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card panel" id="panel-like" role="tabpanel" aria-labelledby="tab-like" hidden>
+        <div class="picker" id="picker">
+          <div class="chips" id="liked-chips"></div>
+          <div class="combo">
+            <input id="game-input" type="text" autocomplete="off" spellcheck="false"
+                   placeholder="Type a game you love…" role="combobox" aria-expanded="false"
+                   aria-controls="suggest" aria-autocomplete="list" aria-label="Add a game you love">
+            <ul id="suggest" class="suggest" role="listbox" hidden></ul>
+          </div>
+        </div>
+        <p class="hint">Add a few games. Click a game to flip it to <b class="neg-text">not for me</b>.</p>
+        <div class="starters">
+          <span class="label">Popular starting points</span>
+          <div id="starters" class="starter-list"></div>
+        </div>
+      </div>
+
+      <div class="card panel" id="panel-dream" role="tabpanel" aria-labelledby="tab-dream" hidden>
+        <label class="sr-only" for="dream-text">Describe your dream game</label>
+        <textarea id="dream-text" rows="3" maxlength="1000"
+                  placeholder="e.g. a cozy farming game with a deep story, no combat"></textarea>
+        <div class="examples" id="examples" aria-label="Example wishes"></div>
+        <div class="google-row">
+          <a id="google-ai" class="primary google-ai" href="https://www.google.com/search?udm=50" target="_blank"
+             rel="noopener noreferrer">Ask Google AI Mode ↗</a>
+          <span class="muted google-note">Opens Google's AI Mode in a new tab with your wish, and asks it to use
+            this site's game pages. Free, no sign-in needed.</span>
+        </div>
+        <div class="ai-row" id="ai-row" hidden>
+          <label class="switch">
+            <input type="checkbox" id="ai-toggle">
+            <span class="track" aria-hidden="true"><span class="thumb"></span></span>
+            <span>Let Claude interpret my wish and explain each pick</span>
+          </label>
+          <small id="ai-reason" class="muted"></small>
+        </div>
+      </div>
+
+      <div class="filters" id="filters" aria-label="Filters">
+        <label class="pill-toggle gem">
+          <input type="checkbox" id="f-gems">
+          <span>Hidden gems</span>
+        </label>
+        <label class="pill-toggle">
+          <input type="checkbox" id="f-free">
+          <span>Free to play</span>
+        </label>
+        <label class="select">
+          <span class="sr-only">Platform</span>
+          <select id="f-platform">
+            <option value="">Any platform</option>
+            <option value="windows">Windows</option>
+            <option value="mac">macOS</option>
+            <option value="linux">Linux / SteamOS</option>
+            <option value="deck">Steam Deck playable</option>
+          </select>
+        </label>
+        <label class="select">
+          <span class="sr-only">Minimum rating</span>
+          <select id="f-positive">
+            <option value="">Any rating</option>
+            <option value="70">70%+ positive</option>
+            <option value="80">80%+ positive</option>
+            <option value="90">90%+ positive</option>
+            <option value="95">95%+ positive</option>
+          </select>
+        </label>
+        <label class="select">
+          <span class="sr-only">Released</span>
+          <select id="f-year">
+            <option value="">Any release year</option>
+            <option value="2025">2025 or newer</option>
+            <option value="2023">2023 or newer</option>
+            <option value="2020">2020 or newer</option>
+            <option value="2015">2015 or newer</option>
+            <option value="2010">2010 or newer</option>
+          </select>
+        </label>
+        <details class="tag-filters" id="tag-filters">
+          <summary>Tags <span id="tag-count" class="count" hidden></span></summary>
+          <div class="tag-box">
+            <div>
+              <label for="must-input">Must have</label>
+              <div class="chips small" id="must-chips"></div>
+              <input id="must-input" list="tag-list" placeholder="e.g. Co-op, then Enter" autocomplete="off">
+            </div>
+            <div>
+              <label for="excl-input">Leave out</label>
+              <div class="chips small" id="excl-chips"></div>
+              <input id="excl-input" list="tag-list" placeholder="e.g. Horror, then Enter" autocomplete="off">
+            </div>
+          </div>
+          <datalist id="tag-list"></datalist>
+        </details>
+      </div>
+
+      <div class="actions" id="actions">
+        <button id="go" class="primary" type="button">Find games</button>
+        <span class="kbd-hint muted" id="kbd-hint"></span>
+      </div>
+    </section>
+
+    <div id="status" class="sr-only" role="status" aria-live="polite"></div>
+    <h2 id="results-heading" class="sr-only" tabindex="-1">Recommendations</h2>
+    <section id="notes" class="notes" aria-label="Search notes"></section>
+    <section id="results" class="grid" aria-labelledby="results-heading" aria-busy="false"></section>
+    <section id="empty" class="empty">
+      <p>Your recommendations will appear here.</p>
+    </section>
+    <!-- quiz results with "More like this" / "Not for me" / favourites not applied yet -->
+    <div id="feedback-bar" class="feedback-bar" role="region" aria-label="Update your results" hidden>
+      <p id="feedback-text"></p>
+      <button type="button" id="feedback-update" class="primary">Update results</button>
+    </div>
+  </main>
+
+  <footer class="foot">
+    Game data and images from Steam's public store. Not affiliated with Valve.
+    Recommendations run locally on this computer.
+  </footer>
+
+  <template id="card-tpl">
+    <article class="game">
+      <a class="cover" target="_blank" rel="noopener noreferrer">
+        <img alt="" loading="lazy" width="460" height="215">
+        <span class="cover-fallback" aria-hidden="true"></span>
+        <span class="rank"></span>
+      </a>
+      <div class="body">
+        <h3 class="title"><a target="_blank" rel="noopener noreferrer"></a></h3>
+        <div class="meta">
+          <span class="score"></span>
+          <span class="reviews"></span>
+          <span class="year"></span>
+        </div>
+        <ul class="tags"></ul>
+        <div class="players" hidden>
+          <p class="psummary"></p>
+          <ul class="praise" aria-label="Players love"></ul>
+          <ul class="feel" aria-label="How it feels"></ul>
+          <ul class="complaints" aria-label="Watch out for"></ul>
+          <ul class="split" aria-label="Players are split on"></ul>
+          <p class="bestfor"></p>
+        </div>
+        <p class="why"></p>
+        <div class="card-actions">
+          <button type="button" class="ghost more">More like this</button>
+          <button type="button" class="ghost nope">Not for me</button>
+          <a class="ghost store" target="_blank" rel="noopener noreferrer">Steam page ↗</a>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
