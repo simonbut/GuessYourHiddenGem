@@ -115,12 +115,31 @@ It also writes:
 
 Only the roughly 900 pages with a written summary are offered to Google, through the sitemap. The pages built only from stock review labels are marked `noindex`, so the site doesn't look like mass-produced thin content. They are still there for visitors. Google indexes the offered pages, so its AI Mode can use them.
 
+Two ways to publish. Either way:
+* the published branch only ever holds the built site;
+* each publish replaces it with one fresh commit, under your GitHub no-reply address;
+* the script refuses to overwrite a branch it didn't make, such as your code.
+
+**A. Next to your code (no GitHub CLI needed).** The site goes to the `gh-pages` branch of this folder's own GitHub repository, pushed with your normal `git push` sign-in. Your code on `main` isn't touched.
+
 ```bash
-gh auth login                          # once: sign in to GitHub (free account)
-python publish_site.py                 # build, push, turn on GitHub Pages
+python publish_site.py --gh-pages
 ```
 
-The site goes to `https://YOURNAME.github.io/dream-game-finder/`. Free GitHub Pages needs a public repository, and it only ever holds the built site. Each publish replaces it with one fresh commit, and commits use your GitHub no-reply address.
+Then, once, in the repository on GitHub: **Settings → Pages → Build and deployment → Branch: `gh-pages`, folder `/ (root)` → Save**. If the GitHub CLI is signed in, the script does this for you. The site is at `https://YOURNAME.github.io/REPO/`. Free GitHub Pages needs the repository to be public.
+
+GitHub Pages can't serve the code branch (`main`) directly: you'd only see the README, because the site has to be built first and its data files are kept out of Git.
+
+**B. In a repository of its own:**
+
+```bash
+gh auth login                          # once: sign in to GitHub (free account)
+python publish_site.py                 # build, create the repo, push, turn on GitHub Pages
+```
+
+The site goes to `https://YOURNAME.github.io/dream-game-finder/` (or `--repo NAME`).
+
+The script remembers your choice and the Google token in `site_config.json`, so later updates are just `python publish_site.py`.
 
 To tell Google about the site:
 1. In [Google Search Console](https://search.google.com/search-console), add a **URL prefix** property for the site address.
@@ -195,7 +214,7 @@ For each test player, the eval hides one game they liked, recommends from the re
 python -m unittest discover -s tests -v
 ```
 
-59 tests run in about a minute on a synthetic database: crawler paging and resume with a fake Steam API, review analysis, recommendations, filters, quiz rules, server API and security, and the static web build (slim model, the in-browser API bridge, game pages, the data page and sitemap). A few smoke tests also run on the real data when it's present.
+64 tests run in about a minute on a synthetic database: crawler paging and resume with a fake Steam API, review analysis, recommendations, filters, quiz rules, server API and security, and the static web build (slim model, the in-browser API bridge, game pages, the data page and sitemap, and the publish guard that never overwrites your code). A few smoke tests also run on the real data when it's present.
 
 ## License and data
 

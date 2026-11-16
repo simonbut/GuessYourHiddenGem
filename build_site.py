@@ -447,6 +447,32 @@ see a request from your browser, as with any image or script on the web.</li>
                       f"{site_url}about/", 1, body, v=v)
 
 
+def data_notice(site_url, built_at, contact=None):
+    """DATA-NOTICE.md at the root of the published site: the built site may sit in a
+    repository whose code licence (e.g. MIT) must not be read as covering Steam's data."""
+    day = time.strftime("%d %B %Y", time.gmtime(built_at)).lstrip("0")
+    ask = f"\nRemoval or correction requests: {contact}\n" if contact else ""
+    return f"""# About the data in this site
+
+This is the built Dream Game Finder website ({site_url}). The licence of the
+project's source code (MIT) covers the code only, not the data here:
+
+* Game names, release dates, developers and publishers, platforms, tags and
+  review scores are facts from Steam's public store as of {day}. The short
+  store-description excerpts and the cover images (loaded from Steam's servers)
+  belong to the games' developers or publishers and to Valve. This project
+  claims no rights in them and grants no licence to them.
+* The AI-written "what players say" summaries and the statistics this project
+  computed from reviews are released under CC0 1.0
+  (https://creativecommons.org/publicdomain/zero/1.0/).
+* No review text, Steam IDs or player names are included.
+
+Steam data is provided "as is", without warranty, and may be out of date.
+Dream Game Finder is not affiliated with or endorsed by Valve. Steam is a
+trademark of Valve Corporation. More: {site_url}about/
+{ask}"""
+
+
 def sitemap_xml(urls):
     items = "".join(f"<url><loc>{E(u)}</loc><lastmod>{d}</lastmod></url>" for u, d in urls)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -538,8 +564,9 @@ def main():
     urls, n_pages = ([(site_url, time.strftime("%Y-%m-%d"))], 0) if args.no_pages else \
         build_pages(model, out, site_url, build, model.meta.get("built_at") or time.time())
     built_at = model.meta.get("built_at") or time.time()
-    write(os.path.join(out, "about", "index.html"),
-          about_page(site_url, build, built_at, args.contact or contact_url(site_url)))
+    contact = args.contact or contact_url(site_url)
+    write(os.path.join(out, "about", "index.html"), about_page(site_url, build, built_at, contact))
+    write(os.path.join(out, "DATA-NOTICE.md"), data_notice(site_url, built_at, contact))
     urls.append((f"{site_url}about/", time.strftime("%Y-%m-%d", time.gmtime(built_at))))
     write(os.path.join(out, "sitemap.xml"), sitemap_xml(urls))
     # robots.txt only counts at the root of a host (a custom domain or NAME.github.io);

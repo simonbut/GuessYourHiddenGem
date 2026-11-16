@@ -17,7 +17,7 @@ Commands
   python recommend.py like "Stardew Valley" --gems  # ...favouring lesser-known games
   python recommend.py dream "cozy farming with a deep story, no combat"
   python recommend.py dream "..." --ai              # Claude interprets + explains
-  python recommend.py user 76561198000000000        # for a reviewer in the database
+  python recommend.py user STEAMID64                # for a reviewer in the database
   python recommend.py eval                          # measure quality (hit rate)
 
 Filters (like/dream/user): --tags, --exclude-tags, --min-positive, --max-reviews,

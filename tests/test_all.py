@@ -90,12 +90,12 @@ def make_db(path, n_users=1500, seed=1):
         for k in liked:
             appid = 1000 + ci * 100 + k
             text = f"This is a {tag.lower()} gem: {words}. It is {phrase}, honestly worth it."
-            rows.append((rid, appid, str(76561198000000000 + u), "english", text, 1, rng.randint(0, 50), 0, 0.5,
+            rows.append((rid, appid, str(76561190000000000 + u), "english", text, 1, rng.randint(0, 50), 0, 0.5,
                          0, 1, 0, 0, 0, 0, 1700000000 + rid, 1700000000 + rid, 5, 600, 300, 0, 0, None, None))
             rid += 1
         other = (ci + 1 + u % 5) % len(CLUSTERS)
         appid = 1000 + other * 100 + rng.randrange(GAMES_PER)
-        rows.append((rid, appid, str(76561198000000000 + u), "english",
+        rows.append((rid, appid, str(76561190000000000 + u), "english",
                      "Not for me at all, boring and slow, refunded.", 0, 0, 0, 0.5, 0, 1, 0, 0, 0, 0,
                      1700000000 + rid, 1700000000 + rid, 5, 30, 20, 0, 0, None, None))
         rid += 1
@@ -741,6 +741,11 @@ class TestWebBuild(Synthetic):
         self.assertNotIn("Open an issue", bs.about_page("https://example.com/", "b1", 1700000000, None))
         # every generated page links to it
         self.assertIn('href="../../about/"', bs.page_shell("t", "d", "https://x/", 2, "<p>x</p>"))
+        # the published site carries its own data notice (its repo's code licence isn't the data's)
+        note = bs.data_notice("https://name.github.io/my-site/", 1700000000, "https://github.com/name/my-site/issues")
+        for must in ("covers the code only", "CC0", "No review text, Steam IDs or player names", "14 November 2023",
+                     "not affiliated", "https://github.com/name/my-site/issues", "https://name.github.io/my-site/about/"):
+            self.assertIn(must, note)
 
     def test_slugs(self):
         self.assertEqual(self.bs.slugify("Sid Meier's Civilization® VI"), "sid-meier-s-civilization-vi")
@@ -972,6 +977,72 @@ class TestRealData(unittest.TestCase):
         res = quiz.results(self.model, [{"shown": ids, "order": ids[:3], "unknown": ids[3:]}], rec.make_opts(n=8))
         self.assertEqual(len(res["results"]), 8)
 
+
+
+# --------------------------------------------------------------------------- #
+class TestPublishGuard(unittest.TestCase):
+    """publish_site.py must never force-push over a branch it didn't make (e.g. the code)."""
+
+    @classmethod
+    def setUpClass(cls):
+        import subprocess
+        import publish_site
+        cls.ps = publish_site
+        cls.tmp = tempfile.mkdtemp()
+        cls.remote = os.path.join(cls.tmp, "remote.git")
+        git = lambda *a, cwd=None: subprocess.run(["git", "-c", "user.name=t", "-c", "user.email=t@example.com",
+                                                   "-c", "init.defaultBranch=main", *a], cwd=cwd, check=True,
+                                                  capture_output=True)
+        git("init", "-q", "--bare", cls.remote)
+        work = os.path.join(cls.tmp, "work")
+        git("init", "-q", work)
+        with open(os.path.join(work, "app.py"), "w") as f:
+            f.write("print('my code')\n")
+        git("add", "-A", cwd=work)
+        git("commit", "-q", "-m", "code", cwd=work)
+        git("push", "-q", cls.remote, "HEAD:refs/heads/main", cwd=work)                 # the code
+        with open(os.path.join(work, publish_site.MARKER), "w") as f:
+            f.write("made by build_site.py\n")
+        git("add", "-A", cwd=work)
+        git("commit", "-q", "-m", "site", cwd=work)
+        git("push", "-q", cls.remote, "HEAD:refs/heads/gh-pages", cwd=work)             # a built site
+
+    @classmethod
+    def tearDownClass(cls):
+        shutil.rmtree(cls.tmp, ignore_errors=True)
+
+    def state(self, branch):
+        with mock.patch.object(self.ps, "public_json", side_effect=urllib.error.URLError("offline")):
+            return self.ps.branch_state(self.remote, "someone", "repo", branch, signed_in=False)
+
+    def fetched_is_site(self, branch):
+        out = tempfile.mkdtemp(dir=self.tmp)
+        self.ps.run(["git", "init", "-q", out], quiet=True)
+        return self.ps.check_fetched(out, self.remote, branch)
+
+    def test_missing_branch_is_free(self):
+        self.assertEqual(self.state("nope"), "missing")
+
+    def test_code_branch_is_refused(self):
+        self.assertEqual(self.state("main"), "unknown")             # exists: look inside before pushing
+        self.assertFalse(self.fetched_is_site("main"))              # no marker: it's not ours
+        with self.assertRaises(SystemExit) as e:
+            self.ps.refuse("someone", "repo", "main", same_repo=False)
+        self.assertIn("--gh-pages", str(e.exception))
+
+    def test_site_branch_can_be_replaced(self):
+        self.assertTrue(self.fetched_is_site("gh-pages"))
+        with mock.patch.object(self.ps, "public_json", return_value={"name": ".dgf-site"}):
+            self.assertEqual(self.ps.branch_state(self.remote, "someone", "repo", "gh-pages", signed_in=False), "site")
+
+    def test_unreachable_remote_stops(self):
+        with self.assertRaises(SystemExit):
+            self.ps.branch_state(os.path.join(self.tmp, "no-such.git"), "someone", "repo", "main", signed_in=False)
+
+    def test_remote_urls(self):
+        self.assertEqual(self.ps.parse_github_remote("git@github.com:a/b.git"), ("a", "b"))
+        self.assertEqual(self.ps.parse_github_remote("https://github.com/a/b"), ("a", "b"))
+        self.assertIsNone(self.ps.parse_github_remote("https://gitlab.com/a/b.git"))
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
